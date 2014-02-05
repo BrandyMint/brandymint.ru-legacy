@@ -14,10 +14,8 @@
       top: $blockVerticalPadding-xs
       bottom: $blockVerticalPadding-xs
 
-body.index
-  .page-container
-    //background: rgba(0,0,0,0.3)
-  .page-container-image
+.page-container-image
+  &.welcome-container-image
     @extend %container-image
     +bgImage("welcome-bg.jpg")
     background:

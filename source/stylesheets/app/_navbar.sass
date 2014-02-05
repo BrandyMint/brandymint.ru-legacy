@@ -29,14 +29,21 @@ $navbarToggleZindex-xs: 1200
     left: -20px
     right: -20px
   &, .icon-bar
-    +transition(background-color 0.2s ease)
+    +transition(background-color 0.2s ease, transform 0.2s ease, opacity 0.2s ease)
   .icon-bar
     background-color: $textColor
-  &:hover
+  //&:hover
+  &.app-nav-toggle-active
     background: $linkColor
     .icon-bar
       background-color: $white
-  //&.app-nav-toggle-active
+      &:first-child
+        +transform(translateY(6px) rotate(45deg))
+      &:nth-child(2)
+        opacity: 0
+      &:last-child
+        +transform(translateY(-6px) rotate(-45deg))
+
   @media screen and (max-width: $screen-xs)
     top: 0
     right: 0
