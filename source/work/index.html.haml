@@ -12,7 +12,7 @@ navbar_state: active
       .row.project-block
         .col-md-5
           - if p.image
-            %img.project-image.img-responsive{alt: "Brandymint projects: #{p.slug}", src: "images/projects/#{p.image}" }
+            %img.project-image.img-responsive{alt: "Brandymint projects: #{p.slug}", src: image_path("projects/#{p.image}")  }
         .col-md-7
           %h2.project-title
             - if p.title
