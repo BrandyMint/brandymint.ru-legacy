@@ -18,7 +18,7 @@
         - else
           - state = ''
         -#= link_to n.title, url_for(n.page), class: "app-nav-item #{state}"
-        = link_to n.title, "/#{n.page}/", class: "app-nav-item #{state}"
+        = link_to n.title, "/#{n.page}/", class: "app-nav-item #{state} app-nav-item-#{n.page}"
     .clearfix
 
 
