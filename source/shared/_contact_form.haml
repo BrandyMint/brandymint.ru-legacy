@@ -1,15 +1,16 @@
-- title = locals[:title] || "Drop us a line"
+-#
+  - title = locals[:title] || "Drop us a line"
 
-.contact-form-block.welcome-block
-  .container
-    .row
-      .col-md-8.col-md-offset-2
-        %h2.welcome-header
-          = title
-    .row
-      .col-md-6.col-md-offset-3
-        %form.contact-form
-          %input{ name: 'name', type: 'text', placeholder: 'Your name' }
-          %input{ name: 'email', type: 'email', placeholder: 'Email' }
-          %textarea{ name: 'message', placeholder: 'Message' }
-          %input.btn.btn-lg.btn-success{ type: 'Submit', value: 'Send' }
+  .contact-form-block.welcome-block
+    .container
+      .row
+        .col-md-8.col-md-offset-2
+          %h2.welcome-header
+            = title
+      .row
+        .col-md-6.col-md-offset-3
+          %form.contact-form
+            %input{ name: 'name', type: 'text', placeholder: 'Your name' }
+            %input{ name: 'email', type: 'email', placeholder: 'Email' }
+            %textarea{ name: 'message', placeholder: 'Message' }
+            %input.btn.btn-lg.btn-success{ type: 'Submit', value: 'Send' }
