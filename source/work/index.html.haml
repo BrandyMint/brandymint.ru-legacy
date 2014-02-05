@@ -18,7 +18,7 @@ navbar_state: active
             - if p.title
               = p.title
             - if p.logo
-              %img{ src: "images/projects/#{p.logo}" }
+              %img{ src: image_path("projects/#{p.logo}") }
           .project-features
             - features = p.features if p.features
             - features.each_pair do |k,v|
