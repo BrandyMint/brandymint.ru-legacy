@@ -7,7 +7,7 @@ navbar_state: active
   = partial 'welcome/projects'
   - projects = data.projects
   - projects.each_with_index do |p,i|
-    .container
+    .container.projects-container
       -#= partial "projects/#{p}.haml"
       .row.project-block
         .col-md-5
