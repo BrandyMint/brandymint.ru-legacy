@@ -65,16 +65,16 @@ $navbarToggleZindex-xs: 1200
   +navbarHide
   margin:
     right: 19px
+  @media screen and (max-width: $screen-xs)
+    position: fixed
+    background: #fff !important
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    padding-top: 3em
   &.active
     +navbarShow
-    @media screen and (max-width: $screen-xs)
-      position: fixed
-      background: #fff !important
-      width: 100%
-      height: 100%
-      top: 0
-      left: 0
-      padding-top: 3em
 
 .app-nav-item
   display: inline-block
@@ -92,7 +92,7 @@ $navbarToggleZindex-xs: 1200
     right: 1em
   &.active
     +link-colors($linkColor)
-  .app-nav.active &
+  .app-nav &
     @media screen and (max-width: $screen-xs)
       display: block
       +box-sizing(border-box)
@@ -106,7 +106,8 @@ $navbarToggleZindex-xs: 1200
   background: rgba(#fff, 0.9)
 
 .navbar-fixed-item
-  background: none
+  background: transparent
+  background: rgba(#fff, 0)
   @media screen and (max-width: $screen-sm)
     +navbar-fixed-item-bg
   .body-navbar-white &,
