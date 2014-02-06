@@ -30,7 +30,7 @@
                   %h2.work-story-header= part.title
                 - if part.content.present?
                   .article-text
-                    = md part.content
+                    = part.content
           - if part.image.present?
             %div{ class: "story-image #{part.image_block_class || '' } "}
               %img{src: image_path(part.image)}
