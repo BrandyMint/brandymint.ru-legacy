@@ -1,79 +1,78 @@
--
-  slug: clickavia
-  title: Clickavia
-  logo: clickavia_logo.svg
-  url: 'http://clickavia.ru/'
-  image: 'clickavia.jpg'
-  welcome_image: 'clickavia-welcome-bg.jpg'
-  background: dark
-  announce: Comfortable service to find and buy airline tickets, <br/> running on modern platform
-  description: |
-    Clickavia provides 
-    __comfortable service to find and buy airline tickets__.
-    These great folks asked to analyze existing codebase and refactor some modules to rise code quality level at first.
-    Later they offered us to develop mobile applications so their customers could search and buy tickets everywhere they go.
-    That work included separate
-    __server-side API__
-    and iPhone/iPad applications (now in alpha).
-  features:
-    1: Code review
-    2: Refactoring (ruby)
-    3: Backend separation
-    4: Server-side API
-    5: iOS development
-  technologies:
-    1: Ruby
-    2: Objective-C
-  methodologies:
-    1: Rapid prototyping
-    2: Scrum
+slug: clickavia
+title: Clickavia
+logo: clickavia_logo.svg
+url: 'http://clickavia.ru/'
+image: 'clickavia.jpg'
+welcome_image: 'clickavia-welcome-bg.jpg'
+background: dark
+announce: Comfortable service to find and buy airline tickets, <br/> running on modern platform
+description: |
+  Clickavia provides 
+  __comfortable service to find and buy airline tickets__.
+  These great folks asked to analyze existing codebase and refactor some modules to rise code quality level at first.
+  Later they offered us to develop mobile applications so their customers could search and buy tickets everywhere they go.
+  That work included separate
+  __server-side API__
+  and iPhone/iPad applications (now in alpha).
+features:
+  1: Code review
+  2: Refactoring (ruby)
+  3: Backend separation
+  4: Server-side API
+  5: iOS development
+technologies:
+  1: Ruby
+  2: Objective-C
+methodologies:
+  1: Rapid prototyping
+  2: Scrum
 
-  story:
-    part1:
-      title: Behind the shiny interface
-      content: |
-        In 2013 we were asked by Clickavia CTO Pavel Bubentsov to review project architecture and code.
-        The company was running quite well while there were some technical problems about its futher development and extension.
-        We checked metrics and took a look at architecture: the codebase needed some optimization.
-        <br><br>
-        We reconsidered the system with Domain–driven design approach and GRASP/SOLID principles.
-        Then made refactoring, separated the project into two applications so the code became much cleaner and easy to understand.
-        This essentially accelerated and simplified overall project development.
-        Codeclimate GPA was improved from 1.8 to 3.0.
-      image: work/clickavia/codeclimate.png
-      image_block_class: codeclimate-block
+story:
+  part1:
+    title: Behind the shiny interface
+    content: |
+      In 2013 we were asked by Clickavia CTO Pavel Bubentsov to review project architecture and code.
+      The company was running quite well while there were some technical problems about its futher development and extension.
+      We checked metrics and took a look at architecture: the codebase needed some optimization.
+      
+      We reconsidered the system with Domain–driven design approach and GRASP/SOLID principles.
+      Then made refactoring, separated the project into two applications so the code became much cleaner and easy to understand.
+      This essentially accelerated and simplified overall project development.
+      Codeclimate GPA was improved from 1.8 to 3.0.
+    image: work/clickavia/codeclimate.png
+    image_block_class: codeclimate-block
 
-    part3:
-      title: Tap is the new click
-      content: |
-        Travel industry is growing really fast and many companies already offer ordering tickets via smartphone or tablet.
-        So it was quite logical decision for Clickavia to create iPhone and iPad apps. As we use lean approach we created
-        clickable lo-fi prototypes that helped us to define project objectives on the first stage.
-      image: work/clickavia/iphone-prototype.png
-      image_block_class: clickavia-iphone-prototype-block
+  part3:
+    title: Tap is the new click
+    content: |
+      Travel industry is growing really fast and many companies already offer ordering tickets via smartphone or tablet.
+      So it was quite logical decision for Clickavia to create iPhone and iPad apps. As we use lean approach we created
+      clickable lo-fi prototypes that helped us to define project objectives on the first stage.
+    image: work/clickavia/iphone-prototype.png
+    image_block_class: clickavia-iphone-prototype-block
 
-    part4:
-      content: |
-        While the wireframes were being tested and refined we also developed a working prototype which allowed us to test network latency
-        and other real-life circumstances. So when we finished prototyping stage we had both wireframes and working examples of how our apps will
-        communicate with server-side API. This stage also allowed us to break the whole app into different modules, write specs for them
-        and improve API documentation.
-      image: work/clickavia/xcode.png
+  part4:
+    content: |
+      While the wireframes were being tested and refined we also developed a working prototype which allowed us to test network latency
+      and other real-life circumstances. So when we finished prototyping stage we had both wireframes and working examples of how our apps will
+      communicate with server-side API. This stage also allowed us to break the whole app into different modules, write specs for them
+      and improve API documentation.
+    image: work/clickavia/xcode.png
 
-    part5:
-      content: |
-        At the same time we created high-fidelity mockups based on wireframes.
-        User experience design and server-side API were synced in their terms and both shaped each other.
-        We came to this when we were refining wireframes, and it helped us to make decisions faster in further development and design, create better
-        design specifications and API documentation.
-      image: work/clickavia/iphone-design.png
-      image_block_class: clickavia-iphone-prototype-block
+  part5:
+    content: |
+      At the same time we created high-fidelity mockups based on wireframes.
+      User experience design and server-side API were synced in their terms and both shaped each other.
+      We came to this when we were refining wireframes, and it helped us to make decisions faster in further development and design, create better
+      design specifications and API documentation.
+    image: work/clickavia/iphone-design.png
+    image_block_class: clickavia-iphone-prototype-block
 
-    part6:
-      content: |
-        This project is an example of how technologies help a company to improve customer experience and succeed in business goals.
-        The prettiest point in software projects is that you can test and refine your processes before applying them in real life.
-        We take that advantage and organize our work to deliver, get feedback and improve the product as soon as possible.
+  part6:
+    content: |
+      This project is an example of how technologies help a company to improve customer experience and succeed in business goals.
+      The prettiest point in software projects is that you can test and refine your processes before applying them in real life.
+      We take that advantage and organize our work to deliver, get feedback and improve the product as soon as possible.
 
 
 

@@ -1,0 +1,42 @@
+- p = locals[:p]
+- bg_url = image_path("projects/#{p.welcome_image}")
+
+.work-story-page
+  %div{ class: "welcome-project welcome-project-#{p.slug} welcome-project-bg-#{p.background}" }
+    .welcome-project-container-image{ style: "background-image: url(#{bg_url})"}
+      .welcome-project-container
+        .container
+          .row
+            .col-md-10.col-md-offset-1.welcome-project-content
+              %h2.welcome-project-header
+                = p.title
+              .welcome-project-subheader
+                = p.announce if p.announce
+              .project-features
+                - if p.features
+                  - features = p.features
+                  - features.each_pair do |k,v|
+                    %span= v
+
+  .welcome-block
+    - if p.story.present?
+      - p.story.each do |s|
+        - part = s[1]
+        .work-story-part
+          .container
+            .row
+              .col-md-8.col-md-offset-2
+                - if part.title.present?
+                  %h2.work-story-header= part.title
+                - if part.content.present?
+                  .article-text
+                    = md part.content
+          - if part.image.present?
+            %div{ class: "story-image #{part.image_block_class || '' } "}
+              %img{src: image_path(part.image)}
+
+= partial 'shared/contact_form', locals: {title: 'Interested? Drop us a line'}
+
+
+
+

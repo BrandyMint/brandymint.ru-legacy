@@ -1,8 +1,8 @@
--#
-  - projects_data = data.work
-  - projects_data.each do |f|
-    = partial 'work/welcome_project_block', locals: {p: f[1][0]}
-= partial 'work/welcome_project_block', locals: {p: data.work.clickavia[0]}
+- projects_data = data.work
+- projects_data.each do |f|
+  = partial 'work/welcome_project_block', locals: {p: f[1]}
+
+-#= partial 'work/welcome_project_block', locals: {p: data.work.clickavia}
 
 
 

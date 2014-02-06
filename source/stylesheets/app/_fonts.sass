@@ -36,11 +36,13 @@ body, p
   font-weight: 300
 
 %sans-serif-font
-  font-family: $sansFontFamily
+  &, p
+    font-family: $sansFontFamily
 
 %serif-font,
 .serif-font
-  font-family: $serifFontFamily
+  &, p
+    font-family: $serifFontFamily
 
 %large-text
   font-size: $largeTextFontSize
@@ -86,8 +88,9 @@ body, p
 
 
 .article-text
-  @extend %serif-font
-
+  &, p
+    @extend %serif-font
+    margin-bottom: $baseLineHeight
 
 textarea
   font-size: $rem
