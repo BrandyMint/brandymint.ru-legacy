@@ -1,12 +1,12 @@
-slug: convead
-title: Convead
-url: 'http://convead.com'
-image: 'convead.jpg'
-welcome_image: 'convead-welcome-bg.jpg'
+slug: lcrm
+title: LCRM
+url: 'http://lcrm.com'
+image: 'lcrm.jpg'
+welcome_image: 'lcrm-welcome-bg.jpg'
 background: dark
 announce: Lead your business to better sales
 description: |
-  __Convead__ is a high-load realtime system and CRM service that reveals your customers
+  __LCRM__ is a high-load realtime system and CRM service that reveals your customers
   behaviour. Define filters and segments for visitors and communicate with clients and 
   newcomers to help them with finding necessary information and purchasing your products.
 features:
@@ -34,8 +34,8 @@ methodologies:
 story:
   part1:
     title: Relations matter
-    image: 'work/convead/convead-ecommerce-en.svg'
-    image_block_class: convead-ecommerce-block
+    image: 'work/lcrm/lcrm-ecommerce-en.svg'
+    image_block_class: lcrm-ecommerce-block
   part2:
     content: |
       Everyone likes to get great customer service: orders processed fast, questions answered in time.
@@ -44,19 +44,19 @@ story:
   part3:
     title: Build your tools
     content: |
-      <a href="http://ipelican.com" target="_blank">iPelican</a>
+      One of our clients is a big company who
       sells to sellers, providing equipment for retailers.
       They know how important is to manage customer relations and they put a lot of attention to it.
       So they decided to create a SaaS application to manage sales team tasks, track website visitors, answer their questions, offer help.
-      When iPelican CEO Alexey Kovalev contacted us, he already had prototypes for this app. It was great to have some constraints and initial ideas
+      When their CEO contacted us, he already had prototypes for this app. It was great to have some constraints and initial ideas
       of how things should work, but in development process a lot has changed.  
-    image: work/convead/convead-visitors.png
+    image: work/lcrm/lcrm-visitors.png
   part4:
     content: |
       The work was split down into two parallel processes: one team was developing client-side widget, a script that was to be embedded
       into website which customers we needed to track; and a managers-side CRM, where website visitor behaviour was tracked.
       Later we added notifications and chat functionality to allow visitors and managers communicate.
-    image: work/convead/convead-widget.png
+    image: work/lcrm/lcrm-widget.png
   part5:
     content: |
       Remember yourself browsing an online shop: every second you waste on getting information reduces your desire to buy.
@@ -66,8 +66,8 @@ story:
       CRM was getting data from API and sending managers actions and messages back.
       This system was built with Faye, Rack (Sinatra), Sidekiq, Postgresql and ElasticSearch.
       Later we rebuilt API with NodeJS to reduce server-side load and make the system scalable.  
-    image: work/convead/convead-scheme.svg
-    image_block_class: convead-scheme-block
+    image: work/lcrm/lcrm-scheme.svg
+    image_block_class: lcrm-scheme-block
   part6:
     content: |
       But managers who use CRM are people, too. They deserve an app where interactions are smooth and there and pages do not reload on every change.
@@ -77,7 +77,7 @@ story:
   part7:
     title: It works
     content: |
-      iPelican team use Convead to provide better customer service, improve their metrics and increase revenue.
+      Sales team use LCRM to provide better customer service, improve their metrics and increase revenue.
       <br><br>
       Current code tests coverage is 90%, Code Climate GPA is 3.52.
       <br>

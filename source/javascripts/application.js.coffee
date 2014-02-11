@@ -13,6 +13,11 @@ $ ->
   else
     @isMobile = false
 
+  $('@clickable-block').on 'click', () ->
+    url = $(@).data('href')
+    console.log url
+    window.location.href = url
+
   coverImageHeight = $('@cover-image').height()
 
   navbarMenuBlock = $('@navbar-menu')

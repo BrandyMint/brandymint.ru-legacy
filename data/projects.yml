@@ -235,5 +235,23 @@
   technologies:
     1: Ruby on Rails
   methodologies:
-    1: Search engine with domain–driven design
+    1: Domain–driven design
+
+-
+  slug: gridology
+  title: Gridology
+  image: 'gridology.jpg'
+  description: |
+    In 2011 we built enterprise social network for
+    Federal Grid Company of Unified Energy System.
+    This complex application included both social network and an API for external applications (Knowledge base, Corporate website).
+    Network has such features as news feeds with reposts, messages, groups, following, message boards, search.
+  features:
+    1: Enterprise social network
+    2: API for external applications
+  technologies:
+    1: Ruby on Rails
+    2: Javascript
+  methodologies:
+    1: Agile
 

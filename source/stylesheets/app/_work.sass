@@ -30,10 +30,17 @@
   padding:
     top: 20px
     bottom: 20px
-
-.project-image
-  margin-bottom: 10px
-  +border-radius(4px)
+  
+  .project-image-block
+    margin-bottom: 10px
+  //.no-touch &
+    .project-image-block
+    .project-image
+      +transition(all 0.3s ease-out)
+      +transform(scale(0.9))
+    &:hover
+      .project-image
+        +transform(scale(1))
 
 .project-title
   margin: 20px 0

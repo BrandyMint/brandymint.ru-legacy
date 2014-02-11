@@ -21,3 +21,19 @@
   @media screen and (max-width: $screen-xs)
     min-height: $height-xs
 
+
+// grayscale      ex: filter: grayscale(100%);
+// sepia          ex: filter: sepia(100%);
+// saturate       ex: filter: saturate(0%);
+// hue-rotate     ex: filter: hue-rotate(45deg);
+// invert         ex: filter: invert(100%);
+// brightness     ex: filter: brightness(15%);
+// contrast       ex: filter: contrast(200%);
+// blur           ex: filter: blur(2px);
+
+=filter( $var )
+  -webkit-filter: $var
+  -moz-filter: $var
+  -ms-filter: $var
+  -o-filter: $var
+  filter: $var

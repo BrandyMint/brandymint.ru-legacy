@@ -1,7 +1,8 @@
 - p = locals[:p]
 - bg_url = image_path("projects/#{p.welcome_image}")
+- url = url_for("/work/#{p.slug}")
 
-%div{ class: "welcome-project welcome-project-#{p.slug} welcome-project-bg-#{p.background}" }
+%div{ class: "welcome-project welcome-project-#{p.slug} welcome-project-bg-#{p.background}", role: 'clickable-block', data: {href: url} }
   .welcome-project-container-image{ style: "background-image: url(#{bg_url})"}
     .welcome-project-container
       .container
@@ -11,6 +12,6 @@
               = p.title
             .welcome-project-subheader
               = p.announce
-            = link_to url_for("/work/#{p.slug}"), class: 'welcome-project-btn' do
+            = link_to url, class: 'welcome-project-btn' do
               Read more
 
