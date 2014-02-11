@@ -26,10 +26,10 @@ navbar_state: active
                 = p.title
               - if p.logo
                 %img{ src: image_path("projects/#{p.logo}") }
-            .project-features
-              - features = p.features if p.features
-              - features.each_pair do |k,v|
-                %span= v
+          .project-features
+            - features = p.features if p.features
+            - features.each_pair do |k,v|
+              %span= v
           %p.project-description
             = md p.description if p.description
           %h5.technology-title Technologies
