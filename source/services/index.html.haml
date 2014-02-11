@@ -39,27 +39,7 @@ body_class: services-page body-navbar-white
                 - s.items.each_with_index do |item, i|
                   %li= item
 
-
-
-
-
-
-      -#
-        We help you to reveal 
-        %em possibilities
-        -#.linebreak-all
-        and
-        %em constraints
-        and turn them into digital products.
-        -#.linebreak-all
-        Starting with a prototype, we iterate,
-        -#.linebreak-all
-        come to a
-        %em common vision
-        with you and build
-        %em better products.
-        This is how we create solutions to improve your
-        %em customer experience.
+= partial 'welcome/projects_more', locals: {title: "our work"}
 
 
 

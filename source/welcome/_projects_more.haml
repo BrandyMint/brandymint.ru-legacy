@@ -1,6 +1,8 @@
+- title = locals[:title] || 'more projects'
+
 .welcome-block
   .container
     .row
       .col-md-8.col-md-offset-2.text-center
-        = link_to 'more projects', url_for('work/'), class: 'btn btn-primary-outline'
+        = link_to title, url_for('work/'), class: 'btn btn-primary-outline'
 

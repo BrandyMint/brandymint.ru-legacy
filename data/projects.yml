@@ -15,6 +15,7 @@
     1: Test-driven development
     2: Scrum
 
+
 -
   slug: swapurban
   logo: swapurban_logo.svg
@@ -77,6 +78,69 @@
     1: Rapid prototyping
     2: Scrum
     3: Test–driven development
+
+-
+  slug: superuff
+  title: Super Dog
+  image: 'superuff.jpg'
+  google_play: 'https://play.google.com/store/apps/details?id=com.brandymint.doggy.free'
+  description: |
+    Super Dog is a cross-platform mobile app built to help everyone with dog training.
+    It contains 30 excercises to study in tree steps each. Simple and cute illustrations are the core of the excercises explanation.
+  features:
+    1: PhoneGap development
+  technologies:
+    1: CoffeeScript
+    2: Backbone
+    3: Marionette
+  methodologies:
+    1: Test-driven development
+    2: Scrum
+
+-
+  slug: mashtime
+  title: Mashtime
+  image: 'mashtime.jpg'
+  url: 'http://mashtime.ru'
+  description: |
+    We built Mashtime to track our working hours so we can analyze how we worked on projects and plan further work
+    or estimate upcoming projects better. It's made for teams, projects and freelancers.
+    Of course, it is responsive so everyone can record his hours on the go.
+    Mashtime remembers the way you use it — more tracking time or more analyzing reports — and helps you
+    to find dashboard pages that are important for you.
+  features:
+    1: Time tracking
+    2: Screen and print-ready reports
+    3: Adapting to user behaviour
+  technologies:
+    1: Ruby on Rails
+    2: CoffeeScript
+  methodologies:
+    1: Test-driven development
+    2: Agile
+    3: Scrum
+
+-
+  slug: potee
+  title: Potee
+  image: 'potee.jpg'
+  url: 'http://potee.me'
+  description: |
+    Potee started as a Rails Rumble hackathon projects. We teamed up with
+    <a href="http://genue.ru/" target="_blank">Genue</a>
+    founder Evgeny Luchinin to bring to life his idea about visual task management.
+    We created a prototype in 48 hours and later returned to refactor it deeply and refine user experience.
+  features:
+    1: Visual task management
+  technologies:
+    1: Ruby on Rails
+    2: CoffeeScript
+    3: Backbone
+    4: Marionette
+  methodologies:
+    1: Agile
+    2: Scrum
+
 -
   slug: hrexpert
   title: HRexpert
