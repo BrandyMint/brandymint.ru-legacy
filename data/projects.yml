@@ -1,7 +1,9 @@
 -
   slug: rocketwash
   title: Rocketwash
-  image: 'rocketwash.jpg'
+  image: 'rocketwash.png'
+  device: iphone
+  device_scale: half
   description: |
     We like cases when modern technologies help you in everyday life.
     Rocketwash is a service which provides you ordering a carwash from iOS and Android smartphone.
@@ -20,13 +22,13 @@
   slug: swapurban
   logo: swapurban_logo.svg
   url: http://swapurban.com
-  image: 'swapurban.jpg'
+  image: 'swapurban.png'
   description: |
     More and more people prefer to exchange between each other instead of buying all new.
     __SwapUrban__
     focuses on this fact and offers a service to swap books.
     It is based on
-    __Amazon's book search__
+    __Amazon book search__
     so you can find any book there, add it to your wishlist and get notified if someone offers it (or get rid of your unused books).
     __Swap process__
     has its own iterface with price balance between offers and wants.
@@ -53,7 +55,7 @@
   slug: investcafe
   logo: investcafe_logo.svg
   url: http://investcafe.ru
-  image: 'investcafe.jpg'
+  image: 'investcafe.png'
   description: |
     Investcafe is Russia’s first independent research firm that provides institutional investors with unbiased analysis 
     and insight from a team of experts.
@@ -82,7 +84,9 @@
 -
   slug: superuff
   title: Super Dog
-  image: 'superuff.jpg'
+  image: 'superuff.png'
+  device: iphone5s
+  device_scale: half
   google_play: 'https://play.google.com/store/apps/details?id=com.brandymint.doggy.free'
   description: |
     Super Dog is a cross-platform mobile app built to help everyone with dog training.
@@ -100,7 +104,7 @@
 -
   slug: mashtime
   title: Mashtime
-  image: 'mashtime.jpg'
+  image: 'mashtime.png'
   url: 'http://mashtime.ru'
   description: |
     We built Mashtime to track our working hours so we can analyze how we worked on projects and plan further work
@@ -123,7 +127,7 @@
 -
   slug: potee
   title: Potee
-  image: 'potee.jpg'
+  image: 'potee.png'
   url: 'http://potee.me'
   description: |
     Potee started as a Rails Rumble hackathon projects. We teamed up with
@@ -145,7 +149,8 @@
   slug: hrexpert
   title: HRexpert
   appstore: 'https://itunes.apple.com/ru/app/hr-ehpert/id665800658?l=en&mt=8'
-  image: 'hrexpert.jpg'
+  image: 'hrexpert.png'
+  device: ipad landscape
   description: |
     iPad application for HR specialists that saves time and helps to organize interviews.
   features:
@@ -158,7 +163,9 @@
 -
   slug: chebru
   title: Cheb.ru android app
-  image: 'chebru.jpg'
+  image: 'chebru.png'
+  device: nexus5
+  device_scale: half
   google_play: 'https://play.google.com/store/apps/details?id=ru.brandymint.chebru'
   description: |
     A guide to Cheboksary city with offline database, streets and companies search, location-based smart search results.
@@ -173,7 +180,8 @@
 -
   slug: anna
   title: "Coats'n'Shorts"
-  image: 'anna.jpg'
+  image: 'anna.png'
+  device: ipad white
   image_link: 'http://coatsnshorts.com/'
   appstore: 'https://itunes.apple.com/ru/app/anin-den/id583847885?mt=8'
   description: |
@@ -195,7 +203,9 @@
 -
   slug: riolis
   title: Riolis
-  image: 'riolis.jpg'
+  image: 'riolis.png'
+  device: iphone
+  device_scale: half
   description: |
     Riolis is well-known by its embroidery kits.
     We developed API for mobile apps, prototyped, designed and created iPhone, iPad and Android versions.
@@ -213,7 +223,8 @@
 -
   slug: kribrum
   title: Kribrum
-  image: 'kribrum.jpg'
+  image: 'kribrum.png'
+  device: ipad landscape
   description: |
     iPad app for Kribrum, social media and news monitoring service built for enterprise use.
   features:
@@ -227,7 +238,7 @@
 -
   slug: villanakipre
   title: Villanakipre.ru
-  image: 'villanakipre.jpg'
+  image: 'villanakipre.png'
   description: |
     Backend development for Villanakipre.ru, website focused on realty rent and sale on Cyprus.
   features:
@@ -240,7 +251,7 @@
 -
   slug: gridology
   title: Gridology
-  image: 'gridology.jpg'
+  image: 'ges.png'
   description: |
     In 2011 we built enterprise social network for
     Federal Grid Company of Unified Energy System.
