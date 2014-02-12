@@ -13,6 +13,52 @@
 
 /* GENERAL STYLE
 
+$deviceScalesList: 1 full, 0.75 three-fourth, 0.5 half, 0.33 third, 0.25 quarter
+
+$macbookPadding: 61.775701%
+$macbookScreen: top 11.0438729%, bottom 14.6747352%, left 13.364486%, right 13.364486%
+
+=makeDevice($deviceName: 'macbook', $devicePadding: $macbookPadding, $deviceScreen: $macbookScreen, $deviceScale: nth($deviceScalesList, 1))
+  .device-#{$deviceName}-#{nth($deviceScale, 2)}
+    position: relative
+    width: 100% * nth($deviceScale, 1)
+    //padding-bottom: 61.775701% * $deviceScale
+    padding-bottom: $devicePadding * nth($deviceScale, 1)
+    > .device
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      width: 100%
+      height: 100%
+      background-size: 100% 100%
+      background-repeat: no-repeat
+      +svg-bg-image("devices/macbook/#{$deviceName}")
+      >
+        .screen
+          position: absolute
+          overflow: hidden
+          @each $attr in $deviceScreen
+            #{nth($attr,1)}: #{nth($attr,2)}
+        .button
+          position: absolute
+          top: 0
+          left: 0
+          display: none
+          overflow: hidden
+          border-radius: 100%
+          -webkit-border-radius: 100%
+          -moz-border-radius: 100%
+          cursor: pointer
+
+@for $i from 1 through length($deviceScalesList)
+  +makeDevice('macbook', $macbookPadding, $macbookScreen, nth($deviceScalesList, $i))
+
+
+
+// Transitional styles below:
+
 =device-mockup($deviceScale: 1)
   //.device-mockup
   position: relative
@@ -248,8 +294,7 @@
 .device-mockup-image
   width: 100%
 
-//@each $scale in 2 double, 0.75 three-fourth, 0.5 half, 0.33 third, 0.25 quarter
-@each $scale in  1 full, 0.75 three-fourth, 0.5 half, 0.33 third, 0.25 quarter
+@each $scale in  $deviceScalesList
   .device-mockup-#{nth($scale, 2)}
     +device-mockup(nth($scale, 1))
 
