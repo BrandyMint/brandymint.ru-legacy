@@ -203,7 +203,9 @@
 -
   slug: riolis
   title: Riolis
-  image: 'riolis.jpg'
+  image: 'riolis.png'
+  device: iphone
+  device_scale: half
   description: |
     Riolis is well-known by its embroidery kits.
     We developed API for mobile apps, prototyped, designed and created iPhone, iPad and Android versions.
@@ -221,7 +223,8 @@
 -
   slug: kribrum
   title: Kribrum
-  image: 'kribrum.jpg'
+  image: 'kribrum.png'
+  device: ipad landscape
   description: |
     iPad app for Kribrum, social media and news monitoring service built for enterprise use.
   features:
@@ -235,7 +238,7 @@
 -
   slug: villanakipre
   title: Villanakipre.ru
-  image: 'villanakipre.jpg'
+  image: 'villanakipre.png'
   description: |
     Backend development for Villanakipre.ru, website focused on realty rent and sale on Cyprus.
   features:
@@ -248,7 +251,7 @@
 -
   slug: gridology
   title: Gridology
-  image: 'gridology.jpg'
+  image: 'ges.png'
   description: |
     In 2011 we built enterprise social network for
     Federal Grid Company of Unified Energy System.
