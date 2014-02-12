@@ -1,0 +1,13 @@
+- device = locals[:device]
+- src = locals[:src]
+- alt = locals[:alt]
+
+- device = 'iphone5s' if device == 'iphone'
+- scale = locals[:scale].present? ? locals[:scale] : 'full'
+
+%div{class: "device-image device-mockup-#{scale} #{device}"}
+  .device
+    .screen
+      %img.device-mockup-image{src: "#{src}", alt: "#{alt}" }
+    .button
+      / You can hook the "home button" to some JavaScript events or just remove it

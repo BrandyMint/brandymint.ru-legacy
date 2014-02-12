@@ -37,3 +37,12 @@
   -ms-filter: $var
   -o-filter: $var
   filter: $var
+
+=svg-bg($name, $extension: png, $color: transparent, $position: 0 0, $repeat: no-repeat, $imgsPath: $imagesPath)
+  background: url("#{$imgsPath}/#{$name}.#{$extension}") $color $position $repeat
+  background: none url("#{$imgsPath}/#{$name}.svg") $color $position $repeat
+
+=svg-bg-image($name, $imgsPath: $imagesPath)
+  background-image: url("#{$imgsPath}/#{$name}.png")
+  background-image: url("#{$imgsPath}/#{$name}.svg")
+

@@ -4,6 +4,7 @@ navbar_state: active
 ---
 
 .work-page
+
   = partial 'welcome/projects'
   - projects = data.projects
   - projects.each_with_index do |p,i|
@@ -13,7 +14,8 @@ navbar_state: active
         .col-md-5
           .project-image-block
             - if p.image
-              %img.project-image.img-responsive{alt: "Brandymint projects: #{p.slug}", src: image_path("projects/#{p.image}")  }
+              -#%img.project-image.img-responsive{alt: "Brandymint projects: #{p.slug}", src: image_path("projects/#{p.image}")  }
+              = partial 'work/device', locals: {device: "#{p.device}", scale: "#{p.device_scale}", src: image_path("projects/#{p.image}"), alt: "Brandymint projects: #{p.slug}" }
         .col-md-7
           %h2.project-title
             - if p.url.present? || p.google_play.present? || p.appstore.present?
