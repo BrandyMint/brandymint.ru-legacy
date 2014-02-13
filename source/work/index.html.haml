@@ -7,60 +7,8 @@ navbar_state: active
   = partial 'welcome/projects'
   - projects = data.projects
   .projects-container
-    - projects.each_with_index do |p,i|
+    - projects.each do |p|
       .project-container
         .container
-          -#= partial "projects/#{p}.haml"
-          .row.project-block
-            .col-md-5
-              .project-image-block
-                - if p.image
-                  -#%img.project-image.img-responsive{alt: "Brandymint projects: #{p.slug}", src: image_path("projects/#{p.image}")  }
-                  = partial 'work/device', locals: {device: "#{p.device}", scale: "#{p.device_scale}", src: image_path("projects/#{p.image}"), alt: "Brandymint projects: #{p.slug}" }
-            .col-md-7
-              %h3.project-title
-                - if p.url.present? || p.google_play.present? || p.appstore.present?
-                  %a{href: p.url || p.appstore || p.google_play, target: :blank}
-                    - if p.title
-                      = p.title
-                    - if p.logo
-                      %img{ src: image_path("projects/#{p.logo}") }
-                - else
-                  - if p.title
-                    = p.title
-                  - if p.logo
-                    %img{ src: image_path("projects/#{p.logo}") }
-              .project-features
-                - features = p.features if p.features
-                - features.each_pair do |k,v|
-                  %span= v
-              %p.project-description
-                = md p.description if p.description
-              %h5.technology-title Technologies
-              .row
-                .col-md-7
-                  .project-technologies
-                    - technologies = p.technologies if p.technologies
-                    - technologies.each_pair do |k,v|
-                      %span= v
-                  %h5.technology-title Methodologies
-                  .project-technologies
-                    - methodologies = p.methodologies if p.methodologies
-                    - methodologies.each_pair do |k,v|
-                      %span= v
-                  %br
-                .col-md-5
-                  - if p.url.present?
-                    %a.pull-right.btn.btn-default.btn-project-link{href: p.url, target: :blank}
-                      = p.url.gsub('http://', '').gsub('/','')
-                      &rarr;
-                  .clearfix
-                  - if p.appstore.present?
-                    %a.pull-right{href: p.appstore, target: :blank}
-                      = image_tag('badge_appstore-lrg.gif')
-                  .clearfix
-                  - if p.google_play.present?
-                    %a.pull-right{href: p.google_play, target: :blank}
-                      = image_tag('google_play.png')
-                  .clearfix
+          = partial "work/project_block", locals: {p: p}
 

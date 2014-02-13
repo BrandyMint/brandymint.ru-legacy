@@ -1,0 +1,65 @@
+- p = locals[:p]
+
+.row.project-block
+  .col-md-5
+    .project-image-block
+      - if p.devices.present?
+        .carousel.slide{ data: {ride: "carousel"}, role: "project-devices-carousel-#{p.slug}" }
+          - if p.devices.count > 1
+            %ol.carousel-indicators
+              - p.devices.each_with_index do |d, i|
+                %li{"data-slide-to" => i, "data-target" => "[role='project-devices-carousel-#{p.slug}']", class: "#{i == 0 ? 'active' : ''}"}
+          .carousel-inner
+            - p.devices.each_with_index do |d, i|
+              %div{ class: "item #{i == 0 ? 'active' : ''}", role: 'carousel-item'}
+                = partial 'work/device', locals: {device: "#{d.device}", scale: "#{d.device_scale}", link: p.url || p.appstore || p.google_play, src: image_path("projects/#{d.image}"), alt: "Brandymint projects: #{p.slug}" }
+                - if d.device.present? && p.devices.count > 1
+                  %div{class: "project-block-os-icon #{device_type d.device}"}
+      - elsif p.image.present?
+        = partial 'work/device', locals: {device: "#{p.device}", scale: "#{p.device_scale}", link: p.url || p.appstore || p.google_play, src: image_path("projects/#{p.image}"), alt: "Brandymint projects: #{p.slug}" }
+
+  .col-md-7
+    %h3.project-title
+      - if p.url.present? || p.google_play.present? || p.appstore.present?
+        %a{href: p.url || p.appstore || p.google_play, target: :blank}
+          - if p.title
+            = p.title
+          - if p.logo
+            %img{ src: image_path("projects/#{p.logo}") }
+      - else
+        - if p.title
+          = p.title
+        - if p.logo
+          %img{ src: image_path("projects/#{p.logo}") }
+    .project-features
+      - features = p.features if p.features
+      - features.each_pair do |k,v|
+        %span= v
+    .project-description
+      %p= md p.description if p.description.present?
+      -#= truncate_words(p.description, length: 80) if p.description
+    .row
+      .col-md-6
+        %h5.technology-title Technologies
+        .project-technologies
+          - technologies = p.technologies if p.technologies
+          - technologies.each_pair do |k,v|
+            %span= v
+      .col-md-6
+        %h5.technology-title Methodologies
+        .project-technologies
+          - methodologies = p.methodologies if p.methodologies
+          - methodologies.each_pair do |k,v|
+            %span= v
+    %br
+    - if p.url.present?
+      %a.btn.btn-default.btn-project-link{href: p.url, target: :blank}
+        = p.url.gsub('http://', '').gsub('/','')
+        &rarr;
+    - if p.appstore.present?
+      %a{href: p.appstore, target: :blank}
+        = image_tag('badge_appstore-lrg.gif')
+    - if p.google_play.present?
+      %a{href: p.google_play, target: :blank}
+        = image_tag('google_play.png')
+

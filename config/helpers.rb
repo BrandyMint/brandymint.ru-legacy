@@ -46,4 +46,17 @@ module ApplicationHelpers
     html = html.gsub(/^\s*<p\s*>|<\s*\/\s*p\s*>\s*$/i, '') if options[:no_p]
     html
   end
+
+  def device_type(device)
+    os = ''
+    if device.downcase.match(/(iphone|ipad|ipod)/)
+      os = 'ios'
+    elsif device.downcase.match(/(s3|s4|galaxy|nexus|samsung)/)
+      os = 'android'
+    else
+      os = 'desktop'
+    end
+    os
+  end
+
 end

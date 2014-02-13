@@ -23,11 +23,12 @@
 
 
 .project-container
-  +translate3d(0,0,0)
+  &, *
+    +translate3d(0,0,0)
   border-bottom: 1px solid $grayLightest
   padding:
     top: 3em
-    bottom: 3em
+    bottom: 0
   &:first-child
     padding-top: 4em
   &:last-child
@@ -50,12 +51,48 @@
         +transform(scale(1))
         opacity: 1
 
+.project-block
+  padding-bottom: $grid-gutter-width * 2
 
+.project-container
+  &:hover
+    .carousel-indicators
+      display: block
 
 .project-image-block
-  margin-bottom: 10px
+  margin-top: 2em
   .device-image
     margin: 0 auto
+  .carousel-indicators
+    top: -3em
+    display: none
+    li
+      border-color: $grayLight
+      +transition(background 0.2s ease, border 0.2s ease)
+      &.active
+        border-color: transparent
+        background: $grayLight
+
+.project-block-os-icon
+  width: 64px
+  height: 64px
+  +border-radius(64px / 1.43)
+  position: absolute
+  top: 20px
+  right: 20px
+  margin-left: -32px
+  border: 1px solid $grayLightest
+  background:
+    color: #fff
+    size: 50% 50%
+    position: center center
+    repeat: no-repeat
+  @each $p in ios, android
+    &.#{$p}
+      +svg-bg-image("device_icons/#{$p}")
+  &.ios
+    background-position-y: 40%
+
 
 .project-title
   margin: 20px 0
