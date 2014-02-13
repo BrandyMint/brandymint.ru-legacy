@@ -83,15 +83,29 @@ $ ->
 
 
 ((app) ->
-  projectSlides = $('[role*=project-devices-carousel]')
-  projectSlides.carousel
-    interval: 5000
-    pause: false
+  projectBlock = $('@project-block')
+  slideSelector = "[role*=project-devices-carousel]"
+  projectSlides = $(slideSelector)
+  projectSlides
+    .carousel
+      interval: 5000
+      pause: false
+    .carousel 'pause'
   slideHeights = []
   projectSlides.each ->
+    $(@).carousel 'pause'
     $(@).find('@carousel-item').each ->
       slideHeights.push $(@).height()
     maxHeight = Math.max.apply(Math, slideHeights)
     $(@).find('@carousel-item').each ->
       $(@).css('height', maxHeight + 'px')
+    unless App.isMobile
+      projectBlock
+        .on 'mouseover', () ->
+          $(@).find(slideSelector).carousel('cycle')
+        .on 'mouseout', () ->
+          $(@).find(slideSelector).carousel('pause')
+
+
+
  )(window.App ||= {})

@@ -1,10 +1,10 @@
 - p = locals[:p]
 
-.row.project-block
+.row.project-block{role: 'project-block'}
   .col-md-5
     .project-image-block
       - if p.devices.present?
-        .carousel.slide{ data: {ride: "carousel"}, role: "project-devices-carousel-#{p.slug}" }
+        .carousel.slide{ role: "project-devices-carousel-#{p.slug}" }
           - if p.devices.count > 1
             %ol.carousel-indicators
               - p.devices.each_with_index do |d, i|
