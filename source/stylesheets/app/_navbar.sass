@@ -11,6 +11,9 @@ $navbarToggleZindex-xs: 1200
 =navbarTransition
   +transition(transform 0.6s ease, opacity 0.6s ease, background 0.6s ease)
 
+.navbar-transitions
+  +navbarTransition
+
 .navbar.application-navbar
   background: $navbarBackgroundColor
   border-bottom: 0
@@ -68,7 +71,6 @@ $navbarToggleZindex-xs: 1200
 
 .app-nav
   +transformsFix
-  +navbarTransition
   +navbarHide
   margin:
     right: 19px

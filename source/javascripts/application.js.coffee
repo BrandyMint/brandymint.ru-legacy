@@ -6,21 +6,14 @@
 window.App ||= {}
 
 $ ->
-  $('@clickable-block').on 'click', () ->
-    url = $(@).data('href')
-    window.location.href = url
-
-
-  App.navbarToggleBtn.on 'click', () ->
-    App.toggleMenu()
-
-  lastScrollTop = 0
   if App.isMobile == true
     App.appNavbar.addClass('navbar-mobile-device')
     App.navbarMenuBlock.removeClass 'active'
   else
     unless $('body').hasClass('hide-navbar-menu')
+      App.navbarMenuBlock.addClass('.navbar-transitions')
       App.toggleMenu(App.navbarToggleBtn, App.navbarMenuBlock)
+    lastScrollTop = 0
     $(window).on 'scroll', (event) ->
       st = $(this).scrollTop()
       if st > 100
@@ -34,7 +27,15 @@ $ ->
         #App.hideNavbar()
       lastScrollTop = st
 
-(  (app) ->
+  $('@clickable-block').on 'click', () ->
+    url = $(@).data('href')
+    window.location.href = url
+
+  App.navbarToggleBtn.on 'click', () ->
+    App.toggleMenu()
+
+
+((app) ->
   userAgent = navigator.userAgent
   android = userAgent.match(/(Android)/g)
   ios = userAgent.match(/(iPhone)/g) || userAgent.match(/(iPad)/g)
