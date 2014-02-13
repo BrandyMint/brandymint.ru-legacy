@@ -5,16 +5,16 @@
     .project-image-block
       - if p.devices.present?
         .carousel.slide{ data: {ride: "carousel"}, role: "project-devices-carousel-#{p.slug}" }
-          %ol.carousel-indicators
-            -#.carousel-devices-indicators
-            - p.devices.each_with_index do |d, i|
-              %li{"data-slide-to" => i, "data-target" => "[role='project-devices-carousel-#{p.slug}']", class: "#{i == 0 ? 'active' : ''}"}
-                -# if d.device.present?
-                  = image_tag("device_icons/#{device_os d.device})
+          - if p.devices.count > 1
+            %ol.carousel-indicators
+              - p.devices.each_with_index do |d, i|
+                %li{"data-slide-to" => i, "data-target" => "[role='project-devices-carousel-#{p.slug}']", class: "#{i == 0 ? 'active' : ''}"}
           .carousel-inner
             - p.devices.each_with_index do |d, i|
               %div{ class: "item #{i == 0 ? 'active' : ''}", role: 'carousel-item'}
                 = partial 'work/device', locals: {device: "#{d.device}", scale: "#{d.device_scale}", link: p.url || p.appstore || p.google_play, src: image_path("projects/#{d.image}"), alt: "Brandymint projects: #{p.slug}" }
+                - if d.device.present? && p.devices.count > 1
+                  %div{class: "project-block-os-icon #{device_type d.device}"}
       - elsif p.image.present?
         = partial 'work/device', locals: {device: "#{p.device}", scale: "#{p.device_scale}", link: p.url || p.appstore || p.google_play, src: image_path("projects/#{p.image}"), alt: "Brandymint projects: #{p.slug}" }
 

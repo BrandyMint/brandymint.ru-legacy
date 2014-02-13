@@ -60,10 +60,11 @@
       display: block
 
 .project-image-block
+  margin-top: 2em
   .device-image
     margin: 0 auto
   .carousel-indicators
-    top: -30px
+    top: -3em
     display: none
     li
       border-color: $grayLight
@@ -71,6 +72,27 @@
       &.active
         border-color: transparent
         background: $grayLight
+
+.project-block-os-icon
+  width: 64px
+  height: 64px
+  +border-radius(64px / 1.43)
+  position: absolute
+  top: 20px
+  right: 20px
+  margin-left: -32px
+  border: 1px solid $grayLightest
+  background:
+    color: #fff
+    size: 50% 50%
+    position: center center
+    repeat: no-repeat
+  @each $p in ios, android
+    &.#{$p}
+      +svg-bg-image("device_icons/#{$p}")
+  &.ios
+    background-position-y: 40%
+
 
 .project-title
   margin: 20px 0

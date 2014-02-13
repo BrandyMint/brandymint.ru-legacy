@@ -98,6 +98,11 @@
       image: 'superuff.png'
       device: iphone5s
       device_scale: half
+    -
+      image: 'superuff.png'
+      device: nexus5
+      device_scale: half
+
   google_play: 'https://play.google.com/store/apps/details?id=com.brandymint.doggy.free'
   description: |
     Super Dog is a cross-platform mobile app built to help everyone with dog training.
@@ -227,6 +232,16 @@
       image: 'riolis.png'
       device: iphone
       device_scale: half
+    -
+      image: 'riolis.png'
+      device: ipad landscape
+    -
+      image: 'riolis.png'
+      device: nexus5
+      device_scale: half
+    -
+      image: 'riolis.png'
+      device: nexus7 landscape
   description: |
     Riolis is well-known by its embroidery kits.
     We developed API for mobile apps, prototyped, designed and created iPhone, iPad and Android versions.
