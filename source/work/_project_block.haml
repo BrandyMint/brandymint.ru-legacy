@@ -2,19 +2,18 @@
 
 .row.project-block
   .col-md-5
-    - if p.devices.present?
-      .carousel.slide{ data: {ride: "carousel"}, role: "project-devices-carousel-#{p.slug}" }
-        -#%ol.carousel-indicators
-          - p.devices.each_with_index do |d, i|
-            %li{"data-slide-to" => i, "data-target" => "[role='project-devices-carousel-#{p.slug}']", class: "#{i == 0 ? 'active' : ''}"}
-        .carousel-inner
-          - p.devices.each_with_index do |d, i|
-            %div{ class: "item #{i == 0 ? 'active' : ''}"}
-              .project-image-block
-                = partial 'work/device', locals: {device: "#{d.device}", scale: "#{d.device_scale}", src: image_path("projects/#{d.image}"), alt: "Brandymint projects: #{p.slug}" }
-    - elsif p.image.present?
-      .project-image-block
-        = partial 'work/device', locals: {device: "#{p.device}", scale: "#{p.device_scale}", src: image_path("projects/#{p.image}"), alt: "Brandymint projects: #{p.slug}" }
+    .project-image-block
+      - if p.devices.present?
+        .carousel.slide{ data: {ride: "carousel"}, role: "project-devices-carousel-#{p.slug}" }
+          -#%ol.carousel-indicators
+            - p.devices.each_with_index do |d, i|
+              %li{"data-slide-to" => i, "data-target" => "[role='project-devices-carousel-#{p.slug}']", class: "#{i == 0 ? 'active' : ''}"}
+          .carousel-inner
+            - p.devices.each_with_index do |d, i|
+              %div{ class: "item #{i == 0 ? 'active' : ''}", role: 'carousel-item'}
+                = partial 'work/device', locals: {device: "#{d.device}", scale: "#{d.device_scale}", link: p.url || p.appstore || p.google_play, src: image_path("projects/#{d.image}"), alt: "Brandymint projects: #{p.slug}" }
+      - elsif p.image.present?
+        = partial 'work/device', locals: {device: "#{p.device}", scale: "#{p.device_scale}", link: p.url || p.appstore || p.google_play, src: image_path("projects/#{p.image}"), alt: "Brandymint projects: #{p.slug}" }
 
   .col-md-7
     %h3.project-title
@@ -33,33 +32,31 @@
       - features = p.features if p.features
       - features.each_pair do |k,v|
         %span= v
-    %p.project-description
-      = md p.description if p.description
-    %h5.technology-title Technologies
+    .project-description
+      %p= md p.description if p.description.present?
+      -#= truncate_words(p.description, length: 80) if p.description
     .row
-      .col-md-7
+      .col-md-6
+        %h5.technology-title Technologies
         .project-technologies
           - technologies = p.technologies if p.technologies
           - technologies.each_pair do |k,v|
             %span= v
+      .col-md-6
         %h5.technology-title Methodologies
         .project-technologies
           - methodologies = p.methodologies if p.methodologies
           - methodologies.each_pair do |k,v|
             %span= v
-        %br
-      .col-md-5
-        - if p.url.present?
-          %a.pull-right.btn.btn-default.btn-project-link{href: p.url, target: :blank}
-            = p.url.gsub('http://', '').gsub('/','')
-            &rarr;
-        .clearfix
-        - if p.appstore.present?
-          %a.pull-right{href: p.appstore, target: :blank}
-            = image_tag('badge_appstore-lrg.gif')
-        .clearfix
-        - if p.google_play.present?
-          %a.pull-right{href: p.google_play, target: :blank}
-            = image_tag('google_play.png')
-        .clearfix
+    %br
+    - if p.url.present?
+      %a.btn.btn-default.btn-project-link{href: p.url, target: :blank}
+        = p.url.gsub('http://', '').gsub('/','')
+        &rarr;
+    - if p.appstore.present?
+      %a{href: p.appstore, target: :blank}
+        = image_tag('badge_appstore-lrg.gif')
+    - if p.google_play.present?
+      %a{href: p.google_play, target: :blank}
+        = image_tag('google_play.png')
 

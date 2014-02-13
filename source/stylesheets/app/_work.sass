@@ -28,7 +28,7 @@
   border-bottom: 1px solid $grayLightest
   padding:
     top: 3em
-    bottom: 3em
+    bottom: 0
   &:first-child
     padding-top: 4em
   &:last-child
@@ -51,12 +51,16 @@
         +transform(scale(1))
         opacity: 1
 
-
+.project-block
+  padding-bottom: $grid-gutter-width * 2
 
 .project-image-block
-  margin-bottom: 10px
   .device-image
     margin: 0 auto
+  .item
+    //@media screen and (min-width: $screen-md)
+      height: $coverImageHeight
+      overflow: hidden
 
 .project-title
   margin: 20px 0

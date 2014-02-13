@@ -46,4 +46,5 @@ module ApplicationHelpers
     html = html.gsub(/^\s*<p\s*>|<\s*\/\s*p\s*>\s*$/i, '') if options[:no_p]
     html
   end
+
 end

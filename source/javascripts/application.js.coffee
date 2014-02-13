@@ -10,6 +10,7 @@ $ ->
     url = $(@).data('href')
     window.location.href = url
 
+
   App.navbarToggleBtn.on 'click', () ->
     App.toggleMenu()
 
@@ -33,7 +34,7 @@ $ ->
         #App.hideNavbar()
       lastScrollTop = st
 
-((app) ->
+(  (app) ->
   userAgent = navigator.userAgent
   android = userAgent.match(/(Android)/g)
   ios = userAgent.match(/(iPhone)/g) || userAgent.match(/(iPad)/g)
@@ -68,3 +69,29 @@ $ ->
     #btn.toggleClass 'app-nav-toggle-inactive'
     menu.toggleClass('active')
 )(window.App ||= {})
+
+((app) ->
+  app.truncate = (string, size=100) ->
+    return string if string.length < size
+    words_array = $.trim(string).substring(0, size).split(' ')
+    new_string = words_array.join(" ") + "&hellip;"
+    if new_string.length > size
+      words_array.slice(0, -1).join(" ") + "&hellip;"
+    else
+      new_string
+)(window.App || = {})
+
+
+((app) ->
+  projectSlides = $('[role*=project-devices-carousel]')
+  projectSlides.carousel
+    interval: 5000
+    pause: false
+  slideHeights = []
+  projectSlides.each ->
+    $(@).find('@carousel-item').each ->
+      slideHeights.push $(@).height()
+    maxHeight = Math.max.apply(Math, slideHeights)
+    $(@).find('@carousel-item').each ->
+      $(@).css('height', maxHeight + 'px')
+ )(window.App ||= {})
