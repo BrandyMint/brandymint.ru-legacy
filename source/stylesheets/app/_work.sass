@@ -55,6 +55,8 @@
   padding-bottom: $grid-gutter-width * 2
 
 .project-container
+  .carousel-indicators
+    display: none
   &:hover
     .carousel-indicators
       display: block
@@ -65,7 +67,6 @@
     margin: 0 auto
   .carousel-indicators
     top: -3em
-    display: none
     li
       border-color: $grayLight
       +transition(background 0.2s ease, border 0.2s ease)
@@ -93,6 +94,12 @@
   &.ios
     background-position-y: 40%
 
+.project-container
+  .project-block-os-icon
+    display: none
+  &:hover
+    .project-block-os-icon
+      display: block
 
 .project-title
   margin: 20px 0
