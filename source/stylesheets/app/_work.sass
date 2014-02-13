@@ -34,21 +34,20 @@
   &:last-child
     border-bottom: none
   .no-touch &
-    &, a
-      color: lighten($textColor, 10%)
-    &:hover
+    a
       color: $textColor
+    &:hover
       a
         color: $linkColor
 
     background: darken(#fff, 3%)
-    +transition(color 0.4s ease, background 0.4s ease)
-    //+transition-delay(0.2s)
+    +transition(background 0.4s ease)
+    +transition-delay(0.2s)
     &:hover
       background: #fff
     .project-image-block
       +transition(transform 0.4s ease-out, opacity 0.4s ease-out)
-      //+transition-delay(0.4s)
+      +transition-delay(0.2s)
       +transform(scale(0.9))
       opacity: 0.7
     &:hover
