@@ -229,18 +229,18 @@
   title: Riolis
   devices:
     -
-      image: 'riolis.png'
+      image: 'riolis.jpg'
       device: iphone
       device_scale: half
     -
-      image: 'riolis.png'
+      image: 'riolis_ipad.jpg'
       device: ipad landscape
     -
-      image: 'riolis.png'
+      image: 'riolis_android_phone.jpg'
       device: nexus5
       device_scale: half
     -
-      image: 'riolis.png'
+      image: 'riolis_android_tablet.jpg'
       device: nexus7 landscape
   description: |
     Riolis is well-known by its embroidery kits.
