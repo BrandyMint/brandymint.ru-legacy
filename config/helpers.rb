@@ -47,4 +47,18 @@ module ApplicationHelpers
     html
   end
 
+  def device_type(device)
+    type = ''
+    if device.downcase.match(/(iphone)/)
+      type = 'iphone'
+    elsif device.downcase.match(/(ipad)/)
+      type = 'ipad'
+    elsif device.downcase.match(/(s3|s4|nexus)/)
+      type = 'android_phone'
+    else
+      type = 'desktop'
+    end
+    type
+  end
+
 end

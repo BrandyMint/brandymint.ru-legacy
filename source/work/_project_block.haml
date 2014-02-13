@@ -5,9 +5,12 @@
     .project-image-block
       - if p.devices.present?
         .carousel.slide{ data: {ride: "carousel"}, role: "project-devices-carousel-#{p.slug}" }
-          -#%ol.carousel-indicators
+          %ol.carousel-indicators
+            -#.carousel-devices-indicators
             - p.devices.each_with_index do |d, i|
               %li{"data-slide-to" => i, "data-target" => "[role='project-devices-carousel-#{p.slug}']", class: "#{i == 0 ? 'active' : ''}"}
+                -# if d.device.present?
+                  = image_tag("device_icons/#{device_os d.device})
           .carousel-inner
             - p.devices.each_with_index do |d, i|
               %div{ class: "item #{i == 0 ? 'active' : ''}", role: 'carousel-item'}

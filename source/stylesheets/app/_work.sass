@@ -54,13 +54,23 @@
 .project-block
   padding-bottom: $grid-gutter-width * 2
 
+.project-container
+  &:hover
+    .carousel-indicators
+      display: block
+
 .project-image-block
   .device-image
     margin: 0 auto
-  .item
-    //@media screen and (min-width: $screen-md)
-      height: $coverImageHeight
-      overflow: hidden
+  .carousel-indicators
+    top: -30px
+    display: none
+    li
+      border-color: $grayLight
+      +transition(background 0.2s ease, border 0.2s ease)
+      &.active
+        border-color: transparent
+        background: $grayLight
 
 .project-title
   margin: 20px 0
