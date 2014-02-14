@@ -1,6 +1,7 @@
 -
   slug: rocketwash
   title: Rocketwash
+  image: 'composed/rocketwash.png'
   devices:
     -
       image: 'rocketwash.png'
@@ -227,6 +228,7 @@
 -
   slug: riolis
   title: Riolis
+  image: 'composed/riolis.png'
   devices:
     -
       image: 'riolis.jpg'

@@ -1,9 +1,9 @@
 - p = locals[:p]
 
 .row.project-block{role: 'project-block'}
-  .col-md-5
+  .col-md-6
     .project-image-block
-      - if p.devices.present?
+      -# if p.devices.present?
         .carousel.slide{ role: "project-devices-carousel-#{p.slug}" }
           - if p.devices.count > 1
             %ol.carousel-indicators
@@ -15,10 +15,10 @@
                 = partial 'work/device', locals: {device: "#{d.device}", scale: "#{d.device_scale}", link: p.url || p.appstore || p.google_play, src: image_path("projects/#{d.image}"), alt: "Brandymint projects: #{p.slug}" }
                 - if d.device.present? && p.devices.count > 1
                   %div{class: "project-block-os-icon #{device_type d.device}"}
-      - elsif p.image.present?
-        = partial 'work/device', locals: {device: "#{p.device}", scale: "#{p.device_scale}", link: p.url || p.appstore || p.google_play, src: image_path("projects/#{p.image}"), alt: "Brandymint projects: #{p.slug}" }
-
-  .col-md-7
+      -# elsif p.image.present?
+      - if p.image.present?
+        %img.project-image-composed{src: image_path("projects/#{p.image}")}
+  .col-md-6
     %h3.project-title
       - if p.url.present? || p.google_play.present? || p.appstore.present?
         %a{href: p.url || p.appstore || p.google_play, target: :blank}
@@ -56,10 +56,5 @@
       %a.btn.btn-default.btn-project-link{href: p.url, target: :blank}
         = p.url.gsub('http://', '').gsub('/','')
         &rarr;
-    - if p.appstore.present?
-      %a{href: p.appstore, target: :blank}
-        = image_tag('badge_appstore-lrg.gif')
-    - if p.google_play.present?
-      %a{href: p.google_play, target: :blank}
-        = image_tag('google_play.png')
-
+    = app_badge :appstore, p.appstore if p.appstore.present?
+    = app_badge :google_play, p.google_play if p.google_play.present?

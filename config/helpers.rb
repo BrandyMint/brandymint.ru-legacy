@@ -59,4 +59,8 @@ module ApplicationHelpers
     os
   end
 
+  def app_badge platform, link
+    link_to '&nbsp;', link, target: :blank, class: "app-badge app-badge-#{platform}"
+  end
+
 end
