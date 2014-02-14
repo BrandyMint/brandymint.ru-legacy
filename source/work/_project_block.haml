@@ -51,6 +51,12 @@
           - methodologies = p.methodologies if p.methodologies
           - methodologies.each_pair do |k,v|
             %span= v
+    .project-platforms
+      - if p.devices.present?
+        - p.devices.each do |d|
+          - if d.device.present?
+            %div{class: "project-block-platform #{device_type d.device}"}
+
     %br
     - if p.url.present?
       %a.btn.btn-default.btn-project-link{href: p.url, target: :blank}

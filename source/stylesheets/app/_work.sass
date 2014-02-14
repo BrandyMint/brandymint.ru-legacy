@@ -88,9 +88,6 @@
         background: $grayLight
 
 .project-block-os-icon
-  width: 64px
-  height: 64px
-  +border-radius(64px / 1.43)
   position: absolute
   top: 20px
   right: 20px
@@ -98,6 +95,13 @@
   border: 1px solid $grayLightest
   background:
     color: #fff
+
+.project-block-os-icon,
+.project-block-platform
+  width: 64px
+  height: 64px
+  +border-radius(64px / 1.43)
+  background:
     size: 32px auto
     position: center center
     repeat: no-repeat
@@ -106,6 +110,12 @@
       +svg-bg-image("device_icons/#{$p}")
   &.ios
     background-position-y: 40%
+
+.project-platforms
+  margin-top: 1em
+
+.project-block-platform
+  display: inline-block
 
 .project-container
   .project-block-os-icon
