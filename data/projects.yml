@@ -30,7 +30,7 @@
   slug: swapurban
   logo: swapurban_logo.svg
   url: http://swapurban.com
-  image: 'swapurban.png'
+  image: 'composed/swapurban.png'
   description: |
     More and more people prefer to exchange between each other instead of buying all new.
     __SwapUrban__
@@ -63,6 +63,7 @@
   slug: investcafe
   logo: investcafe_logo.svg
   url: http://investcafe.ru
+  image: 'investcafe.png'
   devices:
     -
       image: 'investcafe.png'
@@ -94,6 +95,7 @@
 -
   slug: superuff
   title: Super Dog
+  image: 'superuff.png'
   devices:
     -
       image: 'superuff.png'
@@ -121,6 +123,7 @@
 -
   slug: mashtime
   title: Mashtime
+  image: 'mashtime.png'
   devices:
     -
       image: 'mashtime.png'
@@ -168,6 +171,7 @@
   slug: hrexpert
   title: HRexpert
   appstore: 'https://itunes.apple.com/ru/app/hr-ehpert/id665800658?l=en&mt=8'
+  image: 'hrexpert.png'
   devices:
     -
       image: 'hrexpert.png'
@@ -184,6 +188,7 @@
 -
   slug: chebru
   title: Cheb.ru android app
+  image: 'chebru.png'
   devices:
     -
       image: 'chebru.png'
@@ -203,6 +208,7 @@
 -
   slug: anna
   title: "Coats'n'Shorts"
+  image: 'anna.png'
   devices:
     -
       image: 'anna.png'
