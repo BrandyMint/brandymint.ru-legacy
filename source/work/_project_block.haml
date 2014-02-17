@@ -53,9 +53,12 @@
             %span= v
     .project-platforms
       - if p.devices.present?
+        - device_types = []
         - p.devices.each do |d|
           - if d.device.present?
-            %div{class: "project-block-platform #{device_type d.device}"}
+            - device_types.push device_type d.device
+        - device_types.uniq.each do |t|
+          %div{class: "project-block-platform #{t}"}
 
     %br
     - if p.url.present?

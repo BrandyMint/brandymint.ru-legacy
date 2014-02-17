@@ -100,15 +100,16 @@
 .project-block-platform
   width: 64px
   height: 64px
-  +border-radius(64px / 1.43)
+  margin: 16px
+  //+border-radius(64px / 1.43)
   background:
-    size: 32px auto
+    size: auto 100%
     position: center center
     repeat: no-repeat
   @each $p in ios, android
     &.#{$p}
       +svg-bg-image("device_icons/#{$p}")
-  &.ios
+  //&.ios
     background-position-y: 40%
 
 .project-platforms
