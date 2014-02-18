@@ -100,7 +100,7 @@
     size: auto 32px
     position: center center
     repeat: no-repeat
-  @each $p in ios, android, web
+  @each $p in ios, android, windows, web
     &.#{$p}
       +svg-bg-image("device_icons/#{$p}")
       a &

@@ -50,10 +50,12 @@ module ApplicationHelpers
   def device_type(device)
     device ||= 'web'
     os = ''
-    if device.downcase.match(/(iphone|ipad|ipod)/)
+    if device.downcase.match(/(iphone|ipad|ipod|ios)/)
       os = 'ios'
-    elsif device.downcase.match(/(s3|s4|galaxy|nexus|samsung)/)
+    elsif device.downcase.match(/(s3|s4|galaxy|nexus|samsung|android)/)
       os = 'android'
+    elsif device.downcase.match(/(windows|wp|lumia)/)
+      os = 'windows'
     else
       os = 'web'
     end
