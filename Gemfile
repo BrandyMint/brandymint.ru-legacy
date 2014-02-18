@@ -12,6 +12,7 @@ gem "middleman-livereload"
 gem "middleman-google-analytics"
 gem "middleman-navigation"
 gem "middleman-deploy"
+gem "middleman-imageoptim", "~> 0.1.4"
 
 #gem "middleman-core"
 gem 'bootstrap-sass', '3.0.3.0', :require => false, :github => 'thomas-mcdonald/bootstrap-sass'
