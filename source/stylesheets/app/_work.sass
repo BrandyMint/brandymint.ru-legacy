@@ -25,41 +25,45 @@
 .project-container
   &, *
     +translate3d(0,0,0)
-  border-bottom: 1px solid $grayLightest
+  border-bottom: 1em solid $grayLightest
   padding:
     top: 3em
-    bottom: 0
+    bottom: 2em
   &:first-child
     padding-top: 4em
   &:last-child
     border-bottom: none
-  .no-touch &
+  //.no-touch &
     a
       color: $textColor
     &:hover
       a
         color: $linkColor
-    background: darken(#fff, 3%)
+    //background: darken(#fff, 3%)
     +transition(background 0.4s ease)
     //+transition-delay(0.2s)
     &:hover
       background: #fff
-    .project-image-block
+      //&.project-container-riolis2
+        +gradient-vertical(#fff, darken(#fff,7%))
+
+    //.project-image-block
+      //+transition(transform 0.4s ease-out, opacity 0.4s ease-out)
       +transition(transform 0.4s ease-out, opacity 0.4s ease-out)
       //+transition-delay(0.4s)
       +transform(scale(0.9))
-      opacity: 0.7
-    &:hover
+      //opacity: 0.7
+    //&:hover
       .project-image-block
         +transform(scale(1))
-        opacity: 1
+        //opacity: 1
 
 .project-block
   padding:
     top: 0
     left: $grid-gutter-width / 2
     right: $grid-gutter-width / 2
-    bottom: $grid-gutter-width * 2
+    bottom: $grid-gutter-width
   @media screen and (min-width: $screen-lg)
     max-width: $screen-lg
     margin: 0 auto
@@ -74,6 +78,7 @@
 .project-image-composed
   display: block
   max-width: 100%
+  max-height: 500px
   margin: 0 auto
 
 .project-image-block
@@ -90,14 +95,14 @@
         background: $grayLight
 
 .project-block-platform
-  width: 32px
-  height: 32px
+  width: $platformIconSize
+  height: $platformIconSize
   margin:
-    top: 8px
-    right: 16px
-  //+border-radius(64px / 1.43)
+    top: $platformIconSize / 4
+    right: $platformIconSize / 4
+    left: $platformIconSize / 4
   background:
-    size: auto 32px
+    size: auto $platformIconSize
     position: center center
     repeat: no-repeat
   @each $p in ios, android, windows, web
@@ -105,31 +110,29 @@
       +svg-bg-image("device_icons/#{$p}")
       a &
         +svg-bg-image("device_icons/#{$p}_link")
-      .no-touch a &
-        +svg-bg-image("device_icons/#{$p}")
-      .no-touch .project-container:hover a &
-        +svg-bg-image("device_icons/#{$p}_link")
+      //
+        .no-touch a &
+          +svg-bg-image("device_icons/#{$p}")
+        .no-touch .project-container:hover a &
+          +svg-bg-image("device_icons/#{$p}_link")
 
 
 
 .project-platforms
-  margin-top: 1em
+  margin:
+    top: 2em
+    bottom: 1em
 
 .project-block-platform
   display: inline-block
 
-.project-container
-  .project-block-os-icon
-    display: none
-  &:hover
-    .project-block-os-icon
-      display: block
-
 .project-title
-  margin: 20px 0
+  margin: 
+    top: 1.5em
+    bottom: 1em
   font:
-    weight: 100
-  @media screen and (min-width: $screen-md)
+    weight: 900
+  //@media screen and (min-width: $screen-md)
     margin:
       top: 0
       bottom: 10px

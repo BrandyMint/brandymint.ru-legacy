@@ -8,7 +8,8 @@ navbar_state: active
   - projects = data.projects
   .projects-container
     - projects.each do |p|
-      .project-container
+      %a{name: p.slug}
+      %div{ class: "project-container project-container-#{p.slug}"}
         -#.container
         = partial "work/project_block", locals: {p: p}
 

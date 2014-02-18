@@ -79,7 +79,7 @@ module ApplicationHelpers
   def device_type_link project, device
     device ||= 'web'
     url = device_type_url(project, device)
-    icon = content_tag :div, '', class: "project-block-platform #{device_type device}"
+    icon = content_tag :span, '', class: "project-block-platform #{device_type device}"
     if url.present?
       link_to icon, device_type_url(project, device), class: 'device-type-link', target: '_blank'
     else

@@ -1,46 +1,47 @@
 - p = locals[:p]
 
-.row.project-block{role: 'project-block'}
-  .col-md-6
-    .project-image-block
-      - if p.image.present?
-        %img.project-image-composed{src: image_path("projects/#{p.image}")}
-  .col-md-6
-    %h3.project-title
-      - if p.url.present? || p.google_play.present? || p.appstore.present?
-        %a{href: p.url || p.appstore || p.google_play, target: :blank}
+.project-block{role: "project-block"}
+  .row
+    .col-md-8.col-md-offset-2
+      .project-image-block
+        - if p.image.present?
+          %img.project-image-composed{src: image_path("projects/#{p.image}")}
+
+      %h3.project-title.text-center
+        - if p.url.present? || p.google_play.present? || p.appstore.present?
+          %a{href: p.url || p.appstore || p.google_play, target: :blank}
+            - if p.title
+              = p.title
+            - if p.logo
+              %img{ src: image_path("projects/#{p.logo}") }
+        - else
           - if p.title
             = p.title
           - if p.logo
             %img{ src: image_path("projects/#{p.logo}") }
-      - else
-        - if p.title
-          = p.title
-        - if p.logo
-          %img{ src: image_path("projects/#{p.logo}") }
-    .project-features
-      - features = p.features if p.features
-      - features.each_pair do |k,v|
-        %span= v
-    .project-description
-      %p= md p.description if p.description.present?
-    -#%h5.technology-title Technologies
-    .project-technologies
-      - technologies = p.technologies if p.technologies
-      - technologies.each_pair do |k,v|
-        %span= v
-    -#%h5.technology-title Methodologies
-    .project-technologies
-      - methodologies = p.methodologies if p.methodologies
-      - methodologies.each_pair do |k,v|
-        %span= v
-    .project-platforms
-      - if p.devices.present?
-        - device_types = []
-        - p.devices.each do |d|
-          - device_types.push device_type_link(p, d.device)
-        - device_types.uniq.each do |t|
-          = t
-      - else
-        = device_type_link p, 'web'
+      .project-features
+        - features = p.features if p.features
+        - features.each_pair do |k,v|
+          %span= v
+      .project-description
+        %p= md p.description if p.description.present?
+      -#%h5.technology-title Technologies
+      .project-technologies
+        - technologies = p.technologies if p.technologies
+        - technologies.each_pair do |k,v|
+          %span= v
+      -#%h5.technology-title Methodologies
+      .project-technologies
+        - methodologies = p.methodologies if p.methodologies
+        - methodologies.each_pair do |k,v|
+          %span= v
+      .project-platforms.text-center
+        - if p.devices.present?
+          - device_types = []
+          - p.devices.each do |d|
+            - device_types.push device_type_link(p, d.device)
+          - device_types.uniq.each do |t|
+            = t
+        - else
+          = device_type_link p, 'web'
 
