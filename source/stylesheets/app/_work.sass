@@ -39,7 +39,6 @@
     &:hover
       a
         color: $linkColor
-
     background: darken(#fff, 3%)
     +transition(background 0.4s ease)
     //+transition-delay(0.2s)
@@ -61,6 +60,9 @@
     left: $grid-gutter-width / 2
     right: $grid-gutter-width / 2
     bottom: $grid-gutter-width * 2
+  @media screen and (min-width: $screen-lg)
+    max-width: $screen-lg
+    margin: 0 auto
 
 .project-container
   .carousel-indicators
@@ -87,30 +89,28 @@
         border-color: transparent
         background: $grayLight
 
-.project-block-os-icon
-  position: absolute
-  top: 20px
-  right: 20px
-  margin-left: -32px
-  border: 1px solid $grayLightest
-  background:
-    color: #fff
-
-.project-block-os-icon,
 .project-block-platform
-  width: 64px
-  height: 64px
-  margin: 16px
+  width: 32px
+  height: 32px
+  margin:
+    top: 8px
+    right: 16px
   //+border-radius(64px / 1.43)
   background:
-    size: auto 100%
+    size: auto 32px
     position: center center
     repeat: no-repeat
-  @each $p in ios, android
+  @each $p in ios, android, web
     &.#{$p}
       +svg-bg-image("device_icons/#{$p}")
-  //&.ios
-    background-position-y: 40%
+      a &
+        +svg-bg-image("device_icons/#{$p}_link")
+      .no-touch a &
+        +svg-bg-image("device_icons/#{$p}")
+      .no-touch .project-container:hover a &
+        +svg-bg-image("device_icons/#{$p}_link")
+
+
 
 .project-platforms
   margin-top: 1em

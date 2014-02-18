@@ -124,10 +124,7 @@
   slug: mashtime
   title: Mashtime
   image: 'mashtime.png'
-  devices:
-    -
-      image: 'mashtime.png'
-      url: 'http://mashtime.ru'
+  url: 'http://mashtime.ru'
   description: |
     We built Mashtime to track our working hours so we can analyze how we worked on projects and plan further work
     or estimate upcoming projects better. It's made for teams, projects and freelancers.
