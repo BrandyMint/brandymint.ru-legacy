@@ -4,11 +4,19 @@ navbar_state: active
 ---
 
 .work-page
-  = partial 'welcome/projects'
+  -#= partial 'welcome/projects'
   - projects = data.projects
   .projects-container
+    - projects_data = data.work
+    - projects_data.each do |f|
+      %a{name: f[1].slug}
+      %div{ class: "project-container project-container-#{f[1].slug}"}
+        -#.container
+        = partial "work/project_block", locals: {p: f[1]}
+
     - projects.each do |p|
-      .project-container
-        .container
-          = partial "work/project_block", locals: {p: p}
+      %a{name: p.slug}
+      %div{ class: "project-container project-container-#{p.slug}"}
+        -#.container
+        = partial "work/project_block", locals: {p: p}
 

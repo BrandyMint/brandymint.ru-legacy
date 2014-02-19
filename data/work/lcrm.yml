@@ -1,8 +1,9 @@
 slug: lcrm
 title: Real Time Monitoring System
-url: 'http://lcrm.com'
-image: 'lcrm.jpg'
+#url: 'http://convead.com'
+image: 'composed/lcrm.png'
 welcome_image: 'lcrm-welcome-bg.jpg'
+read_more: true
 background: dark
 announce: Lead your business to better sales
 description: |

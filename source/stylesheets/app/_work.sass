@@ -1,6 +1,6 @@
 .work-page
   @extend .welcome-block
-  &, p
+  //&, p
     @extend %compact-text
 
 .projects-header-image
@@ -25,38 +25,48 @@
 .project-container
   &, *
     +translate3d(0,0,0)
-  border-bottom: 1px solid $grayLightest
+  border-bottom: 1em solid $grayLightest
   padding:
     top: 3em
-    bottom: 0
+    bottom: 2em
   &:first-child
     padding-top: 4em
   &:last-child
     border-bottom: none
-  .no-touch &
+  //.no-touch &
     a
       color: $textColor
     &:hover
       a
         color: $linkColor
-
-    background: darken(#fff, 3%)
+    //background: darken(#fff, 3%)
     +transition(background 0.4s ease)
     //+transition-delay(0.2s)
     &:hover
       background: #fff
-    .project-image-block
+      //&.project-container-riolis2
+        +gradient-vertical(#fff, darken(#fff,7%))
+
+    //.project-image-block
+      //+transition(transform 0.4s ease-out, opacity 0.4s ease-out)
       +transition(transform 0.4s ease-out, opacity 0.4s ease-out)
       //+transition-delay(0.4s)
       +transform(scale(0.9))
-      opacity: 0.7
-    &:hover
+      //opacity: 0.7
+    //&:hover
       .project-image-block
         +transform(scale(1))
-        opacity: 1
+        //opacity: 1
 
 .project-block
-  padding-bottom: $grid-gutter-width * 2
+  padding:
+    top: 0
+    left: $grid-gutter-width / 2
+    right: $grid-gutter-width / 2
+    bottom: $grid-gutter-width
+  @media screen and (min-width: $screen-lg)
+    max-width: $screen-lg
+    margin: 0 auto
 
 .project-container
   .carousel-indicators
@@ -64,6 +74,12 @@
   &:hover
     .carousel-indicators
       display: block
+
+.project-image-composed
+  display: block
+  max-width: 100%
+  max-height: 500px
+  margin: 0 auto
 
 .project-image-block
   margin-top: 2em
@@ -78,36 +94,45 @@
         border-color: transparent
         background: $grayLight
 
-.project-block-os-icon
-  width: 64px
-  height: 64px
-  +border-radius(64px / 1.43)
-  position: absolute
-  top: 20px
-  right: 20px
-  margin-left: -32px
-  border: 1px solid $grayLightest
+.project-block-platform
+  width: $platformIconSize
+  height: $platformIconSize
+  margin:
+    top: $platformIconSize / 4
+    right: $platformIconSize / 4
+    left: $platformIconSize / 4
   background:
-    color: #fff
-    size: 32px auto
+    size: auto $platformIconSize
     position: center center
     repeat: no-repeat
-  @each $p in ios, android
+  @each $p in ios, android, windows, web
     &.#{$p}
       +svg-bg-image("device_icons/#{$p}")
-  &.ios
-    background-position-y: 40%
+      a &
+        +svg-bg-image("device_icons/#{$p}_link")
+      //
+        .no-touch a &
+          +svg-bg-image("device_icons/#{$p}")
+        .no-touch .project-container:hover a &
+          +svg-bg-image("device_icons/#{$p}_link")
 
-.project-container
-  .project-block-os-icon
-    display: none
-  &:hover
-    .project-block-os-icon
-      display: block
+
+
+.project-platforms
+  margin:
+    top: 2em
+    bottom: 1em
+
+.project-block-platform
+  display: inline-block
 
 .project-title
-  margin: 20px 0
-  @media screen and (min-width: $screen-md)
+  margin: 
+    top: 1.5em
+    bottom: 1em
+  font:
+    weight: 900
+  //@media screen and (min-width: $screen-md)
     margin:
       top: 0
       bottom: 10px
@@ -123,13 +148,14 @@
     bottom: 4px
 
 .project-description
-  font-size: $baseFontSize * 1.2
-  line-height: 1.5em
+  &, p
+    font-size: $baseFontSize / 1.2
+    line-height: 1.5em
 
 .project-features
   margin-bottom: 20px
   & > span
-    font-size: 17px
+    font-size: $compactTextFontSize
     line-height: 42px
     padding: 6px 10px
     margin-right: 10px
@@ -139,6 +165,7 @@
 
 .project-technologies
   & > span
+    font-size: $compactTextFontSize
     line-height: 32px
     color: lighten($textColor, 10%)
     padding: 4px

@@ -1,13 +1,12 @@
 -
   slug: rocketwash
   title: Rocketwash
+  image: 'composed/rocketwash.png'
   devices:
     -
-      image: 'rocketwash.png'
       device: iphone
       device_scale: half
     -
-      image: 'rocketwash.png'
       device: nexus5
       device_scale: half
 
@@ -29,7 +28,7 @@
   slug: swapurban
   logo: swapurban_logo.svg
   url: http://swapurban.com
-  image: 'swapurban.png'
+  image: 'composed/swapurban.png'
   description: |
     More and more people prefer to exchange between each other instead of buying all new.
     __SwapUrban__
@@ -62,9 +61,7 @@
   slug: investcafe
   logo: investcafe_logo.svg
   url: http://investcafe.ru
-  devices:
-    -
-      image: 'investcafe.png'
+  image: 'composed/investcafe.png'
   description: |
     Investcafe is Russia’s first independent research firm that provides institutional investors with unbiased analysis 
     and insight from a team of experts.
@@ -93,16 +90,16 @@
 -
   slug: superuff
   title: Super Dog
+  image: 'composed/superuff.png'
   devices:
     -
-      image: 'superuff.png'
       device: iphone5s
       device_scale: half
     -
-      image: 'superuff.png'
       device: nexus5
       device_scale: half
-
+    -
+      device: windows_phone
   google_play: 'https://play.google.com/store/apps/details?id=com.brandymint.doggy.free'
   description: |
     Super Dog is a cross-platform mobile app built to help everyone with dog training.
@@ -120,10 +117,8 @@
 -
   slug: mashtime
   title: Mashtime
-  devices:
-    -
-      image: 'mashtime.png'
-      url: 'http://mashtime.ru'
+  image: 'composed/mashtime.png'
+  url: 'http://mashtime.ru'
   description: |
     We built Mashtime to track our working hours so we can analyze how we worked on projects and plan further work
     or estimate upcoming projects better. It's made for teams, projects and freelancers.
@@ -145,7 +140,7 @@
 -
   slug: potee
   title: Potee
-  image: 'potee.png'
+  image: 'composed/potee.png'
   url: 'http://potee.me'
   description: |
     Potee started as a Rails Rumble hackathon projects. We teamed up with
@@ -167,9 +162,9 @@
   slug: hrexpert
   title: HRexpert
   appstore: 'https://itunes.apple.com/ru/app/hr-ehpert/id665800658?l=en&mt=8'
+  image: 'composed/hrexpert.png'
   devices:
     -
-      image: 'hrexpert.png'
       device: ipad landscape
   description: |
     iPad application for HR specialists that saves time and helps to organize interviews.
@@ -183,9 +178,9 @@
 -
   slug: chebru
   title: Cheb.ru android app
+  image: 'composed/chebru.png'
   devices:
     -
-      image: 'chebru.png'
       device: nexus5
       device_scale: half
   google_play: 'https://play.google.com/store/apps/details?id=ru.brandymint.chebru'
@@ -202,11 +197,10 @@
 -
   slug: anna
   title: "Coats'n'Shorts"
+  image: 'composed/anna.png'
   devices:
     -
-      image: 'anna.png'
       device: ipad white
-  image_link: 'http://coatsnshorts.com/'
   appstore: 'https://itunes.apple.com/ru/app/anin-den/id583847885?mt=8'
   description: |
     Coats'n'Shorts for iOS, an update to its popular educational dress up game for children under six. 
@@ -224,23 +218,21 @@
   methodologies:
     1: Scrum
 
+
 -
   slug: riolis
   title: Riolis
+  image: 'composed/riolis.png'
   devices:
     -
-      image: 'riolis.jpg'
       device: iphone
       device_scale: half
     -
-      image: 'riolis_ipad.jpg'
       device: ipad landscape
     -
-      image: 'riolis_android_phone.jpg'
       device: nexus5
       device_scale: half
     -
-      image: 'riolis_android_tablet.jpg'
       device: nexus7 landscape
   description: |
     Riolis is well-known by its embroidery kits.
@@ -259,8 +251,10 @@
 -
   slug: kribrum
   title: Kribrum
-  image: 'kribrum.png'
-  device: ipad landscape
+  image: 'composed/kribrum.png'
+  devices:
+    -
+      device: ipad landscape
   description: |
     iPad app for Kribrum, social media and news monitoring service built for enterprise use.
   features:
@@ -274,7 +268,7 @@
 -
   slug: villanakipre
   title: Villanakipre.ru
-  image: 'villanakipre.png'
+  image: 'composed/villanakipre.png'
   description: |
     Backend development for Villanakipre.ru, website focused on realty rent and sale on Cyprus.
   features:
@@ -287,7 +281,7 @@
 -
   slug: gridology
   title: Gridology
-  image: 'ges.png'
+  image: 'composed/ges.png'
   description: |
     In 2011 we built enterprise social network for
     Federal Grid Company of Unified Energy System.

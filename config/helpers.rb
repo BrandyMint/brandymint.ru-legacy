@@ -48,15 +48,47 @@ module ApplicationHelpers
   end
 
   def device_type(device)
+    device ||= 'web'
     os = ''
-    if device.downcase.match(/(iphone|ipad|ipod)/)
+    if device.downcase.match(/(iphone|ipad|ipod|ios)/)
       os = 'ios'
-    elsif device.downcase.match(/(s3|s4|galaxy|nexus|samsung)/)
+    elsif device.downcase.match(/(s3|s4|galaxy|nexus|samsung|android)/)
       os = 'android'
+    elsif device.downcase.match(/(windows|wp|lumia)/)
+      os = 'windows'
     else
-      os = 'desktop'
+      os = 'web'
     end
     os
+  end
+
+  def device_type_url project, device
+    device ||= 'web'
+    type = device_type device
+    case type
+      when 'ios'
+        url = project.appstore
+      when 'android'
+        url = project.google_play
+      else
+        url = project.url
+    end
+    url
+  end
+
+  def device_type_link project, device
+    device ||= 'web'
+    url = device_type_url(project, device)
+    icon = content_tag :span, '', class: "project-block-platform #{device_type device}"
+    if url.present?
+      link_to icon, device_type_url(project, device), class: 'device-type-link', target: '_blank'
+    else
+      icon
+    end
+  end
+
+  def app_badge platform, link
+    link_to '&nbsp;', link, target: :blank, class: "app-badge app-badge-#{platform}"
   end
 
 end
