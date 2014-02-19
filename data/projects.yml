@@ -218,35 +218,6 @@
   methodologies:
     1: Scrum
 
--
-  slug: riolis2
-  title: Riolis
-  image: 'composed/riolis2.png'
-  devices:
-    -
-      device: iphone
-      device_scale: half
-    -
-      device: ipad landscape
-    -
-      device: nexus5
-      device_scale: half
-    -
-      device: nexus7 landscape
-  description: |
-    Riolis is well-known by its embroidery kits.
-    We developed API for mobile apps, prototyped, designed and created iPhone, iPad and Android versions.
-  features:
-    1: API for mobile apps
-    2: Rapid prototyping
-    3: Mobile caching
-  technologies:
-    1: iOS development
-    2: Android development
-    3: Backend development
-  methodologies:
-    1: Scrum
-    2: Agile
 
 -
   slug: riolis
