@@ -10,15 +10,15 @@
       %h3.project-title.text-center
         - if p.url.present? || p.google_play.present? || p.appstore.present?
           %a{href: p.url || p.appstore || p.google_play, target: :blank}
-            - if p.title
-              = p.title
             - if p.logo
               %img{ src: image_path("projects/#{p.logo}") }
+            - elsif p.title
+              = p.title
         - else
-          - if p.title
-            = p.title
           - if p.logo
             %img{ src: image_path("projects/#{p.logo}") }
+          - if p.title
+            = p.title
       .project-features
         - features = p.features if p.features
         - features.each_pair do |k,v|
@@ -44,4 +44,3 @@
             = t
         - else
           = device_type_link p, 'web'
-

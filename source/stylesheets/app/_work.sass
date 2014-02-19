@@ -1,6 +1,6 @@
 .work-page
   @extend .welcome-block
-  &, p
+  //&, p
     @extend %compact-text
 
 .projects-header-image
@@ -148,13 +148,14 @@
     bottom: 4px
 
 .project-description
-  font-size: $baseFontSize * 1.2
-  line-height: 1.5em
+  &, p
+    font-size: $baseFontSize / 1.2
+    line-height: 1.5em
 
 .project-features
   margin-bottom: 20px
   & > span
-    font-size: 17px
+    font-size: $compactTextFontSize
     line-height: 42px
     padding: 6px 10px
     margin-right: 10px
@@ -164,6 +165,7 @@
 
 .project-technologies
   & > span
+    font-size: $compactTextFontSize
     line-height: 32px
     color: lighten($textColor, 10%)
     padding: 4px
