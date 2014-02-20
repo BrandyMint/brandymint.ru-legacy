@@ -3,9 +3,10 @@ body_class: services-page
 navbar_state: active
 ---
 
+
 .work-page
   -#= partial 'welcome/projects'
-  - projects = data.projects
+  - projects = data.projects.sort! {|a, b| Date.parse(b.date) <=> Date.parse(a.date) }
   .projects-container
     - projects_data = data.work
     - projects_data.each do |f|
@@ -18,5 +19,6 @@ navbar_state: active
       %a{name: p.slug}
       %div{ class: "project-container project-container-#{p.slug}"}
         -#.container
+        -#= Date.parse(p.date) if p.date
         = partial "work/project_block", locals: {p: p}
 

@@ -1,7 +1,9 @@
 -
   slug: rocketwash
   title: Rocketwash
+  logo: rocketwash_logo.svg
   image: 'composed/rocketwash.png'
+  date: 10-11-2014
   devices:
     -
       device: iphone
@@ -29,6 +31,7 @@
   logo: swapurban_logo.svg
   url: http://swapurban.com
   image: 'composed/swapurban.png'
+  date: 10-04-2012
   description: |
     More and more people prefer to exchange between each other instead of buying all new.
     __SwapUrban__
@@ -62,6 +65,7 @@
   logo: investcafe_logo.svg
   url: http://investcafe.ru
   image: 'composed/investcafe.png'
+  date: 10-10-2012
   description: |
     Investcafe is Russia’s first independent research firm that provides institutional investors with unbiased analysis 
     and insight from a team of experts.
@@ -89,8 +93,10 @@
 
 -
   slug: superuff
-  title: Super Dog
+  title: Super Uff
+  logo: superuff_logo.svg
   image: 'composed/superuff.png'
+  date: 01-02-2014
   devices:
     -
       device: iphone5s
@@ -102,7 +108,7 @@
       device: windows_phone
   google_play: 'https://play.google.com/store/apps/details?id=com.brandymint.doggy.free'
   description: |
-    Super Dog is a cross-platform mobile app built to help everyone with dog training.
+    Super Uff is a cross-platform mobile app built to help everyone with dog training.
     It contains 30 excercises to study in tree steps each. Simple and cute illustrations are the core of the excercises explanation.
   features:
     1: PhoneGap development
@@ -118,7 +124,9 @@
   slug: mashtime
   title: Mashtime
   image: 'composed/mashtime.png'
+  logo: mashtime_logo.svg
   url: 'http://mashtime.ru'
+  date: '10-09-2013'
   description: |
     We built Mashtime to track our working hours so we can analyze how we worked on projects and plan further work
     or estimate upcoming projects better. It's made for teams, projects and freelancers.
@@ -141,7 +149,9 @@
   slug: potee
   title: Potee
   image: 'composed/potee.png'
+  logo: potee_logo.svg
   url: 'http://potee.me'
+  date: '20-10-2012'
   description: |
     Potee started as a Rails Rumble hackathon projects. We teamed up with
     <a href="http://genue.ru/" target="_blank">Genue</a>
@@ -163,6 +173,7 @@
   title: HRexpert
   appstore: 'https://itunes.apple.com/ru/app/hr-ehpert/id665800658?l=en&mt=8'
   image: 'composed/hrexpert.png'
+  date: '10-05-2012'
   devices:
     -
       device: ipad landscape
@@ -177,8 +188,9 @@
     1: Scrum
 -
   slug: chebru
-  title: Cheb.ru android app
+  title: Cheboksary Guide
   image: 'composed/chebru.png'
+  date: '10-02-2012'
   devices:
     -
       device: nexus5
@@ -198,6 +210,7 @@
   slug: anna
   title: "Coats'n'Shorts"
   image: 'composed/anna.png'
+  date: '10-03-2012'
   devices:
     -
       device: ipad white
@@ -223,6 +236,7 @@
   slug: riolis
   title: Riolis
   image: 'composed/riolis.png'
+  date: '10-07-2013'
   devices:
     -
       device: iphone
@@ -252,6 +266,7 @@
   slug: kribrum
   title: Kribrum
   image: 'composed/kribrum.png'
+  date: '10-11-2013'
   devices:
     -
       device: ipad landscape
@@ -269,6 +284,7 @@
   slug: villanakipre
   title: Villanakipre.ru
   image: 'composed/villanakipre.png'
+  date: '06-06-2013'
   description: |
     Backend development for Villanakipre.ru, website focused on realty rent and sale on Cyprus.
   features:
@@ -282,6 +298,7 @@
   slug: gridology
   title: Gridology
   image: 'composed/ges.png'
+  date: '10-10-2011'
   description: |
     In 2011 we built enterprise social network for
     Federal Grid Company of Unified Energy System.
