@@ -11,7 +11,7 @@ $ ->
     App.navbarMenuBlock.removeClass 'active'
   else
     unless $('body').hasClass('hide-navbar-menu')
-      App.navbarMenuBlock.addClass('.navbar-transitions')
+      App.navbarMenuBlock.addClass('navbar-transitions')
       App.toggleMenu(App.navbarToggleBtn, App.navbarMenuBlock)
     lastScrollTop = 0
     $(window).on 'scroll', (event) ->
@@ -47,13 +47,16 @@ $ ->
 
 ((app) ->
   app.appNavbar = $('@application-navbar')
+  app.secondaryNavbar = $('@secondary-navbar')
   app.hideNavbar = (st, coverHeight) ->
     setTimeout(( ->
       app.appNavbar.addClass('transparent')
+      app.secondaryNavbar.addClass('secondary-navbar-top')
     ), 200)
   app.showNavbar = (st, coverHeight) ->
     setTimeout(( ->
       app.appNavbar.removeClass('transparent')
+      app.secondaryNavbar.removeClass('secondary-navbar-top')
       if coverHeight? && st > coverHeight
         app.appNavbar.addClass('navbar-white')
       else if st < coverHeight

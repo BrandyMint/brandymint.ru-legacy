@@ -5,15 +5,16 @@ navbar_state: active
 
 
 .work-page
+  -#{data: {spy: 'scroll', target: '.secondary-navbar'}}
   -#= partial 'welcome/projects'
-  - projects = data.projects
-  - projects = projects.sort {|a, b| Date.parse(b[1].date) <=> Date.parse(a[1].date) }
+  - @projects = data.projects
+  - @projects = @projects.sort {|a, b| Date.parse(b[1].date) <=> Date.parse(a[1].date) }
   .projects-container
-    - projects_data = data.work
-    - [projects_data, projects].each do |set|
+    - @projects_data = data.work
+    - [@projects_data, @projects].each do |set|
       - set.each do |f|
         - p = f[1]
-        %a{name: p.slug}
+        %a{name: p.slug, id: "#{p.slug}"}
         %div{ class: "project-container project-container-#{p.slug}"}
           = partial "work/project_block", locals: {p: p}
 

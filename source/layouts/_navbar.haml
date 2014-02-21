@@ -20,5 +20,14 @@
         -#= link_to n.title, url_for(n.page), class: "app-nav-item #{state}"
         = link_to n.title, "/#{n.page}/", class: "app-nav-item #{state} app-nav-item-#{n.page}"
     .clearfix
+      
+- if @projects.present? && @projects_data.present?
+  .secondary-navbar.navbar.navbar-fixed-top{ role: 'secondary-navbar'}
+    .container
+      - [@projects_data, @projects].each do |set|
+        - set.each do |p|
+          - p = p[1]
+          = link_to p.title, "##{p.slug}", class: "app-secondary-nav-item"
+
 
 

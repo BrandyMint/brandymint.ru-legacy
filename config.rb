@@ -16,6 +16,9 @@ require 'config/routes'
 require 'config/helpers'
 require 'config/icon_helper'
 require 'builder'
+require 'pry'
+require 'pry-pretty-numeric'
+require "better_errors"
 
 helpers do
   include RouteHelpers
@@ -113,6 +116,8 @@ configure :development do
   activate :google_analytics do |ga|
     ga.tracking_id = false
   end
+  use BetterErrors::Middleware
+  BetterErrors.application_root = __dir__
 end
 
 

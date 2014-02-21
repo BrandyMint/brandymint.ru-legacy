@@ -1,3 +1,4 @@
+$navbarHeight: 54px
 $navbarHideHeight: 80px
 $navbarMenuZindex-xs: 1100
 $navbarToggleZindex-xs: 1200
@@ -20,7 +21,7 @@ $navbarToggleZindex-xs: 1200
   +navbarTransition
   opacity: 1
   &.transparent
-    opacity: 0
+    //opacity: 0
     +navbarHide
 
 .navbar-toggle.app-nav-toggle
@@ -110,6 +111,27 @@ $navbarToggleZindex-xs: 1200
         top: 1em
         bottom: 1em
 
+.navbar.secondary-navbar
+  +translateY($navbarHeight)
+  +navbarTransition
+  background: $navbarBackgroundColor
+  border-bottom: 0
+  padding:
+    top: 0.5em
+    bottom: 0.5em
+  @media screen and (max-width: $screen-md)
+    display: none
+  &.secondary-navbar-top
+    +translateY(0)
+
+.app-secondary-nav-item
+  @extend .app-nav-item
+  font:
+    size: $compactTextFontSize / 1.2
+    weight: 500
+  text-transform: uppercase
+  letter-spacing: 1px
+  padding: 0 2em 0 0
 
 =navbar-fixed-item-bg
   background: rgba(#fff, 0.9)
