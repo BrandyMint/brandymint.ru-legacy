@@ -1,4 +1,4 @@
-#= require jquery/dist/jquery.min
+#= require jquery/jquery.min
 #= require jquery.role/lib/jquery.role
 #= require bootstrap
 #= require jquery-waypoints/waypoints
