@@ -27,7 +27,7 @@
       - [@projects_data, @projects].each do |set|
         - set.each do |p|
           - p = p[1]
-          = link_to p.title, "##{p.slug}", class: "app-secondary-nav-item"
+          = link_to p.title, "##{p.slug}", class: "app-secondary-nav-item", role: 'project-link', data: {'link-project' => "#{p.slug}"}
 
 
 

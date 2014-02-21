@@ -10,7 +10,7 @@ $navbarToggleZindex-xs: 1200
   +translateY(0)
 
 =navbarTransition
-  +transition(transform 0.6s ease, opacity 0.6s ease, background 0.6s ease)
+  +transition(transform 0.6s ease, opacity 0.6s ease, background 0.6s ease, border 0.6s ease)
 
 .navbar-transitions
   +navbarTransition
@@ -121,22 +121,27 @@ $navbarToggleZindex-xs: 1200
   +navbarTransition
   background: $navbarBackgroundColor
   border-bottom: 0
+  line-height: 1.2em
   padding:
     top: 0.5em
     bottom: 0.5em
   @media screen and (max-width: $screen-md)
     display: none
+  border-bottom: 1px solid #fff
   &.secondary-navbar-top
     +translateY(0)
+    border-bottom: 1px solid rgba($linkColor, 0.2)
 
 .app-secondary-nav-item
   @extend .app-nav-item
   font:
     size: $compactTextFontSize / 1.2
-    weight: 500
+    weight: 900
   text-transform: uppercase
   letter-spacing: 1px
   padding: 0 2em 0 0
+  +link-colors(lighten($textColor, 30%), $linkColor)
+  +transition(none)
 
 =navbar-fixed-item-bg
   background: rgba(#fff, 0.9)

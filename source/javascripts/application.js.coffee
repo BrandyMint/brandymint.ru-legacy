@@ -1,6 +1,7 @@
-#= require jquery/jquery.min
+#= require jquery/dist/jquery.min
 #= require jquery.role/lib/jquery.role
 #= require bootstrap
+#= require jquery-waypoints/waypoints
 #= require modernizr/modernizr
 
 window.App ||= {}
@@ -34,6 +35,22 @@ $ ->
   App.navbarToggleBtn.on 'click', () ->
     App.toggleMenu()
 
+((app) ->
+  $(document).ready ->
+    $('@project-waypoint').waypoint (direction) ->
+      app.secondaryNavbar.find('[data-link-project]').removeClass 'active'
+      project = $(@).data('project')
+      app.secondaryNavbar.find('[data-link-project='+project+']').addClass('active')
+
+    $("@project-link").on 'click', () ->
+      project = $(@).data('link-project')
+      top = $('[data-project="'+project+'"]').position().top
+      currentScrollTop = $('body').scrollTop()
+      $('body').animate
+        scrollTop: top - 80
+        #, 500 * Math.abs(currentScrollTop - top) / currentScrollTop
+      , 600
+)(window.App ||= {})
 
 ((app) ->
   userAgent = navigator.userAgent
