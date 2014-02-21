@@ -1,0 +1,34 @@
+slug: swapurban
+logo: swapurban_logo.svg
+url: http://swapurban.com
+image: 'composed/swapurban.png'
+date: 10-04-2012
+description: |
+  More and more people prefer to exchange between each other instead of buying all new.
+  __SwapUrban__
+  focuses on this fact and offers a service to swap books.
+  It is based on
+  __Amazon book search__
+  so you can find any book there, add it to your wishlist and get notified if someone offers it (or get rid of your unused books).
+  __Swap process__
+  has its own iterface with price balance between offers and wants.
+  __Realtime chat__  helps to communicate seamless and define exchange details.
+  
+  There's a strong accent on  __geolocation–based communities and filtering__ so you don't need to waste your time searching offers nearby.
+  
+  This startup founders came to us with ideas in their bright minds, and we built the product from the very start,
+  including paper prototypes and intercative one.
+  
+  SwapUrban is __award–winning participant of Venture Fair 2013 (Kazan, Russia)__.
+features:
+  1: Realtime communication
+  2: Amazon Search API
+  3: Geolocation
+technologies:
+  1: Ruby on Rails
+  2: Faye
+methodologies:
+  1: Rapid prototyping
+  2: Scrum
+  3: Test-driven development
+

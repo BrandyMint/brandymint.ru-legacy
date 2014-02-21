@@ -1,0 +1,18 @@
+slug: kribrum
+title: Kribrum
+image: 'composed/kribrum.png'
+date: '10-11-2013'
+devices:
+  -
+    device: ipad landscape
+description: |
+  iPad app for Kribrum, social media and news monitoring service built for enterprise use.
+features:
+  1: PhoneGap development
+technologies:
+  1: Backbone
+  2: Marionette
+methodologies:
+  1: Scrum
+  2: Agile
+
