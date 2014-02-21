@@ -15,7 +15,7 @@ $ ->
       App.navbarMenuBlock.addClass('navbar-transitions')
       App.toggleMenu(App.navbarToggleBtn, App.navbarMenuBlock)
     lastScrollTop = 0
-    App.navbarScrollEnabled = true
+    App.navbarScrollEnabled ||= true
     $(window).on 'scroll', (event) ->
       st = $(this).scrollTop()
       if st > 100
@@ -40,29 +40,33 @@ $ ->
 ((app) ->
   $(document).ready ->
     $('@project-waypoint-start').waypoint (direction) ->
-      app.secondaryNavbar.find('[data-link-project]').removeClass 'active'
-      project = $(@).data('project')
-      app.secondaryNavbar.find('[data-link-project='+project+']').addClass('active')
+      if app.navbarScrollEnabled == true
+        app.secondaryNavbar.find('[data-link-project]').removeClass 'active'
+        project = $(@).data('project')
+        app.secondaryNavbar.find('[data-link-project='+project+']').addClass('active')
     $('@project-waypoint-end').waypoint (direction) ->
       app.secondaryNavbar.find('[data-link-project]').removeClass 'active'
 
     $("@project-link").on 'click', () ->
+      $("@project-link").removeClass 'active'
+      $(@).addClass 'active'
       project = $(@).data('link-project')
       projectBlock = $('[data-project="'+project+'"]')
       top = projectBlock.position().top
-      #- parseInt(projectBlock.css('padding-top'))
       currentScrollTop = $('body').scrollTop()
       if top < currentScrollTop
-        top = top - 1
-        app.navbarScrollEnabled = false
+        top = top - 2
+        direction = 'Down'
       else
-        top = top + 1
-      $('body').animate
-        scrollTop: top
-      , 600, ->
-        setTimeout(( ->
-          app.navbarScrollEnabled = true
-        ), 100)
+        top = top + 2
+        direction = 'Up'
+      animationClass = 'animated fadeIn'+direction
+      $('body')
+        .scrollTop(top)
+      projectBlock
+        .addClass animationClass
+        .one 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', () ->
+          $(@).removeClass animationClass
 )(window.App ||= {})
 
 ((app) ->

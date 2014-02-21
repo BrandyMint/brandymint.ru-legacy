@@ -17,6 +17,7 @@ gem "middleman-imageoptim", "~> 0.1.4"
 #gem "middleman-core"
 gem 'bootstrap-sass', '3.0.3.0', :require => false, :github => 'thomas-mcdonald/bootstrap-sass'
 gem 'compass-rails', require: false
+gem 'animate-sass'
 #gem "sass-rails", ">= 4.0"
 gem "sass", ">= 3.2"
 
