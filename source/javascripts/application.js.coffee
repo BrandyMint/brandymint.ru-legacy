@@ -37,17 +37,25 @@ $ ->
 
 ((app) ->
   $(document).ready ->
-    $('@project-waypoint').waypoint (direction) ->
+    $('@project-waypoint-start').waypoint (direction) ->
       app.secondaryNavbar.find('[data-link-project]').removeClass 'active'
       project = $(@).data('project')
       app.secondaryNavbar.find('[data-link-project='+project+']').addClass('active')
+    $('@project-waypoint-end').waypoint (direction) ->
+      app.secondaryNavbar.find('[data-link-project]').removeClass 'active'
 
     $("@project-link").on 'click', () ->
       project = $(@).data('link-project')
-      top = $('[data-project="'+project+'"]').position().top
+      projectBlock = $('[data-project="'+project+'"]')
+      top = projectBlock.position().top
+      #- parseInt(projectBlock.css('padding-top'))
       currentScrollTop = $('body').scrollTop()
+      if top < currentScrollTop
+        top = top - 1
+      else
+        top = top + 1
       $('body').animate
-        scrollTop: (top - 80)
+        scrollTop: top
       , 600
 )(window.App ||= {})
 
@@ -101,31 +109,3 @@ $ ->
       new_string
 )(window.App || = {})
 
-
-((app) ->
-  projectBlock = $('@project-block')
-  slideSelector = "[role*=project-devices-carousel]"
-  projectSlides = $(slideSelector)
-  projectSlides
-    .carousel
-      interval: 5000
-      pause: false
-    .carousel 'pause'
-  slideHeights = []
-  projectSlides.each ->
-    $(@).carousel 'pause'
-    $(@).find('@carousel-item').each ->
-      slideHeights.push $(@).height()
-    maxHeight = Math.max.apply(Math, slideHeights)
-    $(@).find('@carousel-item').each ->
-      $(@).css('height', maxHeight + 'px')
-    unless App.isMobile
-      projectBlock
-        .on 'mouseover', () ->
-          $(@).find(slideSelector).carousel('cycle')
-        .on 'mouseout', () ->
-          $(@).find(slideSelector).carousel('pause')
-
-
-
- )(window.App ||= {})

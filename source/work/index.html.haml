@@ -15,6 +15,6 @@ navbar_state: active
       - set.each do |f|
         - p = f[1]
         %a{name: p.slug}
-        %div{ class: "project-container project-container-#{p.slug}", data: {project: "#{p.slug}"}, role: "project-waypoint"}
+        %div{ class: "project-container project-container-#{p.slug}", data: {project: "#{p.slug}"}, role: "project-waypoint-start"}
           = partial "work/project_block", locals: {p: p}
 
