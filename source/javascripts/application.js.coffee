@@ -47,8 +47,7 @@ $ ->
       top = $('[data-project="'+project+'"]').position().top
       currentScrollTop = $('body').scrollTop()
       $('body').animate
-        scrollTop: top - 80
-        #, 500 * Math.abs(currentScrollTop - top) / currentScrollTop
+        scrollTop: (top - 80)
       , 600
 )(window.App ||= {})
 
