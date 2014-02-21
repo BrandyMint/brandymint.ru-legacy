@@ -1,6 +1,7 @@
 #= require jquery/jquery.min
 #= require jquery.role/lib/jquery.role
 #= require bootstrap
+#= require jquery-waypoints/waypoints
 #= require modernizr/modernizr
 
 window.App ||= {}
@@ -11,9 +12,10 @@ $ ->
     App.navbarMenuBlock.removeClass 'active'
   else
     unless $('body').hasClass('hide-navbar-menu')
-      App.navbarMenuBlock.addClass('.navbar-transitions')
+      App.navbarMenuBlock.addClass('navbar-transitions')
       App.toggleMenu(App.navbarToggleBtn, App.navbarMenuBlock)
     lastScrollTop = 0
+    App.navbarScrollEnabled = true
     $(window).on 'scroll', (event) ->
       st = $(this).scrollTop()
       if st > 100
@@ -21,8 +23,9 @@ $ ->
           App.hideNavbar(st, App.coverImageHeight)
           # downscroll code
         else
-          App.showNavbar(st, App.coverImageHeight)
-          # upscroll code
+          if App.navbarScrollEnabled == true
+            App.showNavbar(st, App.coverImageHeight)
+            # upscroll code
       else
         #App.hideNavbar()
       lastScrollTop = st
@@ -34,6 +37,33 @@ $ ->
   App.navbarToggleBtn.on 'click', () ->
     App.toggleMenu()
 
+((app) ->
+  $(document).ready ->
+    $('@project-waypoint-start').waypoint (direction) ->
+      app.secondaryNavbar.find('[data-link-project]').removeClass 'active'
+      project = $(@).data('project')
+      app.secondaryNavbar.find('[data-link-project='+project+']').addClass('active')
+    $('@project-waypoint-end').waypoint (direction) ->
+      app.secondaryNavbar.find('[data-link-project]').removeClass 'active'
+
+    $("@project-link").on 'click', () ->
+      project = $(@).data('link-project')
+      projectBlock = $('[data-project="'+project+'"]')
+      top = projectBlock.position().top
+      #- parseInt(projectBlock.css('padding-top'))
+      currentScrollTop = $('body').scrollTop()
+      if top < currentScrollTop
+        top = top - 1
+        app.navbarScrollEnabled = false
+      else
+        top = top + 1
+      $('body').animate
+        scrollTop: top
+      , 600, ->
+        setTimeout(( ->
+          app.navbarScrollEnabled = true
+        ), 100)
+)(window.App ||= {})
 
 ((app) ->
   userAgent = navigator.userAgent
@@ -47,13 +77,16 @@ $ ->
 
 ((app) ->
   app.appNavbar = $('@application-navbar')
+  app.secondaryNavbar = $('@secondary-navbar')
   app.hideNavbar = (st, coverHeight) ->
     setTimeout(( ->
       app.appNavbar.addClass('transparent')
+      app.secondaryNavbar.addClass('secondary-navbar-top')
     ), 200)
   app.showNavbar = (st, coverHeight) ->
     setTimeout(( ->
       app.appNavbar.removeClass('transparent')
+      app.secondaryNavbar.removeClass('secondary-navbar-top')
       if coverHeight? && st > coverHeight
         app.appNavbar.addClass('navbar-white')
       else if st < coverHeight
@@ -82,31 +115,3 @@ $ ->
       new_string
 )(window.App || = {})
 
-
-((app) ->
-  projectBlock = $('@project-block')
-  slideSelector = "[role*=project-devices-carousel]"
-  projectSlides = $(slideSelector)
-  projectSlides
-    .carousel
-      interval: 5000
-      pause: false
-    .carousel 'pause'
-  slideHeights = []
-  projectSlides.each ->
-    $(@).carousel 'pause'
-    $(@).find('@carousel-item').each ->
-      slideHeights.push $(@).height()
-    maxHeight = Math.max.apply(Math, slideHeights)
-    $(@).find('@carousel-item').each ->
-      $(@).css('height', maxHeight + 'px')
-    unless App.isMobile
-      projectBlock
-        .on 'mouseover', () ->
-          $(@).find(slideSelector).carousel('cycle')
-        .on 'mouseout', () ->
-          $(@).find(slideSelector).carousel('pause')
-
-
-
- )(window.App ||= {})

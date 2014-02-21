@@ -1,39 +1,35 @@
 - p = locals[:p]
+- default_url = p.url || p.appstore || p.google_play
 
 .project-block{role: "project-block"}
   .row
     .col-md-8.col-md-offset-2
-      .project-image-block
-        - if p.image.present?
-          %img.project-image-composed{src: image_path("projects/#{p.image}")}
+      - if p.image.present?
+        .project-image-block
+          - if default_url.present?
+            = link_to default_url, target: '_blank' do
+              = partial 'work/project_block_image', locals: {image: p.image}
+          - else
+            = partial 'work/project_block_image', locals: {image: p.image}
 
       %h3.project-title.text-center
-        - if p.url.present? || p.google_play.present? || p.appstore.present?
-          %a{href: p.url || p.appstore || p.google_play, target: :blank}
-            - if p.logo
-              %img{ src: image_path("projects/#{p.logo}") }
-            - elsif p.title
-              = p.title
+        - if default_url.present?
+          %a{href: default_url, target: :blank}
+            = partial 'work/project_block_title', locals: {title: p.title, logo: p.logo}
         - else
-          - if p.logo
-            %img{ src: image_path("projects/#{p.logo}") }
-          - if p.title
-            = p.title
+          = partial 'work/project_block_title', locals: {title: p.title, logo: p.logo}
       .project-features
-        - features = p.features if p.features
-        - features.each_pair do |k,v|
+        - p.features.each_pair do |k,v|
           %span= v
       .project-description
         %p= md p.description if p.description.present?
       -#%h5.technology-title Technologies
       .project-technologies
-        - technologies = p.technologies if p.technologies
-        - technologies.each_pair do |k,v|
+        - p.technologies.each_pair do |k,v|
           %span= v
       -#%h5.technology-title Methodologies
       .project-technologies
-        - methodologies = p.methodologies if p.methodologies
-        - methodologies.each_pair do |k,v|
+        - p.methodologies.each_pair do |k,v|
           %span= v
       .project-platforms.text-center
         - if p.devices.present?

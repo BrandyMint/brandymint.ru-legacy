@@ -1,22 +1,20 @@
 ---
-body_class: services-page
+body_class: services-page body-navbar-white
 navbar_state: active
 ---
 
-.work-page
-  -#= partial 'welcome/projects'
-  - projects = data.projects
-  .projects-container
-    - projects_data = data.work
-    - projects_data.each do |f|
-      %a{name: f[1].slug}
-      %div{ class: "project-container project-container-#{f[1].slug}"}
-        -#.container
-        = partial "work/project_block", locals: {p: f[1]}
 
-    - projects.each do |p|
-      %a{name: p.slug}
-      %div{ class: "project-container project-container-#{p.slug}"}
-        -#.container
-        = partial "work/project_block", locals: {p: p}
+.work-page
+  -#{data: {spy: 'scroll', target: '.secondary-navbar'}}
+  -#= partial 'welcome/projects'
+  - @projects = data.projects
+  - @projects = @projects.sort {|a, b| Date.parse(b[1].date) <=> Date.parse(a[1].date) }
+  .projects-container
+    - @projects_data = data.work
+    - [@projects_data, @projects].each do |set|
+      - set.each do |f|
+        - p = f[1]
+        %a{name: p.slug}
+        %div{ class: "project-container project-container-#{p.slug}", data: {project: "#{p.slug}"}, role: "project-waypoint-start"}
+          = partial "work/project_block", locals: {p: p}
 

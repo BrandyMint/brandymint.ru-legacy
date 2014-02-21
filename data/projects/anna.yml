@@ -1,0 +1,25 @@
+slug: anna
+title: "Coats'n'Shorts"
+image: 'composed/anna.png'
+date: '10-03-2012'
+devices:
+  -
+    device: ipad white
+appstore: 'https://itunes.apple.com/ru/app/anin-den/id583847885?mt=8'
+description: |
+  Coats'n'Shorts for iOS, an update to its popular educational dress up game for children under six. 
+  Complete with interactive and colorful backgrounds, Coats'n'Shorts teaches children how to choose 
+  the right clothes for different seasons, occasions, and holidays. Users proceed through twelve levels 
+  by helping Anna mix and match tops, bottoms, and accessories to create the perfect outfit. 
+  Ideal for teaching young kids how to match, categorize, and choose clothing, 
+  Coats'n'Shorts rewards players with a unique prize upon the completion of each level.
+features:
+  1: Hand-crafted illustrations
+  2: Animations
+  3: In–App purchases
+technologies:
+  1: iOS Development
+methodologies:
+  1: Scrum
+
+

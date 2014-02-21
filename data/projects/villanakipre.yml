@@ -1,0 +1,14 @@
+slug: villanakipre
+title: Villanakipre.ru
+image: 'composed/villanakipre.png'
+date: '06-06-2013'
+description: |
+  Backend development for Villanakipre.ru, website focused on realty rent and sale on Cyprus.
+features:
+  1: Advanced search engine
+technologies:
+  1: Ruby on Rails
+methodologies:
+  1: Domain–driven design
+
+

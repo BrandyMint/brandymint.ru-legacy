@@ -1,0 +1,5 @@
+- if locals[:logo]
+  %img{ src: image_path("projects/#{locals[:logo]}") }
+- elsif locals[:title]
+  = locals[:title]
+

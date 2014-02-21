@@ -1,0 +1,32 @@
+slug: investcafe
+logo: investcafe_logo.svg
+title: Investcafe
+url: http://investcafe.ru
+image: 'composed/investcafe.png'
+date: 10-10-2012
+description: |
+  Investcafe is Russia’s first independent research firm that provides institutional investors with unbiased analysis 
+  and insight from a team of experts.
+  
+  We were involved in this project when it was popular source of market news and analytics.
+  The project was growing fast and needed to become scalable and reliable.
+  Originally it based on Bitrix CMS and our mission was to develop new platform with bucket of additional features.
+  We chose Ruby on Rails and carefully took existing database to the new environment.
+  Development included full redesign with responsive design approach.
+features:
+  1: 300,000 pageviews per day
+  2: Migrating to custom platform
+  3: Database transfer
+  4: Custom server-side API
+  5: Redesign
+  6: Responsive design
+  7: iOS development
+technologies:
+  1: Ruby on Rails
+  2: Objective-C
+methodologies:
+  1: Rapid prototyping
+  2: Scrum
+  3: Test–driven development
+
+

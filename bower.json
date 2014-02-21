@@ -5,7 +5,8 @@
     "jquery": "latest",
     "jquery-mobile": "latest",
     "jquery.role": "git://github.com/kossnocorp/role",
-    "modernizr": "~2.7.1"
+    "modernizr": "~2.7.1",
+    "jquery-waypoints": "~2.0.4"
   },
   "ignore": [
     "**/.*",

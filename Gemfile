@@ -24,7 +24,22 @@ gem "sass", ">= 3.2"
 #gem 'therubyracer'
 gem 'rb-inotify', '~> 0.9', :require => false
 
+gem 'better_errors'
 #gem 'middleman-pry'
+#gem 'pry-theme'
+gem 'pry-pretty-numeric'
+#gem 'pry-syntax-hacks'
+#gem 'pry-highlight'
+#gem 'pry-git'
+#gem 'pry-developer_tools'
+#gem 'pry-remote'
+#gem 'rspec-console'
+# step, next, finish, continue, break
+gem 'pry-nav'
+#gem 'pry-doc'
+#gem 'pry-docmore'
+# Добавляет show-stack
+#gem "pry-stack_explorer"
 
 
 
