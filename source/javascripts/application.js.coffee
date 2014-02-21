@@ -15,6 +15,7 @@ $ ->
       App.navbarMenuBlock.addClass('navbar-transitions')
       App.toggleMenu(App.navbarToggleBtn, App.navbarMenuBlock)
     lastScrollTop = 0
+    App.navbarScrollEnabled = true
     $(window).on 'scroll', (event) ->
       st = $(this).scrollTop()
       if st > 100
@@ -22,8 +23,9 @@ $ ->
           App.hideNavbar(st, App.coverImageHeight)
           # downscroll code
         else
-          App.showNavbar(st, App.coverImageHeight)
-          # upscroll code
+          if App.navbarScrollEnabled == true
+            App.showNavbar(st, App.coverImageHeight)
+            # upscroll code
       else
         #App.hideNavbar()
       lastScrollTop = st
@@ -52,11 +54,15 @@ $ ->
       currentScrollTop = $('body').scrollTop()
       if top < currentScrollTop
         top = top - 1
+        app.navbarScrollEnabled = false
       else
         top = top + 1
       $('body').animate
         scrollTop: top
-      , 600
+      , 600, ->
+        setTimeout(( ->
+          app.navbarScrollEnabled = true
+        ), 100)
 )(window.App ||= {})
 
 ((app) ->
