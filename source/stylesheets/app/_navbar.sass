@@ -16,10 +16,15 @@ $navbarToggleZindex-xs: 1200
   +navbarTransition
 
 .navbar.application-navbar
-  background: $navbarBackgroundColor
+  background: transparent
+  &.navbar-white,
+  .body-navbar-white &
+    background: $navbarBackgroundColor
   border-bottom: 0
   +navbarTransition
   opacity: 1
+  overflow: hidden
+  height: $navbarHeight
   &.transparent
     //opacity: 0
     +navbarHide
@@ -140,8 +145,8 @@ $navbarToggleZindex-xs: 1200
   background: none
   @media screen and (max-width: $screen-sm)
     +navbar-fixed-item-bg
-  .body-navbar-white &,
-  .navbar-white &,
+  //.navbar-white &,
+  //.body-navbar-white &,
   .services-page &,
   .contact-page &,
   .navbar-mobile-device &
