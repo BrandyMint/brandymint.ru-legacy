@@ -29,3 +29,12 @@
 .btn-learn-more
   @media screen and (max-width: $screen-xs)
     display: block
+
+.btn-container
+  +btn-outline($linkColor, none, #fff, $linkColor)
+  border: none
+  font:
+    size: $largeHeaderFontSize / 1.5
+    weight: 500
+  @media screen and (max-width: $screen-sm)
+    font-size: $largeHeaderFontSize-xs / 1.5
