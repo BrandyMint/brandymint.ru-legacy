@@ -32,6 +32,9 @@
         - p.methodologies.each_pair do |k,v|
           %span= v
       .project-platforms.text-center
+        .project-block-release-date
+          = Date.parse(p.date).strftime('%d/%m/%Y') if p.date.present?
+        %br
         - if p.devices.present?
           - device_types = []
           - p.devices.each do |d|
@@ -40,3 +43,4 @@
             = t
         - else
           = device_type_link p, 'web'
+

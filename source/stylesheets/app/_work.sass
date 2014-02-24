@@ -115,12 +115,23 @@
           +svg-bg-image("device_icons/#{$p}")
         .no-touch .project-container:hover a &
           +svg-bg-image("device_icons/#{$p}_link")
-
+.project-block-release-date
+  color: $grayLight
+  display: inline-block
+  height: $platformIconSize
+  padding: 0 $platformIconSize/4
+  font:
+    size: $platformIconSize / 2
+    weight: 100
+  line-height: 1em
+  vertical-align: middle
+  text-transform: uppercase
+  letter-spacing: 1px
 
 
 .project-platforms
   margin:
-    top: 2em
+    top: 1em
     bottom: 1em
 
 .project-block-platform
