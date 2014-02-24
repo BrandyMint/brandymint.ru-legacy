@@ -2,16 +2,17 @@
   .container
     %a.navbar-brand-logo-link.pull-left{href: url_for('/')}
       %img.navbar-brand-logo.navbar-fixed-item{src: image_path("logo_brandymint_black.svg"), alt: 'Brandymint'}
-    
-    %button.app-nav-toggle.navbar-toggle.navbar-fixed-item{type: "button", role: "app-nav-toggle-button", 'data-state' => current_page.data.navbar_state || ''}
-      .icon-bar-btn
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
+
+    .pull-right
+      %button.app-nav-toggle.navbar-toggle.navbar-fixed-item{type: "button", role: "app-nav-toggle-button", 'data-state' => current_page.data.navbar_state || ''}
+        .icon-bar-btn
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
 
 
     -#.navbar-collapse.collapse
-    .app-nav.pull-right.navbar-fixed-item{ role: 'navbar-menu'}
+    .app-nav.navbar-fixed-item{ role: 'navbar-menu'}
       - data.navigation.each do |n|
         - if current_page.url.gsub('/','').match( url_for(n.page).gsub('/','') )
           - state = 'active'
