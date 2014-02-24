@@ -1,8 +1,6 @@
 - title = locals[:title] || 'more projects'
 
-.welcome-block
-  .container
-    .row
-      .col-md-8.col-md-offset-2.text-center
-        = link_to title, url_for('/work/'), class: 'btn btn-primary-outline'
+= link_to url_for('/work/'), class: 'btn btn-container welcome-block btn-block text-center' do
+  = title
+  = ficon 'right-open-big'
 
