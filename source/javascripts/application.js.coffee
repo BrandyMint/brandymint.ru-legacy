@@ -105,11 +105,10 @@ $ ->
   app.navbarToggleBtn = $('@app-nav-toggle-button')
   app.toggleMenu = (btn = app.navbarToggleBtn, menu = app.navbarMenuBlock) ->
     btn.toggleClass 'app-nav-toggle-active'
-    #btn.toggleClass 'app-nav-toggle-inactive'
+    menu.toggleClass('navbar-transitions')
     menu.toggleClass('active')
     $('body, html').toggleClass('not-scrollable')
     app.navbarScrollEnabled = !app.navbarScrollEnabled
-    console.log app.navbarScrollEnabled
 )(window.App ||= {})
 
 ((app) ->
