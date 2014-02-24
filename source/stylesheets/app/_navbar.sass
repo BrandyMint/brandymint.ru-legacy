@@ -22,6 +22,8 @@ $navbarToggleZindex-xs: 1200
 
 .navbar.application-navbar
   background: transparent
+  @media screen and (max-width: $screen-sm)
+    background: $navbarBackgroundColor
   &.navbar-white,
   .body-navbar-white &
     background: $navbarBackgroundColor
@@ -41,12 +43,11 @@ $navbarToggleZindex-xs: 1200
   padding: 20px
   margin:
     top: 0
-    left: -20px
-    //right: -20px
+    left: -47px
+    right: 0
   top: 0
   //right: 0
   right: inherit
-  margin-right: 0
   position: fixed
   z-index: $navbarToggleZindex-xs
 
@@ -155,9 +156,9 @@ $navbarToggleZindex-xs: 1200
   +link-colors(lighten($textColor, 30%), $linkColor)
   +transition(none)
 
-.navbar-fixed-item
+//.navbar-fixed-item
   background: none
-  @media screen and (max-width: $screen-sm)
+  //@media screen and (max-width: $screen-sm)
     +navbar-fixed-item-bg
   //.navbar-white &,
   //.body-navbar-white &,
