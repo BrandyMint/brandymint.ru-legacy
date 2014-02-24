@@ -1,5 +1,9 @@
 body
   background: $footerBackground
+
+body, html
+  &.not-scrollable
+    overflow: hidden
 *
   +transform3d(0)
   //+transformsFix

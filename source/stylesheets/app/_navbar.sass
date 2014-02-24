@@ -1,6 +1,7 @@
 $navbarHeight: 54px
 $navbarHideHeight: 80px
 $navbarMenuZindex-xs: 1100
+$navbarSecondaryZindex: 1000
 $navbarToggleZindex-xs: 1200
 
 =navbarHide
@@ -24,7 +25,8 @@ $navbarToggleZindex-xs: 1200
   border-bottom: 0
   +navbarTransition
   opacity: 1
-  overflow: hidden
+  //overflow: hidden
+  overflow: visible
   height: $navbarHeight
   &.transparent
     //opacity: 0
@@ -37,7 +39,14 @@ $navbarToggleZindex-xs: 1200
   margin:
     top: 0
     left: -20px
-    right: -20px
+    //right: -20px
+  top: 0
+  //right: 0
+  right: inherit
+  margin-right: 0
+  position: fixed
+  z-index: $navbarToggleZindex-xs
+
   &, .icon-bar
     +transition(background-color 0.2s ease, transform 0.2s ease, opacity 0.2s ease)
   .icon-bar
@@ -54,13 +63,6 @@ $navbarToggleZindex-xs: 1200
       &:last-child
         +transform(translateY(-6px) rotate(-45deg))
 
-  @media screen and (max-width: $screen-xs)
-    top: 0
-    right: 0
-    margin-right: 0
-    position: fixed
-    z-index: $navbarToggleZindex-xs
-
 .navbar-brand-logo
   max-width: 120px
   padding: 12px 20px 15px 20px
@@ -70,27 +72,37 @@ $navbarToggleZindex-xs: 1200
   +box-sizing(content-box)
 
 .navbar-brand-logo-link
-  @media screen and (max-width: $screen-xs)
-    display: block
-    top: 0
-    position: fixed
-    z-index: $navbarToggleZindex-xs
+  //@media screen and (max-width: $screen-xs)
+  display: block
+  top: 0
+  position: fixed
+  z-index: $navbarToggleZindex-xs
 
 .app-nav
   +transformsFix
   +navbarHide
   margin:
     right: 19px
+  position: fixed
+  background: #fff !important
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  padding-top: 3em
   &.active
     +navbarShow
-    @media screen and (max-width: $screen-xs)
-      position: fixed
-      background: #fff !important
-      width: 100%
-      height: 100%
-      top: 0
-      left: 0
-      padding-top: 3em
+    //@media screen and (max-width: $screen-xs)
+  .app-nav-item
+    @extend %large-header
+    display: block
+    +box-sizing(border-box)
+    text-align: center
+    padding:
+      top: 1em
+      bottom: 1em
+    font:
+      weight: 300
 
 .app-nav-item
   display: inline-block
@@ -108,18 +120,13 @@ $navbarToggleZindex-xs: 1200
     right: 1em
   &.active
     +link-colors($linkColor)
-  .app-nav.active &
-    @media screen and (max-width: $screen-xs)
-      display: block
-      +box-sizing(border-box)
-      text-align: center
-      padding:
-        top: 1em
-        bottom: 1em
+  //.app-nav.active &
+    //@media screen and (max-width: $screen-xs)
 
 .navbar.secondary-navbar
   +translateY($navbarHeight - 1px)
   +navbarTransition
+  z-index: $navbarSecondaryZindex
   background: $navbarBackgroundColor
   border-bottom: 0
   line-height: 1.2em

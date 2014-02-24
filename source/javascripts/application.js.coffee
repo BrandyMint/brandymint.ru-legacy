@@ -11,9 +11,9 @@ $ ->
     App.appNavbar.addClass('navbar-mobile-device')
     App.navbarMenuBlock.removeClass 'active'
   else
-    unless $('body').hasClass('hide-navbar-menu')
-      App.navbarMenuBlock.addClass('navbar-transitions')
-      App.toggleMenu(App.navbarToggleBtn, App.navbarMenuBlock)
+    #unless $('body').hasClass('hide-navbar-menu')
+    #  App.navbarMenuBlock.addClass('navbar-transitions')
+    #  App.toggleMenu(App.navbarToggleBtn, App.navbarMenuBlock)
     lastScrollTop = 0
     App.navbarScrollEnabled ||= true
     $(window).on 'scroll', (event) ->
@@ -83,10 +83,11 @@ $ ->
   app.appNavbar = $('@application-navbar')
   app.secondaryNavbar = $('@secondary-navbar')
   app.hideNavbar = (st, coverHeight) ->
-    setTimeout(( ->
-      app.appNavbar.addClass('transparent')
-      app.secondaryNavbar.addClass('secondary-navbar-top')
-    ), 200)
+    if app.navbarScrollEnabled == true
+      setTimeout(( ->
+        app.appNavbar.addClass('transparent')
+        app.secondaryNavbar.addClass('secondary-navbar-top')
+      ), 200)
   app.showNavbar = (st, coverHeight) ->
     setTimeout(( ->
       app.appNavbar.removeClass('transparent')
@@ -106,6 +107,9 @@ $ ->
     btn.toggleClass 'app-nav-toggle-active'
     #btn.toggleClass 'app-nav-toggle-inactive'
     menu.toggleClass('active')
+    $('body, html').toggleClass('not-scrollable')
+    app.navbarScrollEnabled = !app.navbarScrollEnabled
+    console.log app.navbarScrollEnabled
 )(window.App ||= {})
 
 ((app) ->
