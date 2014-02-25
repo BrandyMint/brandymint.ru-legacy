@@ -1,0 +1,28 @@
+---
+body_class: services-page body-navbar-white
+navbar_state: active
+---
+
+- @product_sections = data.product_sections
+- @products = data.products
+- @products_sorted = data.products.sort {|a, b| @product_sections[a[0]].position <=> @product_sections[b[0]].position}
+- @products_sorted = Hash[@products_sorted]
+- projects_data = {}
+
+.work-page.products-page
+  - @products_sorted.each_pair do |section_key, section_content|
+    %h2.text-center.products-page-title
+      = @product_sections[section_key].title if @product_sections[section_key].present?
+    - section_content.each_with_index do |(product_key, product_content), index|
+      - projects_data[product_key] = data.projects[product_key]
+      - if product_content.present? && projects_data[product_key].present?
+        -# product_content = projects_data[product_key]
+        - p = projects_data[product_key].merge product_content
+        -#.merge product_content
+      - elsif !product_content
+        - p = projects_data
+      %a{name: "#{p.slug}"}
+      %div{ class: "project-container product-container", data: {project: "#{p.slug}"}, role: "project-waypoint-start"}
+        = partial "products/product_block", locals: {p: p, index: index}
+
+

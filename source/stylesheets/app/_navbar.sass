@@ -89,7 +89,7 @@ $navbarToggleZindex-xs: 1200
     right: 19px
   position: fixed
   width: 100%
-  height: 100%
+  height: 1000px
   top: 0
   left: 0
   padding-top: 3em
@@ -97,14 +97,16 @@ $navbarToggleZindex-xs: 1200
   &.active
     +navbarShow
     //@media screen and (max-width: $screen-xs)
+    height: 100%
+
   .app-nav-item
     @extend %large-header
     display: block
     +box-sizing(border-box)
     text-align: center
     padding:
-      top: 1em
-      bottom: 1em
+      top: 0.7em
+      bottom: 0.7em
     //font:
       weight: 300
 
@@ -147,11 +149,12 @@ $navbarToggleZindex-xs: 1200
 .app-secondary-nav-item
   @extend .app-nav-item
   font:
-    size: $compactTextFontSize / 1.2
+    size: round($compactTextFontSize / 1.3)
     weight: 900
+  line-height: 1em
   text-transform: uppercase
   letter-spacing: 1px
-  padding: 0 2em 0 0
+  padding: 0 1.5em 0 0
   +link-colors(lighten($textColor, 30%), $linkColor)
   +transition(none)
 

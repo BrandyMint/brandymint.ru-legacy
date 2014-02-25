@@ -33,6 +33,10 @@
     padding-top: 4em
   &:last-child
     border-bottom: none
+  &.product-container
+    padding:
+      top: 1.5em
+      bottom: 1.5em
   //.no-touch &
     a
       color: $textColor
@@ -163,6 +167,12 @@
     font-size: $baseFontSize / 1.2
     line-height: 1.5em
 
+.product-block
+  .project-description
+    &, p
+      font-size: round($baseFontSize / 1.5)
+      line-height: 1.4em
+
 .project-features
   margin-bottom: 20px
   & > span
@@ -183,3 +193,11 @@
     margin-right: 4px
     border: 1px solid $grayLightest
     white-space: nowrap
+
+.products-page-title
+  @extend %large-header
+  margin:
+    top: 2em
+    bottom: 1em
+  &:first-child
+    margin-top: 0
