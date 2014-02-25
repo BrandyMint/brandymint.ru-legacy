@@ -76,6 +76,32 @@ module ApplicationHelpers
     url
   end
 
+  def project_badge_title project, device
+    device ||= 'web'
+    type = device_type device
+    case type
+      when 'ios'
+        title = 'view in appstore'
+      when 'android'
+        title = 'view in google play'
+      else
+        title = project.url.gsub(/(http|:|\/|)/, '')
+    end
+    title
+  end
+
+  def project_badge_link project, device, args={}
+    args[:css_class] ||= ''
+    device ||= 'web'
+    url = device_type_url(project, device)
+    icon = content_tag :span, '', class: "project-block-platform #{device_type device}"
+    if url.present?
+      link_to project_badge_title(project, device), device_type_url(project, device), class: "#{args[:css_class]}", target: '_blank'
+    else
+      ''
+    end
+  end
+
   def device_type_link project, device
     device ||= 'web'
     url = device_type_url(project, device)
