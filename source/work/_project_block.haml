@@ -25,12 +25,14 @@
         %p= md p.description if p.description.present?
       -#%h5.technology-title Technologies
       .project-technologies
-        - p.technologies.each_pair do |k,v|
-          %span= v
+        - if p.technologies.present?
+          - p.technologies.each_pair do |k,v|
+            %span= v
       -#%h5.technology-title Methodologies
       .project-technologies
-        - p.methodologies.each_pair do |k,v|
-          %span= v
+        - if p.methodologies.present?
+          - p.methodologies.each_pair do |k,v|
+            %span= v
       .project-platforms.text-center
         .project-block-release-date
           = Date.parse(p.date).strftime('%d/%m/%Y') if p.date.present?

@@ -1,0 +1,23 @@
+slug: kitchentimer
+title: Smart Kitchen Timer
+#logo: kitchentimer_logo.svg
+image: 'composed/kitchentimer.png'
+date: 10-02-2014
+devices:
+  -
+    device: iphone
+    device_scale: half
+  -
+    device: nexus5
+    device_scale: half
+
+description: |
+  Functional kitchen timer with nice 'tactile' design.
+  Includes preparation time information for various dishes and timers history.
+
+features:
+  1: Cross-platform development
+technologies:
+  1: Qt Mobile
+
+
