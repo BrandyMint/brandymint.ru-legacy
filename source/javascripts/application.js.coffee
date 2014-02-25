@@ -105,10 +105,18 @@ $ ->
   app.navbarToggleBtn = $('@app-nav-toggle-button')
   app.toggleMenu = (btn = app.navbarToggleBtn, menu = app.navbarMenuBlock) ->
     btn.toggleClass 'app-nav-toggle-active'
-    menu.toggleClass('navbar-transitions')
     menu.toggleClass('active')
     $('body, html').toggleClass('not-scrollable')
     app.navbarScrollEnabled = !app.navbarScrollEnabled
+    if app.navbarScrollEnabled
+      # on hiding
+      setTimeout(( ->
+        menu.toggleClass('navbar-transitions')
+      ), 600)
+    else
+      # on showing
+      menu.toggleClass('navbar-transitions')
+
 )(window.App ||= {})
 
 ((app) ->
