@@ -201,3 +201,61 @@
     bottom: 1em
   &:first-child
     margin-top: 0
+
+.product-block-opensource
+  font-size: round($baseFontSize / 1.5)
+  line-height: 1.5em
+  +border-radius(4px)
+  border: 1px solid $grayLightest
+  padding: 1em
+  height: 200px
+  margin:
+    top: $grid-gutter-width / 2
+    bottom: $grid-gutter-width / 2
+  overflow: hidden
+
+.product-block-opensource-title
+  //border-bottom: 1px solid $grayLightest
+  padding:
+    left: $grid-gutter-width / 2
+    right: $grid-gutter-width / 2
+    bottom: 0
+  margin:
+    left: - $grid-gutter-width / 2
+    right: - $grid-gutter-width / 2
+    bottom: $grid-gutter-width / 2
+  &, a
+    font:
+      size: $baseFontSize
+      weight: 500
+
+.product-block-opensource-description
+  margin:
+    top: 0.5em
+
+.product-block-opensource-downloads
+  color: $grayLight
+  font-size: 0.85em
+  line-height: 1em
+  margin-top: 0.5em
+  .downloads-count
+    font:
+      size: 1.6em
+      weight: 900
+
+.product-block-opensource
+  .progress.languages-stats
+    //+border-radius(0 0 4px 4px)
+      position: absolute
+      width: 100%
+      bottom: 0
+    height: 10px
+    margin:
+      top: $grid-gutter-width /2 
+      left: - $grid-gutter-width / 2
+      right: - $grid-gutter-width / 2
+      bottom: 0
+
+@each $l in javascript #f15501, coffeescript #244776, css #1f085e, ruby #701516, shell #5861ce, cpp #f34b7d, objective-c #438eff, c #555, java #b07219
+  .progress-bar-#{nth($l,1)}
+    background-color: nth($l,2)

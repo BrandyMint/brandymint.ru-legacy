@@ -1,0 +1,12 @@
+slug: grape_swagger_rails
+title: grape-swagger-rails
+url: https://github.com/BrandyMint/grape-swagger-rails
+downloads: 2,535
+badge: https://badge.fury.io/rb/grape-swagger-rails.png
+description: |
+  Swagger UI as Rails Engine for grape-swagger gem
+languages:
+  javascript: 96%
+  css: 2%
+  ruby: 2%
+

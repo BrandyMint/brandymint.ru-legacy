@@ -1,0 +1,10 @@
+slug: squash_migrations
+title: squash_migrations
+url: https://github.com/BrandyMint/squash_migrations
+badge: https://badge.fury.io/rb/squash_migrations.png
+downloads: 827
+description: |
+  Squash migrations to last migration.
+languages:
+  ruby: 100%
+
