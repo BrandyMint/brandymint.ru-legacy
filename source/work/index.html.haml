@@ -4,13 +4,19 @@ navbar_state: active
 ---
 
 
-.work-page
-  -#{data: {spy: 'scroll', target: '.secondary-navbar'}}
-  -#= partial 'welcome/projects'
-  - @projects_list = data.projects
-  - @projects_work = data.work
+- @projects_list = data.projects
+- @projects_work = data.work
+- @projects = @projects_work.merge(@projects_list).sort {|a, b| Date.parse(b[1].date) <=> Date.parse(a[1].date) }
 
-  - @projects = @projects_work.merge(@projects_list).sort {|a, b| Date.parse(b[1].date) <=> Date.parse(a[1].date) }
+
+- if @projects.present?
+  .secondary-navbar.navbar.navbar-fixed-top{ role: 'secondary-navbar'}
+    .container
+      - @projects.each do |f|
+        - p = f[1]
+        = link_to p.title, "##{p.slug}", class: "app-secondary-nav-item", role: 'project-link', data: {'link-project' => "#{p.slug}"}
+
+.work-page
   .projects-container
     - @projects.each do |f|
       - p = f[1]
