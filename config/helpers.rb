@@ -117,4 +117,10 @@ module ApplicationHelpers
     link_to '&nbsp;', link, target: :blank, class: "app-badge app-badge-#{platform}"
   end
 
+  def more_link_block title, url
+    link_to url_for("#{url}"), class: 'btn btn-container welcome-block btn-block text-center' do
+      "#{title} #{ficon 'right-open-big'}"
+    end
+  end
+
 end

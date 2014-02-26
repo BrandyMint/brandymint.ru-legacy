@@ -39,10 +39,13 @@
     display: block
 
 .btn-container
-  +btn-outline($linkColor, none, #fff, $linkColor)
+  +btn-outline($linkColor, darken(#fff, 3%), #fff, $linkColor)
   border: none
   font:
     size: $largeHeaderFontSize / 1.5
     weight: 500
+  border-top: 1px solid darken(#fff, 10%)
+  &, .btn-block + &
+    margin-top: 0
   @media screen and (max-width: $screen-sm)
     font-size: $largeHeaderFontSize-xs / 1.5

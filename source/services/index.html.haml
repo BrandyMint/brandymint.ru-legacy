@@ -39,7 +39,7 @@ body_class: services-page body-navbar-white
                 - s.items.each_with_index do |item, i|
                   %li= item
 
-= partial 'welcome/projects_more', locals: {title: "our work"}
-
+= more_link_block 'our work', url_for('/work/')
+= more_link_block 'contact us', url_for('/contact/')
 
 

@@ -1,6 +1,8 @@
 - title = locals[:title] || 'more projects'
 
-= link_to url_for('/work/'), class: 'btn btn-container welcome-block btn-block text-center' do
+-#= link_to url_for('/work/'), class: 'btn btn-container welcome-block btn-block text-center' do
   = title
   = ficon 'right-open-big'
+
+= more_link_block locals[:title], url_for('/work/')
 
