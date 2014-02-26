@@ -3,24 +3,6 @@
   //&, p
     @extend %compact-text
 
-.projects-header-image
-  background: url('../images/background_blurred200.jpg') top left
-  background-size: cover
-  margin: 40px 0
-  @media screen and (min-width: $screen-md)
-    margin-bottom: 60px
-
-.projects-header-container
-  background: rgba(255,255,255,0.3)
-.projects-header
-  @extend .large-header
-  font-weight: 700
-  color: #fff
-  text-shadow: none
-  -webkit-font-smoothing: antialiased
-  text-align: center
-  padding: 50px 0
-
 
 .project-container
   &, *
@@ -34,9 +16,12 @@
   &:last-child
     border-bottom: none
   &.product-container
-    padding:
-      top: 1.5em
-      bottom: 1.5em
+    &, &:first-child
+      padding:
+        top: 2em
+        bottom: 1.5em
+    &, &:last-child
+      border-bottom: 1px solid $grayLightest
   //.no-touch &
     a
       color: $textColor
@@ -196,11 +181,28 @@
 
 .products-page-title
   @extend %large-header
-  margin:
-    top: 2em
-    bottom: 1em
+  padding:
+    top: 1em
+  @media screen and (min-width: $screen-md)
+    padding:
+      top: 2em
+      bottom: 1em
+
+.products-section
   &:first-child
-    margin-top: 0
+    .products-page-title
+      padding-top: 0
+
+//.products-section
+  //padding:
+    top: 3em
+
+.product-title
+  @extend %large-header
+  font-size: $largeHeaderFontSize / 1.5
+  margin-bottom: 1em
+  @media screen and (max-width: $screen-sm)
+    font-size: $largeHeaderFontSize-xs / 1.5
 
 .product-block-opensource
   font-size: round($baseFontSize / 1.5)
