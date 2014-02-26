@@ -28,7 +28,8 @@ navbar_state: active
     - else
       .container
         .row
-          - section_content.each_with_index do |(product_key, product_content), index|
+          - section_content_sorted = section_content.sort {|a, b| (b[1].downloads || 0) <=> (a[1].downloads || 0)}
+          - section_content_sorted.each_with_index do |(product_key, product_content), index|
             - p = product_content
             .col-md-4
               = partial "products/product_block_opensource", locals: {p: p}
