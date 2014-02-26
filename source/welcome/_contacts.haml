@@ -5,17 +5,12 @@
         %h2.welcome-header
           Contact
       .col-sm-4.col-sm-offset-2.article-text
-        = link_to 'mailto:danil@brandymint.com', class: 'contacts-link' do
-          %strong danil@brandymint.com
+        = link_to "mailto:#{data.contacts.email}", class: 'contacts-link' do
+          %strong= data.contacts.email
         %br
         %br
-        = link_to 'tel:+79033891228', class: 'contacts-link' do
-          %small +7 903 389 12 28
+        = link_to "tel:#{data.contacts.phone}", class: 'contacts-link' do
+          %small= data.contacts.phone
       .col-sm-4.col-sm-offset-2.contacts-text
-        Russian Federation
-        %br
-        Cheboksary
-        %br
-        Akademika Krylova, 7
-
+        = data.contacts.address
 

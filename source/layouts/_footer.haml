@@ -7,25 +7,41 @@
           %a{href: "#{root_app_path}"}
             %img.footer-brand-logo{src: image_path("logo_brandymint.svg"), alt: 'Brandymint'}
         %p
-          = link_to 'mailto:danil@brandymint.com', class: 'contacts-link' do
-            %strong danil@brandymint.com
+          = link_to "mailto:#{data.contacts.email}", class: 'contacts-link' do
+            %strong= data.contacts.email
         %p
-          = link_to 'tel:+79033891228', class: 'contacts-link' do
-            %small +7 903 389 12 28
-
+          = link_to "tel:#{data.contacts.phone}", class: 'contacts-link' do
+            %small= data.contacts.phone
+        = link_to url_for('/contact/'), class: 'footer-map-link' do
+          .pull-left
+            %img{ src: "http://maps.googleapis.com/maps/api/staticmap?center=56.14500717902213,47.23953854232787&zoom=13&size=100x100&sensor=false"}
+          .pull-left
+            %span.footer-contacts-address= data.contacts.address
+          .clearfix
       .col-sm-7
-        %ul.footer-list
-          - data.services.each do |s|
-            %li= s.title
+        .footer-list-inline
+          .row
+            - data.navigation.each_pair do |key, value|
+              - unless key.match 'contact'
+                .col-xs-4
+                  %strong
+                    = link_to value.title, "/#{value.page}/"
+                  %hr.mini.footer-hr
+                  - if key.match 'products'
+                    - data.products.saas.each_pair do |p_key, p|
+                      - p = data.projects[p_key]
+                      - if p.url || p.appstore || p.google_play
+                        = link_to p.title, p.url || p.appstore || p.google_play, target: :blank, class: 'footer-products-link'
+
       .col-sm-2
-        %ul.footer-list
-          - data.social.each do |social|
-            %li
-              %a{ href: "#{social.link}", target: :blank, class: "footer-social-link footer-social-link-#{social.title.downcase}" }
-                - if social.icon?
-                  %span.footer-social-logo.icon-color-white= fontello social.icon
-                - elsif social.logo?
-                  %span.footer-social-logo
-                    %img{src: image_path(social.logo)}
-                = social.title
+        -#%ul.footer-list
+          -#%li
+            -#= social.title
+        - data.social.each do |social|
+          %a{ href: "#{social.link}", target: :blank, class: "footer-social-link footer-social-link-#{social.title.downcase}" }
+            - if social.icon?
+              %span.footer-social-logo.icon-color-white= fontello social.icon
+            - elsif social.logo?
+              %span.footer-social-logo
+                %img{src: image_path(social.logo)}
         .clearfix
