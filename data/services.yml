@@ -1,17 +1,17 @@
--
+fullstack:
   title: Full stack web development
   items:
     - Ruby (Ruby on Rails, Sinatra)
     - NodeJS
 
--
+singlepage:
   title: Single page applications
   items:
     - Front-end development
     - Widgets
     - JavaScript (CoffeeScript, Backbone, Marionette, jQuery)
 
--
+code:
   title: Code improvement
   items:
     -
@@ -27,7 +27,7 @@
     -
       Test automation
 
--
+mobile:
   title: Mobile development
   items:
     -
