@@ -7,21 +7,8 @@
       = partial 'work/project_block_title', locals: {title: p.title, logo: p.logo}
   - else
     = partial 'work/project_block_title', locals: {title: p.title, logo: p.logo}
--#.project-features
-  - p.features.each_pair do |k,v|
-    %span= v
 .project-description
   %p= md p.description if p.description.present?
--#%h5.technology-title Technologies
--#.project-technologies
-  - if p.technologies.present?
-    - p.technologies.each_pair do |k,v|
-      %span= v
--#%h5.technology-title Methodologies
--#.project-technologies
-  - if p.methodologies.present?
-    - p.methodologies.each_pair do |k,v|
-      %span= v
 .project-platforms
   - if p.devices.present?
     - device_types = []
@@ -31,4 +18,9 @@
       = t
   - else
     = project_badge_link p, 'web', css_class: 'btn btn-primary-outline-sm'
+  - if p.github.present?
+    &nbsp;
+    = link_to p.github, class: 'product-github-link', target: :blank do
+      = ficon 'github-circled', size: 32, color: 'gray-light', v_align: 'middle'
+
 

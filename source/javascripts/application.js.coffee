@@ -47,7 +47,8 @@ $ ->
     $('@project-waypoint-end').waypoint (direction) ->
       app.secondaryNavbar.find('[data-link-project]').removeClass 'active'
 
-    $("@project-link").on 'click', () ->
+    $("@project-link").on 'click', (e) ->
+      e.preventDefault()
       $("@project-link").removeClass 'active'
       $(@).addClass 'active'
       project = $(@).data('link-project')

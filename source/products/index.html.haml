@@ -17,6 +17,7 @@ navbar_state: active
 
 
   - @products_sorted.each_pair do |section_key, section_content|
+    %a{name: "#{section_key}"}
     .products-section{ data: {project: "#{section_key}"}, role: "project-waypoint-start"}
       %h2.text-center.products-page-title
         = @product_sections[section_key].title if @product_sections[section_key].present?
