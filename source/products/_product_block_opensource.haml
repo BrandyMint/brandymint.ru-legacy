@@ -1,0 +1,23 @@
+- p = locals[:p]
+
+.product-block-opensource
+  .product-block-opensource-title
+    %strong
+      - if p.url.present?
+        = link_to p.title, p.url, target: :blank
+      - else
+        = p.title
+    - if p.languages.present?
+      .progress.languages-stats
+        - p.languages.each_with_index do |(language, percents), index|
+          %div{class: "progress-bar progress-bar-#{language}", "aria-valuemax" => "100", "aria-valuemin" => "0", role: "progressbar", style: "width: #{percents}%"}
+  .product-block-opensource-badge.pull-left
+    = image_tag p.badge if p.badge.present?
+  - if p.downloads.present?
+    .product-block-opensource-downloads.pull-right
+      .downloads-count= p.downloads
+      %small downloads
+  .clearfix
+  .product-block-opensource-description
+    = p.description if p.description.present?
+

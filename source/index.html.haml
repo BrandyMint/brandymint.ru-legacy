@@ -9,7 +9,7 @@ body_class: welcome index hide-navbar-menu
   = partial 'welcome/what_we_do'
 %article
   = partial 'welcome/projects'
-  = partial 'welcome/projects_more'
+  = more_link_block 'more projects', url_for('/work/')
 %hr.no-margins
 %article
   = partial 'welcome/partners'

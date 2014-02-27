@@ -76,6 +76,32 @@ module ApplicationHelpers
     url
   end
 
+  def project_badge_title project, device
+    device ||= 'web'
+    type = device_type device
+    case type
+      when 'ios'
+        title = 'view in appstore'
+      when 'android'
+        title = 'view in google play'
+      else
+        title = project.url.gsub(/(http|:|\/|)/, '')
+    end
+    title
+  end
+
+  def project_badge_link project, device, args={}
+    args[:css_class] ||= ''
+    device ||= 'web'
+    url = device_type_url(project, device)
+    icon = content_tag :span, '', class: "project-block-platform #{device_type device}"
+    if url.present?
+      link_to project_badge_title(project, device), device_type_url(project, device), class: "#{args[:css_class]}", target: '_blank'
+    else
+      ''
+    end
+  end
+
   def device_type_link project, device
     device ||= 'web'
     url = device_type_url(project, device)
@@ -89,6 +115,12 @@ module ApplicationHelpers
 
   def app_badge platform, link
     link_to '&nbsp;', link, target: :blank, class: "app-badge app-badge-#{platform}"
+  end
+
+  def more_link_block title, url
+    link_to url_for("#{url}"), class: 'btn btn-container welcome-block btn-block text-center' do
+      "#{title} #{ficon 'right-open-big'}"
+    end
   end
 
 end

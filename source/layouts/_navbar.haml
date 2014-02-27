@@ -13,13 +13,13 @@
 
     -#.navbar-collapse.collapse
     .app-nav.navbar-fixed-item{ role: 'navbar-menu'}
-      - data.navigation.each do |n|
+      - data.navigation.each_pair do |k, n|
         - if current_page.url.gsub('/','').match( url_for(n.page).gsub('/','') )
           - state = 'active'
         - else
           - state = ''
         -#= link_to n.title, url_for(n.page), class: "app-nav-item #{state}"
-        = link_to n.title, "/#{n.page}/", class: "app-nav-item #{state} app-nav-item-#{n.page}"
+        = link_to n.title, "/#{n.page}/", class: "app-nav-item #{state} app-nav-item-#{n.page} col-sm-6 col-sm-offset-3"
     .clearfix
       
 
