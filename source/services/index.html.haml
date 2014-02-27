@@ -26,13 +26,12 @@ body_class: services-page body-navbar-white
     .row
       .col-sm-8.col-sm-offset-2
         %small.serif-font
-          - data.services_description.each do |d|
-            = d
+          = data.services_description
   .services-block-compact
     .row
       .col-sm-8.col-sm-offset-2
         .services-page-services-list
-          - data.services.each do |s|
+          - data.services.each_pair do |s_key, s|
             .service-item
               %h3.service-title= s.title
               %ul.service-description.unstyled-list
