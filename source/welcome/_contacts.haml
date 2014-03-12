@@ -19,6 +19,9 @@
           = link_to "tel:#{contact.phone}", class: 'contacts-link' do
             %small= contact.phone
     .row
-      .col-sm-4.col-sm-offset-5.contacts-text
-        = data.contacts.address
+      .col-sm-3.col-sm-offset-5.article-text
+        %br
+        %em= data.contacts.address
+    %br
+    .text-center= ficon 'down-open-big'
 
