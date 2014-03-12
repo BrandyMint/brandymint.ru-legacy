@@ -1,9 +1,29 @@
-phone: +7 903 389 12 28
-email: danil@brandymint.com
+people:
+  danil:
+    photo: 'people/pismenny.jpg'
+    name: Danil Pismenny
+    position: Founder, CEO/CTO
+    phone: +7 903 389 12 28
+    email: danil@brandymint.com
+
+  tanya:
+    photo: 'people/tanya.jpg'
+    name: Tatyana Pismennaya
+    position: Sales and Account Manager
+    email: elacheva@gmail.com
+
+  mescheryakov:
+    photo: 'people/mescheryakov.jpg'
+    name: Alexander Mescheryakov
+    position: Product Designer
+    phone: +7 960 307 00 64
+    email: sib@brandymint.com
+
 address: |
   Russian Federation
   <br>
   Cheboksary
   <br>
   Akademika Krylova, 7
+
 
