@@ -3,6 +3,7 @@ title: Smart Kitchen Timer
 #logo: kitchentimer_logo.svg
 image: 'composed/kitchentimer.png'
 appstore: 'https://itunes.apple.com/us/app/kitchen-timer/id835885947?ls=1&mt=8'
+google_play: 'https://play.google.com/store/apps/details?id=com.brandymint.kitchentimer'
 date: 10-02-2014
 devices:
   -
