@@ -26,4 +26,15 @@ address: |
   <br>
   Akademika Krylova, 7
 
+phones:
+  - "8 800 77 55 661"
+  - "8 961 342 90 22"
+  - "8 903 389 12 28"
 
+bank_accounts:
+  -
+    title: Pismenny D. V.
+    link: https://docs.google.com/document/d/16mY9h9FzTEVFr54Y59wnQcjInhPm-RmtzXURUQVTwhI/edit#heading=h.3slwo5tr5kr1
+  -
+    title: Brandy Mint LLC
+    link: https://docs.google.com/document/d/1bDvbMnH396FZZNk74YtxNkb_O-kWTicpiVLAfo_92_E/edit

@@ -49,6 +49,13 @@
               - data.product_sections.each_pair do |ps_key, ps|
                 .footer-products-link
                   = link_to ps.title, "/#{data.navigation[section_key].page}/##{ps.slug || ps_key}"
-
+            - if section_key.match 'contact'
+              - data.contacts.phones.each do |p|
+                .footer-products-link
+                  = link_to p, "tel:#{p}"
+              %br
+              - data.contacts.bank_accounts.each do |acc|
+                .footer-products-link
+                  = link_to "Bank account &mdash; #{acc.title}".html_safe, acc.link, target: :blank
 
 

@@ -4,6 +4,16 @@
       .col-md-6.col-md-offset-3
         %h2.welcome-header
           Contact us
+    .row
+      .col-md-8.col-md-offset-2.text-center
+        - data.contacts.phones.each_with_index do |p,i|
+          = link_to "#{ficon 'phone-1', size: 16} #{p}", "tel:#{p}", class: 'gray-link'
+          - unless i == data.contacts.phones.count - 1
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        %br
+        %br
+        %br
+    .row
       - data.contacts.people.each_pair do |key, contact|
         .col-sm-3.col-sm-offset-1.article-text
           - if contact.photo.present?
