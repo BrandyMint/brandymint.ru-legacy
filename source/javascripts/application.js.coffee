@@ -3,6 +3,7 @@
 #= require bootstrap
 #= require jquery-waypoints/waypoints
 #= require modernizr/modernizr
+#= require jReject/js/jquery.reject
 
 window.App ||= {}
 
@@ -36,6 +37,27 @@ $ ->
 
   App.navbarToggleBtn.on 'click', () ->
     App.toggleMenu()
+
+((app) ->
+  $(document).ready ->
+    $.reject
+      reject:
+        msie: 8
+      display: [
+        "chrome"
+        "firefox"
+        "safari"
+        "opera"
+      ]
+      header: "Вы используете устаревший браузер"
+      paragraph1: "Вы пользуетесь устаревшим браузером, который не поддерживает современные веб-стандарты."
+      paragraph2: "Чтобы использовать все возможности сайта, загрузите и установите один из этих браузеров:"
+      closeMessage: ""
+      closeLink: "Закрыть это сообщение"
+      closeCookie: true
+      imagePath: "/images/"
+)(window.App ||= {})
+
 
 ((app) ->
   $(document).ready ->
