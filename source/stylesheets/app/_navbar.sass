@@ -4,11 +4,28 @@ $navbarMenuZindex-xs: 1100
 $navbarSecondaryZindex: 1000
 $navbarToggleZindex-xs: 1200
 
+=legacyCss
+  .no-csstransforms &,
+  .no-csstransforms3d &
+    @content
+
+=modernCss
+  .csstransforms &,
+  .csstransforms3d &
+    @content
+
+
 =navbarHide
   +translateY(-100%)
+  +legacyCss
+    margin-top: - $navbarHeight
+    display: none
 
 =navbarShow
   +translateY(0)
+  +legacyCss
+    margin-top: 0
+    display: block
 
 =navbarTransition
   +transition(transform 0.6s ease, opacity 0.6s ease, background 0.6s ease, border 0.6s ease)
@@ -69,6 +86,8 @@ $navbarToggleZindex-xs: 1200
 
 .navbar-brand-logo
   max-width: 120px
+  max-height: 27px
+  max-height: 27px
   padding: 12px 20px 15px 20px
   margin:
     left: -20px
