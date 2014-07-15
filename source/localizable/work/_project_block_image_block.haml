@@ -5,7 +5,7 @@
   .project-image-block
     - if default_url.present?
       = link_to default_url, target: '_blank' do
-        = partial 'work/project_block_image', locals: {image: p.image}
+        = partial 'localizable/work/project_block_image', locals: {image: p.image}
     - else
-      = partial 'work/project_block_image', locals: {image: p.image}
+      = partial 'localizable/work/project_block_image', locals: {image: p.image}
 

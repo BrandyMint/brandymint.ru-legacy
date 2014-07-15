@@ -1,6 +1,6 @@
 .work-page.events-page
   %h1.large-header.text-center Events
-  - @events = data.events
+  - @events = ldata.events
   - if @events.present?
     - @events.each_with_index do |(event_key, event_content), index|
       - p = event_content

@@ -6,15 +6,15 @@
           Contact us
     .row
       .col-md-8.col-md-offset-2.text-center
-        - data.contacts.phones.each_with_index do |p,i|
+        - ldata.contacts.phones.each_with_index do |p,i|
           = link_to "#{ficon 'phone-1', size: 16} #{p}", "tel:#{p}", class: 'gray-link'
-          - unless i == data.contacts.phones.count - 1
+          - unless i == ldata.contacts.phones.count - 1
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         %br
         %br
         %br
     .row
-      - data.contacts.people.each_pair do |key, contact|
+      - ldata.contacts.people.each_pair do |key, contact|
         .col-sm-3.col-sm-offset-1.article-text
           - if contact.photo.present?
             .contacts-photo{ style: "background-image: url('/images/#{contact.photo}')" }
@@ -31,7 +31,7 @@
     .row
       .col-sm-3.col-sm-offset-5.article-text
         %br
-        %em= data.contacts.address
+        %em= ldata.contacts.address
     %br
     .text-center= ficon 'down-open-big'
 

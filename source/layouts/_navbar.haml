@@ -13,7 +13,7 @@
 
     -#.navbar-collapse.collapse
     .app-nav.navbar-fixed-item{ role: 'navbar-menu'}
-      - data.navigation.each_pair do |k, n|
+      - ldata.navigation.each_pair do |k, n|
         - if current_page.url.gsub('/','').match( url_for(n.page).gsub('/','') )
           - state = 'active'
         - else

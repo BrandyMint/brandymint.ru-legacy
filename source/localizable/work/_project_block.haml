@@ -4,14 +4,14 @@
 .project-block{role: "project-block"}
   .row
     .col-md-8.col-md-offset-2
-      = partial 'work/project_block_image_block', locals: {p: p, default_url: default_url}
+      = partial 'localizable/work/project_block_image_block', locals: {p: p, default_url: default_url}
 
       %h3.project-title.text-center
         - if default_url.present?
           %a{href: default_url, target: :blank}
-            = partial 'work/project_block_title', locals: {title: p.title, logo: p.logo}
+            = partial 'localizable/work/project_block_title', locals: {title: p.title, logo: p.logo}
         - else
-          = partial 'work/project_block_title', locals: {title: p.title, logo: p.logo}
+          = partial 'localizable/work/project_block_title', locals: {title: p.title, logo: p.logo}
       .project-features
         - p.features.each_pair do |k,v|
           %span= v

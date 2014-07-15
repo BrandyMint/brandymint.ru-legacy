@@ -8,24 +8,24 @@
             %img.footer-brand-logo{src: image_path("logo_brandymint.svg"), alt: 'Brandymint'}
       .col-sm-3
         %p
-          = link_to "mailto:#{data.contacts.email}", class: 'contacts-link' do
-            %strong= data.contacts.email
+          = link_to "mailto:#{ldata.contacts.email}", class: 'contacts-link' do
+            %strong= ldata.contacts.email
         %p
-          = link_to "tel:#{data.contacts.phone}", class: 'contacts-link' do
-            %small= data.contacts.phone
+          = link_to "tel:#{ldata.contacts.phone}", class: 'contacts-link' do
+            %small= ldata.contacts.phone
       .col-sm-3
         = link_to url_for('/contact/'), class: 'footer-map-link' do
           .pull-left
             %img{ src: "http://maps.googleapis.com/maps/api/staticmap?center=56.14500717902213,47.23953854232787&zoom=13&size=100x100&sensor=false"}
           .pull-left
-            %span.footer-contacts-address= data.contacts.address
+            %span.footer-contacts-address= ldata.contacts.address
           .clearfix
       .col-sm-3
         -#%ul.footer-list
           -#%li
             -#= social.title
         .pull-right
-          - data.social.each do |social|
+          - ldata.social.each do |social|
             %a{ href: "#{social.link}", target: :blank, class: "footer-social-link footer-social-link-#{social.title.downcase}" }
               - if social.icon?
                 %span.footer-social-logo.icon-color-white= fontello social.icon
@@ -35,7 +35,7 @@
         .clearfix
     .footer-list-inline.footer-sections-list
       .row
-        - data.navigation.each_pair do |section_key, section_content|
+        - ldata.navigation.each_pair do |section_key, section_content|
           .col-xs-3
             %strong
               = link_to section_content.title, "/#{section_content.page}/"
@@ -44,17 +44,17 @@
               - data[section_key].each_pair do |l_key, l|
                 - if l.is_a? Hash
                   .footer-products-link
-                    = link_to l.title, "/#{data.navigation[section_key].page}/##{l.slug || l_key}"
+                    = link_to l.title, "/#{ldata.navigation[section_key].page}/##{l.slug || l_key}"
             - if section_key.match 'products'
-              - data.product_sections.each_pair do |ps_key, ps|
+              - ldata.product_sections.each_pair do |ps_key, ps|
                 .footer-products-link
-                  = link_to ps.title, "/#{data.navigation[section_key].page}/##{ps.slug || ps_key}"
+                  = link_to ps.title, "/#{ldata.navigation[section_key].page}/##{ps.slug || ps_key}"
             - if section_key.match 'contact'
-              - data.contacts.phones.each do |p|
+              - ldata.contacts.phones.each do |p|
                 .footer-products-link
                   = link_to p, "tel:#{p}"
               %br
-              - data.contacts.bank_accounts.each do |acc|
+              - ldata.contacts.bank_accounts.each do |acc|
                 .footer-products-link
                   = link_to "Bank account &mdash; #{acc.title}".html_safe, acc.link, target: :blank
 
