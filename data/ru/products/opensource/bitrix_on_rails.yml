@@ -1,0 +1,11 @@
+slug: bitrix_on_rails
+title: bitrix_on_rails
+url: https://github.com/BrandyMint/bitrix_on_rails
+downloads: 12,058
+badge: https://badge.fury.io/rb/bitrix_on_rails.png
+description: |
+  1S Bitrix infoblocks integration into Ruby on Rails projects
+languages:
+  ruby: 99%
+  shell: 1%
+

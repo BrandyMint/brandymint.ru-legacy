@@ -1,0 +1,24 @@
+published: true
+slug: potee
+title: Potee
+image: 'composed/potee.png'
+logo: potee_logo.svg
+url: 'http://potee.me'
+date: '20-10-2012'
+description: |
+  Potee started as a Rails Rumble hackathon projects. We teamed up with
+  <a href="http://genue.ru/" target="_blank">Genue</a>
+  founder Evgeny Luchinin to bring to life his idea about visual task management.
+  We created a prototype in 48 hours and later returned to refactor it deeply and refine user experience.
+features:
+  1: Visual task management
+technologies:
+  1: Ruby on Rails
+  2: CoffeeScript
+  3: Backbone
+  4: Marionette
+methodologies:
+  1: Agile
+  2: Scrum
+
+

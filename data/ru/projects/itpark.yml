@@ -1,0 +1,19 @@
+published: false
+slug: itpatk
+title: IT Park
+#logo: itpark_logo.png
+image: 'composed/itpark.png'
+google_play: 'https://play.google.com/store/apps/details?id=ru.ravidok.it_park'
+date: 26-03-2014
+devices:
+  -
+    device: nexus5
+    device_scale: half
+
+description: |
+  IT Park Kazan application with startups, events and news info.
+
+features:
+  1: Android development
+
+

@@ -1,0 +1,19 @@
+published: true
+slug: hrexpert
+title: HRexpert
+appstore: 'https://itunes.apple.com/ru/app/hr-ehpert/id665800658?l=en&mt=8'
+image: 'composed/hrexpert.png'
+date: '10-05-2012'
+devices:
+  -
+    device: ipad landscape
+description: |
+  iPad application for HR specialists that saves time and helps to organize interviews.
+features:
+  1: Server–side API
+  2: Data sync
+technologies:
+  1: iOS development
+methodologies:
+  1: Scrum
+

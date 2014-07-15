@@ -1,0 +1,54 @@
+fullstack:
+  title: Full stack web development
+  items:
+    - Ruby (Ruby on Rails, Sinatra)
+    - NodeJS
+
+singlepage:
+  title: Single page applications
+  items:
+    - Front-end development
+    - Widgets
+    - JavaScript (CoffeeScript, Backbone, Marionette, jQuery)
+
+code:
+  title: Code improvement
+  items:
+    -
+      Code audit and optimization
+    -
+      Code review
+    -
+      Deep refactoring
+    -
+      Performance optimization
+    -
+      Web projects maintenance
+    -
+      Test automation
+
+mobile:
+  title: Mobile development
+  items:
+    -
+      Native apps for iOS (Objective-C) and Android (Java)
+    -
+      Cross-platform apps with PhoneGap/Cordova (iOS, Android, Windows Phone)
+    -
+      Cross-platform apps with QT Mobile (C++)
+    -
+      Backend for mobile applications
+      #APIs for mobile and web apps
+    -
+      Responsive design
+
+#-
+#  title: Web applications
+#  items:
+#    -
+#      Full stack applications
+#    -
+#      SaaS solutions
+#    -
+#      Cloud–based backends
+

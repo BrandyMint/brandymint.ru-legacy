@@ -123,4 +123,9 @@ module ApplicationHelpers
     end
   end
 
+  # localized data
+  def ldata
+    data[I18n.locale]
+  end
+
 end

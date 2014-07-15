@@ -1,0 +1,66 @@
+-
+  name: Danil Pismenny
+  github: https://github.com/dapi
+  photo: 'danil.png'
+  position: team lead
+  experience: ~15 years
+  skills: |
+    team building and leading, system architect, Ruby, Ruby On Rails, Rack, EventMachine, 
+    CoffeeScript, Backbone, Marionette, Postgresql (pl/pgsql), Elasticsearch, Redis (pub/sub), 
+    Faye, Websockets/EventSource, git flow, Strong OOP (GRASP, SOLID, DDD), TDD (rspec, cucumber, minitest)
+-
+  name: Alexey Khoroshev
+  github: https://github.com/aleksxor
+  position: senior developer
+  experience: ~20 years
+  skills: |
+    Ruby (Ruby On Rails, Sinatra); PHP (Zend Framework, Yii, Symfony 2.x, 1.x); JavaScript (CoffeeScript, Backbone, Marionette, Angular.js, Node.js, jQuery, MooTools); MySql; PostgreSql (pl/pgsql); Faye; TDD (rspec, cucumber)
+-
+  name: Alexander Logunov
+  github: https://github.com/unloved
+  photo: 'logunov.png'
+  position: regular+ developer
+  experience: 6 years
+  skills: |
+    Ruby (Rails, Sinatra, Rack); PHP (Yii); JavaScript (CoffeeScript, Backbone, jQuery); MySql; PostgreSql; Faye; ElasticSearch, Git
+-
+  name: Alexander Mescheryakov
+  github: https://github.com/sibsfinx
+  photo: 'mescheryakov.png'
+  position: ux/ui/front-end developer
+  experience: 6 years
+  skills: |
+    User Experience and Interface Design (web, mobile apps, mobile and responsive web), Prototyping, Front-end Development (Ruby on Rails, Sinatra, PHP), Mobile Apps (iOS/Objective-C, Android/Java), HTML5/HAML, CSS3/SCSS/SASS, Javascript (CoffeeScript, JQuery, MooTools), Git, Graphic and Web Design
+-
+  name: Eugeny Stepanov
+  github: https://github.com/Nitr
+  photo: 'estepanov.png'
+  position: regular developer
+  experience: 3 years
+  skills: |
+    Ruby/RubyOnRails, PHP, JavaScript(CoffeeScript, Backbone, JQuery, SpineJS, Marionette, RequireJS), MySQL, PostgreSQL, Faye, OOP(GRASP, GOF, SOLID), Elasticsearch, Solr, Git, Svn
+-
+  name: Alexey Illarionov
+  github: 'https://github.com/illarionov'
+  position: devops
+  experience: 8 years
+  skills: |
+    Network Administration, Linux/FreeBSD, bash scripting, Chef,  Android
+-
+  name: Denis Dubov
+  github: 'https://github.com/denisdbv'
+  photo: 'dubov.png'
+  position: iOS senior developer
+-
+  name: Alexey Naumov
+  github: https://github.com/anaumov
+  position: regular developer, iOS junior
+-
+  name: Andrey Sidorov
+  github: https://github.com/heretge
+  photo: 'asidorov.png'
+  position: ruby junior developer
+-
+  name: Victor Bespalov
+  github: https://github.com/bespalow
+  position: iOS junior developer

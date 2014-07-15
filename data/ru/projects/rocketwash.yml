@@ -1,0 +1,28 @@
+published: true
+slug: rocketwash
+title: Rocketwash
+logo: rocketwash_logo.svg
+image: 'composed/rocketwash.png'
+date: 10-12-2013
+devices:
+  -
+    device: iphone
+    device_scale: half
+  -
+    device: nexus5
+    device_scale: half
+
+description: |
+  We like cases when modern technologies help you in everyday life.
+  Rocketwash is a service which provides you ordering a carwash from iOS and Android smartphone.
+features:
+  1: PhoneGap development
+technologies:
+  1: CoffeeScript
+  2: Backbone
+  3: Marionette
+methodologies:
+  1: Test-driven development
+  2: Scrum
+
+

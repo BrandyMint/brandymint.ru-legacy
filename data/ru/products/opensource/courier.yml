@@ -1,0 +1,10 @@
+slug: courier
+title: courier
+url: https://github.com/BrandyMint/courier
+badge: https://badge.fury.io/rb/courier.png
+downloads: 8,782
+description: |
+  Email delivery management service
+languages:
+  ruby: 100%
+

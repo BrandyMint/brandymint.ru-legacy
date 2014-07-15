@@ -1,0 +1,13 @@
+services:
+  title: Services
+  page: services
+work:
+  title: Work
+  page: work
+products:
+  title: Products
+  page: products
+contacts:
+  title: Contact
+  page: contact
+

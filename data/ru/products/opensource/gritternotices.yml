@@ -1,0 +1,10 @@
+slug: gritter_notices
+title: gritter_notices
+url: https://github.com/dapi/gritter_notices
+badge: https://badge.fury.io/rb/gritter_notices.png
+downloads: 827
+description: |
+  Show growl-like flash messages and saved user notices with Gritter
+languages:
+  ruby: 100%
+

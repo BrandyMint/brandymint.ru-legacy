@@ -1,0 +1,8 @@
+slug: littlesms
+title: littlesms
+url: https://github.com/BrandyMint/littlesms
+description: |
+  Ruby module for littlesms.ru service integration.
+languages:
+  ruby: 100%
+

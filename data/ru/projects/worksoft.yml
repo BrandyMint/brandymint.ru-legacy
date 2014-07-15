@@ -1,0 +1,18 @@
+published: true
+slug: worksoft
+title: Worksoft
+image: 'composed/worksoft.png'
+date: '06-02-2012'
+description: |
+  Marketplace store providing plugins and modules for 1S applications, popular business solutions.
+  Developers can sign up and sell their plugins for different versions of apps.
+features:
+  1: Advanced browsing and search
+  2: Marketplace engine
+technologies:
+  1: Ruby on Rails
+methodologies:
+  1: Test-driven development
+  2: Scrum
+
+

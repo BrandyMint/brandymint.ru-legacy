@@ -1,0 +1,21 @@
+published: true
+slug: chebru
+title: Cheboksary Guide
+image: 'composed/chebru.png'
+date: '10-02-2012'
+devices:
+  -
+    device: nexus5
+    device_scale: half
+google_play: 'https://play.google.com/store/apps/details?id=ru.brandymint.chebru'
+description: |
+  A guide to Cheboksary city with offline database, streets and companies search, location-based smart search results.
+features:
+  1: Offline database
+  2: Google and Yandex maps
+  3: Geolocation
+technologies:
+  1: Android development
+methodologies:
+  1: Scrum
+
