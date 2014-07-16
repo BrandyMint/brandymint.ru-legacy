@@ -56,6 +56,6 @@
               %br
               - ldata.contacts.bank_accounts.each do |acc|
                 .footer-products-link
-                  = link_to "Bank account &mdash; #{acc.title}".html_safe, acc.link, target: :blank
+                  = link_to "#{ldata.contacts.bank_accounts_title} &mdash; #{acc.title}".html_safe, acc.link, target: :blank
 
 

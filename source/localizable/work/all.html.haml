@@ -4,7 +4,7 @@ navbar_state: active
 ---
 
 - @projects_list = ldata.projects
-- @projects_work = ldata.work
+- @projects_work = ldata.work || {}
 - @projects = @projects_work.merge(@projects_list).sort {|a, b| Date.parse(b[1].date) <=> Date.parse(a[1].date) }
 
 = partial 'localizable/work/projects_list', locals: {projects: @projects}

@@ -6,12 +6,12 @@
   .row
     - if index % 2 == 0
       .col-md-5
-        = partial 'work/project_block_image_block', locals: {p: p, default_url: default_url}
+        = partial 'localizable/work/project_block_image_block', locals: {p: p, default_url: default_url}
       .col-md-5.col-md-offset-1
-        = partial 'products/product_block_content', locals: {p: p, default_url: default_url}
+        = partial 'localizable/products/product_block_content', locals: {p: p, default_url: default_url}
     - else
       .col-md-5.col-md-offset-1
-        = partial 'products/product_block_content', locals: {p: p, default_url: default_url}
+        = partial 'localizable/products/product_block_content', locals: {p: p, default_url: default_url}
       .col-md-5.col-md-offset-1
-        = partial 'work/project_block_image_block', locals: {p: p, default_url: default_url}
+        = partial 'localizable/work/project_block_image_block', locals: {p: p, default_url: default_url}
 

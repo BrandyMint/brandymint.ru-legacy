@@ -3,12 +3,10 @@
     .container
       .welcome-content
         %h1.welcome-header
-          We build web, mobile
-          %br
-          and backend applications.
+          = ldata.welcome.header.html_safe
         .welcome-subheader
-          %a.btn.btn-primary-outline{ href: 'services' }
+          = link_to 'services', class: 'btn btn-primary-outline' do
             -#= link_to services_path, class: 'btn btn-primary-outline' do
-            What we do
+            = ldata.welcome.header_btn
 
 

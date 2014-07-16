@@ -32,7 +32,7 @@ navbar_state: active
             - p = product_content || projects_data[product_key]
           %a{name: "#{p.slug}"}
           %div{ class: "project-container product-container", data: {project: "#{p.slug}"}, role: "project-waypoint-start"}
-            = partial "products/product_block", locals: {p: p, index: index}
+            = partial "localizable/products/product_block", locals: {p: p, index: index}
       - else
         .container
           .row
@@ -40,7 +40,7 @@ navbar_state: active
             - section_content_sorted.each_with_index do |(product_key, product_content), index|
               - p = product_content
               .col-md-4
-                = partial "products/product_block_opensource", locals: {p: p}
+                = partial "localizable/products/product_block_opensource", locals: {p: p}
 
 = more_link_block 'events', url_for('/events/')
 = more_link_block 'contact us', url_for('/contact/')

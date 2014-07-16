@@ -1,13 +1,13 @@
 services:
-  title: Services
+  title: Услуги
   page: services
 work:
-  title: Work
+  title: Портфолио
   page: work
 products:
-  title: Products
+  title: Продукты
   page: products
 contacts:
-  title: Contact
+  title: Контакты
   page: contact
 

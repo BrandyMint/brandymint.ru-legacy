@@ -4,9 +4,9 @@
 %h3.product-title
   - if default_url.present?
     %a{href: default_url, target: :blank}
-      = partial 'work/project_block_title', locals: {title: p.title, logo: p.logo}
+      = partial 'localizable/work/project_block_title', locals: {title: p.title, logo: p.logo}
   - else
-    = partial 'work/project_block_title', locals: {title: p.title, logo: p.logo}
+    = partial 'localizable/work/project_block_title', locals: {title: p.title, logo: p.logo}
 .project-description
   %p= md p.description if p.description.present?
 .project-platforms

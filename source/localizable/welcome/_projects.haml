@@ -1,6 +1,7 @@
 - projects_data = ldata.work
-- projects_data.each do |f|
-  = partial 'work/welcome_project_block', locals: {p: f[1]}
+- if projects_data.present?
+  - projects_data.each do |f|
+    = partial 'work/welcome_project_block', locals: {p: f[1]}
 
 -#= partial 'work/welcome_project_block', locals: {p: ldata.work.clickavia}
 
