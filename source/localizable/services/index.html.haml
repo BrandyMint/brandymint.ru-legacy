@@ -18,7 +18,7 @@ body_class: services-page body-navbar-white
         .row
           .col-sm-8.col-sm-offset-2
             %h2.services-subheader
-              Services we provide
+              = ldata.services_description.header
 
 .container
   -#.welcome-block
@@ -26,7 +26,7 @@ body_class: services-page body-navbar-white
     .row
       .col-sm-8.col-sm-offset-2
         %small.serif-font
-          = ldata.services_description
+          = ldata.services_description.description
 
   .services-block-compact
     .row
