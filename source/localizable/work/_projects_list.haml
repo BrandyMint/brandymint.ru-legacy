@@ -16,7 +16,7 @@
       %div{ class: "project-container project-container-#{p.slug}", data: {project: "#{p.slug}"}, role: "project-waypoint-start"}
         = partial "localizable/work/project_block", locals: {p: p}
 
-= more_link_block 'our products', url_for('/products/')
-= more_link_block 'contact us', url_for('/contact/')
+= more_link_block ldata.shared.our_products, lpath('products')
+= more_link_block ldata.shared.contact_us, lpath('contact')
 
 

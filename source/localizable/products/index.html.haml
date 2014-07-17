@@ -42,7 +42,7 @@ navbar_state: active
               .col-md-4
                 = partial "localizable/products/product_block_opensource", locals: {p: p}
 
-= more_link_block 'events', url_for('/events/')
-= more_link_block 'contact us', url_for('/contact/')
+= more_link_block ldata.shared.events, lpath('events')
+= more_link_block ldata.shared.contact_us, lpath('contact')
 
 
