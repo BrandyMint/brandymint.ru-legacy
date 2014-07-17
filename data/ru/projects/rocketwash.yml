@@ -16,7 +16,7 @@ description: |
   We like cases when modern technologies help you in everyday life.
   Rocketwash is a service which provides you ordering a carwash from iOS and Android smartphone.
 features:
-  1: PhoneGap development
+  1: PhoneGap-разработка
 technologies:
   1: CoffeeScript
   2: Backbone

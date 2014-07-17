@@ -4,13 +4,12 @@ title: Gridology
 image: 'composed/ges.png'
 date: '10-10-2011'
 description: |
-  In 2011 we built enterprise social network for
-  Federal Grid Company of Unified Energy System.
-  This complex application included both social network and an API for external applications (Knowledge base, Corporate website).
-  Network has such features as news feeds with reposts, messages, groups, following, message boards, search.
+  В 2011 году мы разработали корпоративную социальную сеть для ФСК ЕЭС.
+  Комплексное решение включало в себя социальную сеть и API для внешних приложений (база знаний, корпоративный сайт).
+  В социальной сети реализован такой функционал, как ленты новостей с репостами, сообщения, группы, фолловинг, форумы и универсальный поиск.
 features:
-  1: Enterprise social network
-  2: API for external applications
+  1: Корпоративная социальная сеть
+  2: API для внешних приложений
 technologies:
   1: Ruby on Rails
   2: Javascript

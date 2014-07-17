@@ -9,7 +9,7 @@ devices:
 description: |
   iPad app for Kribrum, social media and news monitoring service built for enterprise use.
 features:
-  1: PhoneGap development
+  1: PhoneGap-разработка
 technologies:
   1: Backbone
   2: Marionette

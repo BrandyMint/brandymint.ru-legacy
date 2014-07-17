@@ -8,12 +8,12 @@ devices:
   -
     device: ipad landscape
 description: |
-  iPad application for HR specialists that saves time and helps to organize interviews.
+  iPad-приложение для рекрутинговых специалистов, помогающее сэкономить время и организовать процесс собеседования.
 features:
-  1: Server–side API
-  2: Data sync
+  1: Серверный API
+  2: Синхронизация данных
 technologies:
-  1: iOS development
+  1: iOS-разработка
 methodologies:
   1: Scrum
 

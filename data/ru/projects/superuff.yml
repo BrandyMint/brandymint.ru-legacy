@@ -18,7 +18,7 @@ description: |
   Super Uff is a cross-platform mobile app built to help everyone with dog training.
   It contains 30 excercises to study in tree steps each. Simple and cute illustrations are the core of the excercises explanation.
 features:
-  1: PhoneGap development
+  1: PhoneGap-разработка
 technologies:
   1: CoffeeScript
   2: Backbone

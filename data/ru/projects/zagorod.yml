@@ -9,13 +9,13 @@ description: |
   Zagorod is our project built to help resorts and cottage owners to rent houses and gather clients base.
   Also focused on delivering additional services such as catering and transportation.
 features:
-  1: Responsive design
-  2: Manager panel
-  3: SMS notifications
+  1: Адаптивный дизайн
+  2: Панель менеджера
+  3: SMS-уведомления
 technologies:
   1: Ruby on Rails
 methodologies:
-  1: Rapid prototyping
-  2: Agile development
+  1: Быстрое прототипирование
+  2: Agile-разработка
 
 

@@ -20,13 +20,13 @@ features:
   3: Database transfer
   4: Custom server-side API
   5: Redesign
-  6: Responsive design
-  7: iOS development
+  6: Адаптивный дизайн
+  7: iOS-разработка
 technologies:
   1: Ruby on Rails
   2: Objective-C
 methodologies:
-  1: Rapid prototyping
+  1: Быстрое прототипирование
   2: Scrum
   3: Test–driven development
 

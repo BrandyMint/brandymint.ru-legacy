@@ -19,11 +19,11 @@ description: |
   We developed API for mobile apps, prototyped, designed and created iPhone, iPad and Android versions.
 features:
   1: API for mobile apps
-  2: Rapid prototyping
+  2: Быстрое прототипирование
   3: Mobile caching
 technologies:
-  1: iOS development
-  2: Android development
+  1: iOS-разработка
+  2: Android-разработка
   3: Backend development
 methodologies:
   1: Scrum
