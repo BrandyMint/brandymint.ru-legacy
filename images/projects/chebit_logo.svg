@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="206.254px" height="54.092px" viewBox="-16.486 -5.18 206.254 54.092"
+	 enable-background="new -16.486 -5.18 206.254 54.092" xml:space="preserve">
+<g>
+	<g>
+		<rect x="134.654" y="7.595" fill="#00D6F2" width="7.275" height="28.093"/>
+		<rect x="65.471" y="7.595" fill="#00D6F2" width="28.092" height="7.275"/>
+		<rect x="65.471" y="28.413" fill="#00D6F2" width="28.092" height="7.275"/>
+		<rect x="65.471" y="18.004" fill="#00D6F2" width="28.092" height="7.276"/>
+		<polygon fill="#00D6F2" points="58.971,35.688 58.971,7.595 51.695,7.595 51.695,18.004 38.154,18.004 38.154,7.595 30.879,7.595 
+			30.879,35.688 38.154,35.688 38.154,25.28 51.695,25.28 51.695,35.688 		"/>
+		<polygon fill="#00D6F2" points="24.379,14.871 24.379,7.595 -3.711,7.595 -3.713,35.688 24.379,35.688 24.379,28.413 
+			3.564,28.413 3.564,14.871 		"/>
+		<polygon fill="#00D6F2" points="176.521,7.595 148.43,7.595 148.43,14.871 158.838,14.871 158.838,35.688 166.113,35.688 
+			166.113,14.871 176.521,14.871 		"/>
+		<path fill="#00D6F2" d="M124.844,21.642l3.311-3.312V7.595h-28.092v28.093h28.092V24.953L124.844,21.642z M120.879,28.413H107.34
+			V25.28h13.539V28.413z M120.879,18.004H107.34v-3.133h13.539V18.004z"/>
+	</g>
+	<path fill="#00D6F2" d="M-16.486-5.18v54.092h206.254V-5.18H-16.486z M182.492,41.637H-9.211V2.095h191.703V41.637z"/>
+</g>
+</svg>
