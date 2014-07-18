@@ -1,6 +1,6 @@
 published: true
 slug: superuff
-title: Super Uff
+title: Супер Пёс
 logo: superuff_logo.svg
 image: 'composed/superuff.png'
 date: 01-02-2014
@@ -15,8 +15,8 @@ devices:
     device: windows_phone
 google_play: 'https://play.google.com/store/apps/details?id=com.brandymint.doggy.free'
 description: |
-  Super Uff is a cross-platform mobile app built to help everyone with dog training.
-  It contains 30 excercises to study in tree steps each. Simple and cute illustrations are the core of the excercises explanation.
+  Супер Пёс — кросплатформенное мобильное приложение, призванное помочь в обучении собак.
+  30 упражнений, разбитых по шагам с простыми и приятными иллюстрациями, объясняют весь процесс с самого начала.
 features:
   1: PhoneGap-разработка
 technologies:

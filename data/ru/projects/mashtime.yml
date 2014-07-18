@@ -6,15 +6,15 @@ logo: mashtime_logo.svg
 url: 'http://mashtime.ru'
 date: '10-09-2013'
 description: |
-  We built Mashtime to track our working hours so we can analyze how we worked on projects and plan further work
-  or estimate upcoming projects better. It's made for teams, projects and freelancers.
-  Of course, it is responsive so everyone can record his hours on the go.
-  Mashtime remembers the way you use it — more tracking time or more analyzing reports — and helps you
-  to find dashboard pages that are important for you.
+  Мы сделали Mashtime для учёта рабочего времени, анализа проектов и планирования будущей работы.
+  Сервис подходит для команд, проектов и фрилансеров.
+  Само собой, дизайн адаптивный, так что каждый может отмечать время даже на ходу.
+  Mashtime запоминает, как вы пользуетесь им — больше для записи часов или для отчётов — и показывает вам
+  именно тот интерфейс, который вам нужен.
 features:
-  1: Time tracking
-  2: Screen and print-ready reports
-  3: Adapting to user behaviour
+  1: Учет времени
+  2: Отчёты для печати
+  3: Адаптивное поведение
 technologies:
   1: Ruby on Rails
   2: CoffeeScript

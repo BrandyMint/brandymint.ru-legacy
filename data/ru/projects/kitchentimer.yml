@@ -15,8 +15,8 @@ devices:
     device_scale: half
 
 description: |
-  Functional kitchen timer with nice 'tactile' design.
-  Includes preparation time information for various dishes and timers history.
+  Функциональный кухонный таймер с «приятным на ощупь» дизайном.
+  Включает подсказки по времени проготовления блюд и историю таймера.
 
 features:
   1: Кросплатформенная разработка

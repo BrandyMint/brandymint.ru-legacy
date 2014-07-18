@@ -11,7 +11,7 @@ devices:
     device_scale: half
 
 description: |
-  IT Park Kazan application with startups, events and news info.
+  Приложение для IT Park (Казань) с информацией о стартапах, событиях и новостях.
 
 features:
   1: Android-разработка

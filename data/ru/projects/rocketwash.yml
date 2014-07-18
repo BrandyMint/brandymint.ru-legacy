@@ -13,8 +13,8 @@ devices:
     device_scale: half
 
 description: |
-  We like cases when modern technologies help you in everyday life.
-  Rocketwash is a service which provides you ordering a carwash from iOS and Android smartphone.
+  Мы любим проекты, которые помогают сделать повседневную жизнь лучше.
+  Rocketwash — это сервис записи на автомойку с iOS– и Android–устройств.
 features:
   1: PhoneGap-разработка
 technologies:

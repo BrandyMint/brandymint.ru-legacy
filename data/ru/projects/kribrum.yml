@@ -7,7 +7,7 @@ devices:
   -
     device: ipad landscape
 description: |
-  iPad app for Kribrum, social media and news monitoring service built for enterprise use.
+  iPad-приложение для Kribrum, мониторингового сервиса (СМИ и социальные медиа) для корпоративного пользования.
 features:
   1: PhoneGap-разработка
 technologies:

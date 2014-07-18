@@ -6,12 +6,12 @@ logo: potee_logo.svg
 url: 'http://potee.me'
 date: '20-10-2012'
 description: |
-  Potee started as a Rails Rumble hackathon projects. We teamed up with
-  <a href="http://genue.ru/" target="_blank">Genue</a>
-  founder Evgeny Luchinin to bring to life his idea about visual task management.
-  We created a prototype in 48 hours and later returned to refactor it deeply and refine user experience.
+  Potee начался как проект на хакатоне Rails Rumble. Мы объединились с 
+  <a href="http://genue.ru/" target="_blank">Евгением Лучининым</a>,
+  чтобы воплотить в жизнь его идею визуального таск-менеджера.
+  На хакатоне мы сделали рабочий прототип за 48 часов, а позже вернулись к рефакторингу,улучшению фунцкионала и user experience..
 features:
-  1: Visual task management
+  1: Визуальный таск-менеджер
 technologies:
   1: Ruby on Rails
   2: CoffeeScript

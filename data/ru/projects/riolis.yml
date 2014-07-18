@@ -1,6 +1,6 @@
 published: true
 slug: riolis
-title: Riolis
+title: Риолис
 image: 'composed/riolis.png'
 date: '10-07-2013'
 devices:
@@ -15,16 +15,16 @@ devices:
   -
     device: nexus7 landscape
 description: |
-  Riolis is well-known by its embroidery kits.
-  We developed API for mobile apps, prototyped, designed and created iPhone, iPad and Android versions.
+  Риолис — известный производитель наборов для вышивания.
+  Мы разработали API для мобильных приложений, сделали прототипы, дизайн и выпустили приложения для iPhone, iPad и Android.
 features:
-  1: API for mobile apps
+  1: API для мобильных приложений
   2: Быстрое прототипирование
-  3: Mobile caching
+  3: Кэширование в приложениях
 technologies:
   1: iOS-разработка
   2: Android-разработка
-  3: Backend development
+  3: Backend-разработка
 methodologies:
   1: Scrum
   2: Agile

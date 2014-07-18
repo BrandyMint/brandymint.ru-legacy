@@ -1,13 +1,13 @@
 published: true
 slug: zagorod
 #logo: zagorod_logo.svg
-title: Zagorod
+title: За город!
 url: http://zagorod21.ru
 image: 'composed/zagorod.png'
 date: 10-12-2013
 description: |
-  Zagorod is our project built to help resorts and cottage owners to rent houses and gather clients base.
-  Also focused on delivering additional services such as catering and transportation.
+  «За город!» — наш проект для баз отдыха и хозяев коттеджей, сдающих жильё и желающих увеличить поток клиентов.
+  Отдельное внимание уделено дополнительным сервисам — таким, как кейтеринг и пассажироперевозки.
 features:
   1: Адаптивный дизайн
   2: Панель менеджера
