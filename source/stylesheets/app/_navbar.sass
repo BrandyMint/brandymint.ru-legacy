@@ -101,6 +101,26 @@ $navbarToggleZindex-xs: 1200
   position: fixed
   z-index: $navbarToggleZindex-xs
 
+.navbar-locale-btn-group
+  //@media screen and (max-width: $screen-xs)
+  display: block
+  top: 0
+  margin:
+    left: 120px + $grid-gutter-width/2
+    top: 14px
+  +opacity(0.8)
+  position: fixed
+  z-index: $navbarToggleZindex-xs
+
+.navbar-locale-btn
+  +btn-outline(lighten($textColor,20%), none, #fff, lighten($textColor,20%))
+  font-size: 12px
+  letter-spacing: 0
+  text-transform: none
+  padding: 3px 7px
+  min-width: 0
+
+
 .app-nav
   +transformsFix
   +navbarHide

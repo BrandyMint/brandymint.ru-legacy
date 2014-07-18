@@ -2,6 +2,14 @@
   .container
     %a.navbar-brand-logo-link.pull-left{href: lpath('')}
       %img.navbar-brand-logo.navbar-fixed-item{src: image_path("logo_brandymint_black.svg"), alt: 'Brandymint'}
+    .btn-group.navbar-fixed-item.navbar-locale-btn-group
+      - ['ru', 'en'].each do |locale|
+        - if current_page.url.match( url_for(locale).gsub('/','') )
+          - state = 'active'
+        - else
+          - state = ''
+        -#= link_to n.title, url_for(n.page), class: "app-nav-item #{state}"
+        = link_to locale, "/#{locale}", class: "#{state} btn navbar-locale-btn"
 
     .pull-right
       %button.app-nav-toggle.navbar-toggle.navbar-fixed-item{type: "button", role: "app-nav-toggle-button", 'data-state' => current_page.data.navbar_state || ''}

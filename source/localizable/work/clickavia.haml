@@ -2,7 +2,8 @@
 body_class: body-navbar-white
 ---
 
-- p = ldata.work.clickavia
-= partial 'localizable/work/story', locals: {p: p}
+- p = ldata.work.clickavia if ldata.work.present?
+- if p.present?
+  = partial 'localizable/work/story', locals: {p: p}
 
 

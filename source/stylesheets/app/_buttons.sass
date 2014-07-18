@@ -15,10 +15,12 @@
   border: 2px solid $color
   color: $color
   background: $background
-  &:hover, &:focus
+  &:hover, &:focus, &.active
     color: $colorHover
     background: $backgroundHover
     border-color: $backgroundHover
+  &.active
+    +box-shadow(none)
 
 .btn-primary-outline
   +btn-outline($linkColor, none, #fff, $textColor)
