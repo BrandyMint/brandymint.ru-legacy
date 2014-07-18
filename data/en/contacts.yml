@@ -1,0 +1,44 @@
+contact_us: Contact us
+
+people:
+  danil:
+    photo: 'people/pismenny.jpg'
+    name: Danil Pismenny
+    position: Founder, CEO/CTO
+    phone: +7 903 389 12 28
+    email: danil@brandymint.com
+
+  tanya:
+    photo: 'people/tanya.jpg'
+    name: Tatyana Pismennaya
+    position: Sales and Account Manager
+    email: elacheva@gmail.com
+
+  mescheryakov:
+    photo: 'people/mescheryakov.jpg'
+    name: Alexander Mescheryakov
+    position: Product Designer
+    phone: +7 960 307 00 64
+    email: sib@brandymint.com
+
+address: |
+  Russian Federation
+  <br>
+  Cheboksary
+  <br>
+  Akademika Krylova, 7
+
+phones:
+  - "8 800 77 55 661"
+  - "8 961 342 90 22"
+  - "8 903 389 12 28"
+
+bank_accounts_title: Bank account
+
+bank_accounts:
+  -
+    title: Pismenny D. V.
+    link: https://docs.google.com/document/d/16mY9h9FzTEVFr54Y59wnQcjInhPm-RmtzXURUQVTwhI/edit#heading=h.3slwo5tr5kr1
+  -
+    title: Brandy Mint LLC
+    link: https://docs.google.com/document/d/1bDvbMnH396FZZNk74YtxNkb_O-kWTicpiVLAfo_92_E/edit

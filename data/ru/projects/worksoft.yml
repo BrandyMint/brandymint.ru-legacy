@@ -1,0 +1,18 @@
+published: true
+slug: worksoft
+title: Worksoft
+image: 'composed/worksoft.png'
+date: '06-02-2012'
+description: |
+  Магазин плагинов и модулей для 1С.
+  Разработчики могут регистрироваться и продавать свои решения, контролируя версии и совместимость.
+features:
+  1: Продвинутый поиск
+  2: Магазин приложений
+technologies:
+  1: Ruby on Rails
+methodologies:
+  1: Test-driven development
+  2: Scrum
+
+

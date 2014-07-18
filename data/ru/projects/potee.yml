@@ -1,0 +1,24 @@
+published: true
+slug: potee
+title: Potee
+image: 'composed/potee.png'
+logo: potee_logo.svg
+url: 'http://potee.me'
+date: '20-10-2012'
+description: |
+  Potee начался как проект на хакатоне Rails Rumble. Мы объединились с 
+  <a href="http://genue.ru/" target="_blank">Евгением Лучининым</a>,
+  чтобы воплотить в жизнь его идею визуального таск-менеджера.
+  На хакатоне мы сделали рабочий прототип за 48 часов, а позже вернулись к рефакторингу,улучшению фунцкионала и user experience..
+features:
+  1: Визуальный таск-менеджер
+technologies:
+  1: Ruby on Rails
+  2: CoffeeScript
+  3: Backbone
+  4: Marionette
+methodologies:
+  1: Agile
+  2: Scrum
+
+

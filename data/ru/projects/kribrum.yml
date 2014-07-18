@@ -1,0 +1,19 @@
+published: true
+slug: kribrum
+title: Kribrum
+image: 'composed/kribrum.png'
+date: '10-11-2013'
+devices:
+  -
+    device: ipad landscape
+description: |
+  iPad-приложение для Kribrum, мониторингового сервиса (СМИ и социальные медиа) для корпоративного пользования.
+features:
+  1: PhoneGap-разработка
+technologies:
+  1: Backbone
+  2: Marionette
+methodologies:
+  1: Scrum
+  2: Agile
+

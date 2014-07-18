@@ -1,0 +1,22 @@
+- projects = locals[:projects]
+
+
+- if projects.present?
+  .secondary-navbar.navbar.navbar-fixed-top{ role: 'secondary-navbar'}
+    .container
+      - projects.each do |f|
+        - p = f[1]
+        = link_to p.title, "##{p.slug}", class: "app-secondary-nav-item", role: 'project-link', data: {'link-project' => "#{p.slug}"}
+
+.work-page
+  .projects-container
+    - projects.each do |f|
+      - p = f[1]
+      %a{name: p.slug}
+      %div{ class: "project-container project-container-#{p.slug}", data: {project: "#{p.slug}"}, role: "project-waypoint-start"}
+        = partial "localizable/work/project_block", locals: {p: p}
+
+= more_link_block ldata.shared.our_products, lpath('products')
+= more_link_block ldata.shared.contact_us, lpath('contact')
+
+

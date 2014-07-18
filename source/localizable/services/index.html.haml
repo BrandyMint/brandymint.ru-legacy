@@ -1,0 +1,45 @@
+---
+body_class: services-page body-navbar-white
+---
+
+
+.services-container-image{role: 'cover-image'}
+  .page-container
+    .container
+      .row
+        .col-sm-9.col-sm-offset-2
+          .services-content
+            -#%h1.services-header
+              We create and improve digital products:
+              %br
+              define, develop, test, make better.
+    .services-subheader-block
+      .container
+        .row
+          .col-sm-8.col-sm-offset-2
+            %h2.services-subheader
+              = ldata.services_description.header
+
+.container
+  -#.welcome-block
+  .services-block-compact
+    .row
+      .col-sm-8.col-sm-offset-2
+        %small.serif-font
+          = ldata.services_description.description
+
+  .services-block-compact
+    .row
+      .col-sm-8.col-sm-offset-2
+        .services-page-services-list
+          - ldata.services.each_pair do |s_key, s|
+            .service-item
+              %h3.service-title= s.title
+              %ul.service-description.unstyled-list
+                - s.items.each_with_index do |item, i|
+                  %li= item
+
+= more_link_block ldata.shared.our_work, lpath('work')
+= more_link_block ldata.shared.contact_us, lpath('contact')
+
+

@@ -1,0 +1,9 @@
+slug: alice
+title: alice
+url: https://github.com/BrandyMint/alice
+description: |
+  Alice is advanced comment system for Ruby On Rails
+languages:
+  ruby: 87%
+  javascript: 13%
+

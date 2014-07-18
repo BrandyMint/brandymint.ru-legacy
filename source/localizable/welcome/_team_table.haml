@@ -1,0 +1,30 @@
+-#.team-list.row
+.team-list
+  - team = ldata.team
+  - team.each do |t|
+    .team-list-item
+      .team-list-item-content
+        .row
+          .col-lg-2.col-sm-4.team-list-photo
+            - if t.photo.present?
+              %img{ src: "images/team/#{t.photo}" }
+            - else
+              %img{ src: 'images/team/none.png' }
+          .col-lg-10.col-sm-8
+            .team-list-name
+              - if t.name
+                - if t.github
+                  = link_to t.name, t.github, target: :blank
+                - else
+                  = t.name
+            .team-list-position
+              = t.position if t.position
+            .team-list-experience
+              - if t.experience
+                = t.experience
+                in industry
+            .team-list-skills
+              = t.skills if t.skills
+            -#.team-list-background
+            -#.team-list-learning
+

@@ -1,0 +1,16 @@
+- partners = {aip: 'aip.png', elegion: 'elegion.png', ideast: 'ideast.png', itpark: 'itpark.png', investcafe: 'investcafe.png', chebit: 'chebit.png'}
+.welcome-block.welcome-partners
+  .container
+    .row
+      .col-md-8.col-md-offset-2
+        %h2.welcome-header
+          = ldata.welcome.partners_header
+    .row
+      - partners.each do |partner, logo|
+        .col-sm-2.col-xs-6.welcome-partners-logo
+          -#= partner
+          %img{ src: image_path("partners/#{logo}"), class: 'welcome-partners-logo-image' }
+
+
+
+

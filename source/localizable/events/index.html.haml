@@ -1,0 +1,12 @@
+.work-page.events-page
+  %h1.large-header.text-center Events
+  - @events = ldata.events
+  - if @events.present?
+    - @events.each_with_index do |(event_key, event_content), index|
+      - p = event_content
+      %a{name: "#{p.slug}"}
+      %div{ class: "project-container product-container", data: {project: "#{p.slug}"}, role: "project-waypoint-start"}
+        = partial "localizable/products/product_block", locals: {p: p, index: index}
+
+= more_link_block ldata.shared.contact_us, url_for('contact')
+

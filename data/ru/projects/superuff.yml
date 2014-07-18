@@ -1,0 +1,30 @@
+published: true
+slug: superuff
+title: Супер Пёс
+logo: superuff_logo.svg
+image: 'composed/superuff.png'
+date: 01-02-2014
+devices:
+  -
+    device: iphone5s
+    device_scale: half
+  -
+    device: nexus5
+    device_scale: half
+  -
+    device: windows_phone
+google_play: 'https://play.google.com/store/apps/details?id=com.brandymint.doggy.free'
+description: |
+  Супер Пёс — кросплатформенное мобильное приложение, призванное помочь в обучении собак.
+  30 упражнений, разбитых по шагам с простыми и приятными иллюстрациями, объясняют весь процесс с самого начала.
+features:
+  1: PhoneGap-разработка
+technologies:
+  1: CoffeeScript
+  2: Backbone
+  3: Marionette
+methodologies:
+  1: Test-driven development
+  2: Scrum
+
+

@@ -1,0 +1,17 @@
+-
+  icon: github
+  title: Github
+  link: 'http://github.com/brandymint'
+-
+  icon: facebook
+  title: Facebook
+  link: 'http://facebook.com/brandymint'
+-
+  icon: vkontakte-rect
+  title: vk.com
+  link: 'http://vk.com/brandymintru'
+-
+  #icon: medium
+  logo: 'medium_logo.svg'
+  title: Medium
+  link: 'https://medium.com/brandymints-blog'

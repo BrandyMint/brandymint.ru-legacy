@@ -1,0 +1,37 @@
+.welcome-block.welcome-contacts
+  .container
+    .row
+      .col-md-6.col-md-offset-3
+        %h2.welcome-header
+          = ldata.contacts.contact_us
+    .row
+      .col-md-8.col-md-offset-2.text-center
+        - ldata.contacts.phones.each_with_index do |p,i|
+          = link_to "#{ficon 'phone-1', size: 16} #{p}", "tel:#{p}", class: 'gray-link'
+          - unless i == ldata.contacts.phones.count - 1
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        %br
+        %br
+        %br
+    .row
+      - ldata.contacts.people.each_pair do |key, contact|
+        .col-sm-3.col-sm-offset-1.article-text
+          - if contact.photo.present?
+            .contacts-photo{ style: "background-image: url('/images/#{contact.photo}')" }
+            %br
+          .contacts-name
+            %strong= contact.name
+            %br
+            %small= contact.position
+          = link_to "mailto:#{contact.email}", class: 'contacts-link' do
+            %small= contact.email
+          %br
+          = link_to "tel:#{contact.phone}", class: 'contacts-link' do
+            %small= contact.phone
+    .row
+      .col-sm-3.col-sm-offset-5.article-text
+        %br
+        %em= ldata.contacts.address
+    %br
+    .text-center= ficon 'down-open-big'
+

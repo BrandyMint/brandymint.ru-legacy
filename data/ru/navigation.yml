@@ -1,0 +1,13 @@
+services:
+  title: Услуги
+  page: services
+work:
+  title: Портфолио
+  page: work
+products:
+  title: Продукты
+  page: products
+contacts:
+  title: Контакты
+  page: contact
+

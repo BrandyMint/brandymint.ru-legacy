@@ -40,11 +40,13 @@ module Haml::Filters::Markdown
   end
 end
 
+activate :i18n, langs: [:en, :ru], mount_at_root: false
+
 # Middleman Navigation
 activate :navigation
 
 # Livereload
-activate :livereload
+# activate :livereload
 
 # Automatic image dimensions on image_tag helper
 activate :automatic_image_sizes
@@ -107,6 +109,8 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
+
+set :relative_links, true
 
 activate :sprockets
 

@@ -1,0 +1,26 @@
+published: true
+slug: mashtime
+title: Mashtime
+image: 'composed/mashtime.png'
+logo: mashtime_logo.svg
+url: 'http://mashtime.ru'
+date: '10-09-2013'
+description: |
+  Мы сделали Mashtime для учёта рабочего времени, анализа проектов и планирования будущей работы.
+  Сервис подходит для команд, проектов и фрилансеров.
+  Само собой, дизайн адаптивный, так что каждый может отмечать время даже на ходу.
+  Mashtime запоминает, как вы пользуетесь им — больше для записи часов или для отчётов — и показывает вам
+  именно тот интерфейс, который вам нужен.
+features:
+  1: Учет времени
+  2: Отчёты для печати
+  3: Адаптивное поведение
+technologies:
+  1: Ruby on Rails
+  2: CoffeeScript
+methodologies:
+  1: Test-driven development
+  2: Agile
+  3: Scrum
+
+

@@ -1,0 +1,8 @@
+---
+body_class: body-navbar-white
+---
+
+- p = ldata.work.lcrm if ldata.work.present?
+- if p.present?
+  = partial 'localizable/work/story', locals: {p: p}
+

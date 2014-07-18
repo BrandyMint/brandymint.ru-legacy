@@ -1,0 +1,21 @@
+published: true
+slug: chebru
+title: Чеб.ру
+image: 'composed/chebru.png'
+date: '10-02-2012'
+devices:
+  -
+    device: nexus5
+    device_scale: half
+google_play: 'https://play.google.com/store/apps/details?id=ru.brandymint.chebru'
+description: |
+  Справочник Чебоксар с оффлайновой базой данных, поиском по улицам и компаниям, выдающим результаты на основе вашего местоположения.
+features:
+  1: Оффлайновая база данных
+  2: Google и Яндекс карты
+  3: Геолокация
+technologies:
+  1: Android-разработка
+methodologies:
+  1: Scrum
+

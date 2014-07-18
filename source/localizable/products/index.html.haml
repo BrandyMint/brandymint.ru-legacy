@@ -1,0 +1,48 @@
+---
+body_class: services-page body-navbar-white
+navbar_state: active
+---
+
+- @product_sections = ldata.product_sections
+- @products = ldata.products
+- @products_sorted = ldata.products.sort {|a, b| @product_sections[a[0]].position <=> @product_sections[b[0]].position}
+- @products_sorted = Hash[@products_sorted]
+- projects_data = {}
+
+.work-page.products-page
+  .secondary-navbar.navbar.navbar-fixed-top{ role: 'secondary-navbar'}
+    .container
+      - @products_sorted.each_pair do |section_key, section_content|
+        = link_to @product_sections[section_key].title, "##{section_key}", class: "app-secondary-nav-item", role: 'project-link', data: {'link-project' => "#{section_key}"}
+
+
+  - @products_sorted.each_pair do |section_key, section_content|
+    %a{name: "#{section_key}"}
+    .products-section{ data: {project: "#{section_key}"}, role: "project-waypoint-start"}
+      %h2.text-center.products-page-title
+        = @product_sections[section_key].title if @product_sections[section_key].present?
+      - if section_key != 'opensource'
+        - section_content.each_with_index do |(product_key, product_content), index|
+          - projects_data[product_key] = ldata.projects[product_key]
+          - if product_content.present? && projects_data[product_key].present?
+            -# product_content = projects_data[product_key]
+            - p = projects_data[product_key].merge product_content
+            -#.merge product_content
+          - else
+            - p = product_content || projects_data[product_key]
+          %a{name: "#{p.slug}"}
+          %div{ class: "project-container product-container", data: {project: "#{p.slug}"}, role: "project-waypoint-start"}
+            = partial "localizable/products/product_block", locals: {p: p, index: index}
+      - else
+        .container
+          .row
+            - section_content_sorted = section_content.sort {|a, b| (b[1].downloads || 0) <=> (a[1].downloads || 0)}
+            - section_content_sorted.each_with_index do |(product_key, product_content), index|
+              - p = product_content
+              .col-md-4
+                = partial "localizable/products/product_block_opensource", locals: {p: p}
+
+= more_link_block ldata.shared.events, lpath('events')
+= more_link_block ldata.shared.contact_us, lpath('contact')
+
+

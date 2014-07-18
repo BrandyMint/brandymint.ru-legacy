@@ -1,7 +1,15 @@
 .navbar.application-navbar.navbar-fixed-top{role: 'application-navbar'}
   .container
-    %a.navbar-brand-logo-link.pull-left{href: url_for('/')}
+    %a.navbar-brand-logo-link.pull-left{href: lpath('')}
       %img.navbar-brand-logo.navbar-fixed-item{src: image_path("logo_brandymint_black.svg"), alt: 'Brandymint'}
+    .btn-group.navbar-fixed-item.navbar-locale-btn-group
+      - ['ru', 'en'].each do |locale|
+        - if current_page.url.match( url_for(locale).gsub('/','') )
+          - state = 'active'
+        - else
+          - state = ''
+        -#= link_to n.title, url_for(n.page), class: "app-nav-item #{state}"
+        = link_to locale, "/#{locale}", class: "#{state} btn navbar-locale-btn"
 
     .pull-right
       %button.app-nav-toggle.navbar-toggle.navbar-fixed-item{type: "button", role: "app-nav-toggle-button", 'data-state' => current_page.data.navbar_state || ''}
@@ -13,13 +21,13 @@
 
     -#.navbar-collapse.collapse
     .app-nav.navbar-fixed-item{ role: 'navbar-menu'}
-      - data.navigation.each_pair do |k, n|
+      - ldata.navigation.each_pair do |k, n|
         - if current_page.url.gsub('/','').match( url_for(n.page).gsub('/','') )
           - state = 'active'
         - else
           - state = ''
         -#= link_to n.title, url_for(n.page), class: "app-nav-item #{state}"
-        = link_to n.title, "/#{n.page}/", class: "app-nav-item #{state} app-nav-item-#{n.page} col-sm-6 col-sm-offset-3"
+        = link_to n.title, lpath(n.page), class: "app-nav-item #{state} app-nav-item-#{n.page} col-sm-6 col-sm-offset-3"
     .clearfix
       
 

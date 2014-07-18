@@ -1,0 +1,12 @@
+.page-container-image.welcome-container-image{role: 'cover-image'}
+  .page-container
+    .container
+      .welcome-content
+        %h1.welcome-header
+          = ldata.welcome.header.html_safe
+        .welcome-subheader
+          = link_to 'services', class: 'btn btn-primary-outline' do
+            -#= link_to services_path, class: 'btn btn-primary-outline' do
+            = ldata.welcome.header_btn
+
+

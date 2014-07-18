@@ -123,4 +123,13 @@ module ApplicationHelpers
     end
   end
 
+  # localized data
+  def ldata
+    data[I18n.locale]
+  end
+
+  def lpath path
+    "/#{I18n.locale}/#{path}"
+  end
+
 end

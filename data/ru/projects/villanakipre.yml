@@ -1,0 +1,15 @@
+published: true
+slug: villanakipre
+title: Вилла на Кипре
+image: 'composed/villanakipre.png'
+date: '06-06-2013'
+description: |
+  Backend-разработка для Villanakipre.ru, сайте и продаже и аренде жилья на Кипре.
+features:
+  1: Продвинутый поиск
+technologies:
+  1: Ruby on Rails
+methodologies:
+  1: Domain–driven design
+
+

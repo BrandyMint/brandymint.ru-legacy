@@ -1,0 +1,17 @@
+- p = locals[:p]
+- index = locals[:index]
+- default_url = p.url || p.appstore || p.google_play
+
+.project-block.product-block{role: "project-block"}
+  .row
+    - if index % 2 == 0
+      .col-md-5
+        = partial 'localizable/work/project_block_image_block', locals: {p: p, default_url: default_url}
+      .col-md-5.col-md-offset-1
+        = partial 'localizable/products/product_block_content', locals: {p: p, default_url: default_url}
+    - else
+      .col-md-5.col-md-offset-1
+        = partial 'localizable/products/product_block_content', locals: {p: p, default_url: default_url}
+      .col-md-5.col-md-offset-1
+        = partial 'localizable/work/project_block_image_block', locals: {p: p, default_url: default_url}
+

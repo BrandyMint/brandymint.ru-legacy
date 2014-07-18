@@ -1,0 +1,11 @@
+saas:
+  title: SaaS–приложения
+  position: 1
+
+mobile:
+  title: Мобильные
+  position: 2
+
+opensource:
+  title: Open Source
+  position: 3

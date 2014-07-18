@@ -1,0 +1,11 @@
+slug: rails4template
+title: rails4_template
+url: https://github.com/BrandyMint/rails4_template
+description: |
+  Rails 4 project template. Twitter Bootstrap, Haml, Sass, Settingslogic, Postgres, Test suite, etc.
+languages:
+  ruby: 94%
+  shell: 3%
+  css: 2%
+  coffeescript: 1%
+

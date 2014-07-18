@@ -1,0 +1,21 @@
+published: true
+slug: zagorod
+#logo: zagorod_logo.svg
+title: За город!
+url: http://zagorod21.ru
+image: 'composed/zagorod.png'
+date: 10-12-2013
+description: |
+  «За город!» — наш проект для баз отдыха и хозяев коттеджей, сдающих жильё и желающих увеличить поток клиентов.
+  Отдельное внимание уделено дополнительным сервисам — таким, как кейтеринг и пассажироперевозки.
+features:
+  1: Адаптивный дизайн
+  2: Панель менеджера
+  3: SMS-уведомления
+technologies:
+  1: Ruby on Rails
+methodologies:
+  1: Быстрое прототипирование
+  2: Agile-разработка
+
+

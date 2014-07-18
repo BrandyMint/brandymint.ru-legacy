@@ -1,0 +1,11 @@
+slug: loop_dance
+title: loop_dance
+url: https://github.com/dapi/loop_dance
+badge: https://badge.fury.io/rb/loop_dance.png
+downloads: 14,159
+description: |
+  Simple daemonized pseudo-scheduler controlled by rake tasks
+languages:
+  ruby: 84%
+  javascript: 16%
+
