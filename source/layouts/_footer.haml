@@ -14,7 +14,7 @@
           = link_to "tel:#{ldata.contacts.phone}", class: 'contacts-link' do
             %small= ldata.contacts.phone
       .col-sm-3
-        = link_to url_for('/contact/'), class: 'footer-map-link' do
+        = link_to lpath('contact'), class: 'footer-map-link' do
           .pull-left
             %img{ src: "http://maps.googleapis.com/maps/api/staticmap?center=56.14500717902213,47.23953854232787&zoom=13&size=100x100&sensor=false"}
           .pull-left
@@ -38,17 +38,17 @@
         - ldata.navigation.each_pair do |section_key, section_content|
           .col-xs-3
             %strong
-              = link_to section_content.title, "/#{section_content.page}/"
+              = link_to section_content.title, lpath("#{section_content.page}")
             %hr.mini.footer-hr
             - if data[section_key].present? && !(section_key.match('products')) && !(section_key.match('work'))
               - data[section_key].each_pair do |l_key, l|
                 - if l.is_a? Hash
                   .footer-products-link
-                    = link_to l.title, "/#{ldata.navigation[section_key].page}/##{l.slug || l_key}"
+                    = link_to l.title, lpath("#{ldata.navigation[section_key].page}/##{l.slug || l_key}")
             - if section_key.match 'products'
               - ldata.product_sections.each_pair do |ps_key, ps|
                 .footer-products-link
-                  = link_to ps.title, "/#{ldata.navigation[section_key].page}/##{ps.slug || ps_key}"
+                  = link_to ps.title, lpath("#{ldata.navigation[section_key].page}/##{ps.slug || ps_key}")
             - if section_key.match 'contact'
               - ldata.contacts.phones.each do |p|
                 .footer-products-link
