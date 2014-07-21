@@ -9,13 +9,17 @@ body_class: welcome index hide-navbar-menu
   = partial 'localizable/welcome/what_we_do'
 %article
   = partial 'welcome/projects'
-  = more_link_block ldata.welcome.more_projects, url_for('/work/')
+  = more_link_block ldata.welcome.more_projects, lpath('work')
 %hr.no-margins
 %article
   = partial 'welcome/partners'
 %hr.no-margins
 %article
   = partial 'welcome/contacts'
+
+= partial 'shared/map'
+
+
 %section
   = partial 'shared/contact_form'
 
