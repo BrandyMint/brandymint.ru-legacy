@@ -14,22 +14,14 @@ people:
     position: Аккаунт–менеджмент, продажи
     email: elacheva@gmail.com
 
-  mescheryakov:
-    photo: 'people/mescheryakov.jpg'
-    name: Александр Мещеряков
-    position: Продукт–дизайнер
-    phone: +7 960 307 00 64
-    email: sib@brandymint.com
-
 address: |
   Чебоксары
   <br>
   Академика Крылова, 7
 
 phones:
-  - "8 800 77 55 661"
-  - "8 961 342 90 22"
   - "8 903 389 12 28"
+  - "8 961 342 90 22"
 
 bank_accounts_title: Реквизиты
 
