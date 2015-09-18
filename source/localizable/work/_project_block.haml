@@ -8,13 +8,14 @@
 
       %h3.project-title.text-center
         - if default_url.present?
-          %a{href: default_url, target: :blank}
+          %a.project-title-link{href: default_url, target: :blank}
             = partial 'localizable/work/project_block_title', locals: {title: p.title, logo: p.logo}
         - else
           = partial 'localizable/work/project_block_title', locals: {title: p.title, logo: p.logo}
       .project-features
-        - p.features.each_pair do |k,v|
-          %span= v
+        - if p.features.present?
+          - p.features.each_pair do |k,v|
+            %span= v
       .project-description
         %p= md p.description if p.description.present?
       -#%h5.technology-title Technologies
