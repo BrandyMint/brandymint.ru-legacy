@@ -1,0 +1,19 @@
+published: true
+slug: kiosk
+title: Киоск
+url: http://kiiiosk.ru/
+logo: kiosk_logo.svg
+image: 'composed/kiosk.png'
+date: 17-09-2015
+description: |
+  Киоск — платформа для интернет-торговли.
+  Киоск экономит время на обработке заказов,
+  автоматически принимает оплату, уведомляет службу доставки, учитывает остатки на складе (moysklad.ru) и продвигает товары в yandex market.
+  Как говорят клиенты, “киоск — это удивительно быстрый запуск интернет-магазина”.
+technologies:
+  1: Ruby
+  2: Clojure
+  3: ES6
+  4: React
+
+
