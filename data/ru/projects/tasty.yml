@@ -1,0 +1,20 @@
+published: true
+slug: tasty
+title: Тейсти
+url: http://taaasty.ru/
+logo: tasty_logo.png
+image: 'composed/tasty.png'
+date: 17-09-2015
+devices:
+  -
+    device: iphone
+  -
+    device: nexus5
+description: |
+  Тейсти — чувственный личный дневник, в котором Вы не останетесь одиноки. На тейсти живут художники и артисты, которым есть, что сказать миру.
+technologies:
+  1: Ruby
+  2: ES6
+  4: React
+
+
