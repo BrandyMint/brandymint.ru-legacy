@@ -1,0 +1,23 @@
+published: true
+slug: onelec
+#logo: onelec_logo.svg
+title: Onelec
+url: http://onelec.ru
+image: 'composed/onelec.png'
+date: 10-11-2013
+description: |
+  База электронных компонентов с мультипараметрической организацией (товары с переменным количеством аттрибутов).
+  Главное достоинство — очень быстрый поисковый сервис, около 5мс при миллионе товаров.
+features:
+  1: Импорт XLS и CSV
+  2: Быстрый поиск по огромной БД
+  3: Интерфейс администратора
+technologies:
+  1: Ruby on Rails
+  2: PostgreSQL
+  3: Elasticsearch
+methodologies:
+  1: Быстрое прототипирование
+  2: Agile-разработка
+
+

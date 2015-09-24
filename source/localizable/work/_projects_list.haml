@@ -14,7 +14,11 @@
       - p = f[1]
       %a{name: p.slug}
       %div{ class: "project-container project-container-#{p.slug}", data: {project: "#{p.slug}"}, role: "project-waypoint-start"}
-        = partial "localizable/work/project_block", locals: {p: p}
+        - if p[:noindex]
+          %noidex
+            = partial "localizable/work/project_block", locals: {p: p}
+        - else
+          = partial "localizable/work/project_block", locals: {p: p}
 
 = more_link_block ldata.shared.our_products, lpath('products')
 = more_link_block ldata.shared.contact_us, lpath('contact')
