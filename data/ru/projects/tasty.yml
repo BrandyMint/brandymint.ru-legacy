@@ -2,14 +2,21 @@ published: true
 slug: tasty
 title: Тейсти
 url: http://taaasty.ru/
+appstore: 'https://itunes.apple.com/ru/app/tejsti/id944944503?mt=8'
+google_play: 'https://play.google.com/store/apps/details?id=ru.taaasty&hl=ru'
 logo: tasty_logo.png
 image: 'composed/tasty.png'
 date: 17-09-2015
 devices:
   -
     device: iphone
+    device_scale: half
   -
     device: nexus5
+    device_scale: half
+  -
+    device: web
+
 description: |
   Тейсти — чувственный личный дневник, в котором Вы не останетесь одиноки. На тейсти живут художники и артисты, которым есть, что сказать миру.
 technologies:

@@ -2,9 +2,20 @@ published: true
 slug: kiosk
 title: Киоск
 url: http://kiiiosk.ru/
+# appstore:
+# google_play:
 logo: kiosk_logo.svg
 image: 'composed/kiosk.png'
 date: 17-09-2015
+devices:
+  -
+    device: iphone
+    device_scale: half
+  -
+    device: nexus5
+    device_scale: half
+  -
+    device: web
 description: |
   Киоск — платформа для интернет-торговли.
   Киоск экономит время на обработке заказов,
