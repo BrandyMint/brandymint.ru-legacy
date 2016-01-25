@@ -13,6 +13,12 @@ people:
     name: Татьяна Письменная
     position: Аккаунт–менеджмент, продажи
     email: elacheva@gmail.com
+  mescheryakov:
+    photo: 'people/mescheryakov.jpg'
+    name: Александр Мещеряков
+    position: Продукт–дизайнер
+    phone: +7 960 307 00 64
+    email: sib@brandymint.com
 
 address: |
   Чебоксары
