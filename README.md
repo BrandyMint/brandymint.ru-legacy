@@ -9,6 +9,8 @@
 
 `bundle exec middleman build` builds a static site in `build` folder.
 
+`cap production deploy`
+
 ---
 
 ## Data and content
