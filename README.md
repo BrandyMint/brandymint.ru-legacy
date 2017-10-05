@@ -3,6 +3,10 @@
 
 ## Development
 
+`npm install -g bower`
+
+`bower install`
+
 `bundle install` first.
 
 `bundle exec middleman` starts a server on `0.0.0.0:4567` (liveupdate included).
