@@ -10,7 +10,7 @@ require 'capistrano/ext/multistage'
 
 set :application, "brandymint.ru"
 set :user,      'wwwbrandymint'
-set :port, 2222
+set :port, 22
 set :deploy_to,  defer {"/home/#{user}/#{application}" }
 
 set :scm, :git

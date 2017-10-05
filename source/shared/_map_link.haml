@@ -1,10 +1,10 @@
 .contacts-block
   %span.glyphicon.glyphicon-map-marker.icon-color-gray-light
   = link_to '#j-footer-map', 'data-toggle' => 'collapse' do
-    -# г. Чебоксары, ул. Академика Крылова, дом 7
+    -# г. Чебоксары, ул. Академика Крылова, дом 5
     Russian Federation,
     Cheboksary,
-    Akademika Krylova, 7
+    Akademika Krylova, 
 
 #j-footer-map.footer-map-block.collapse{ 'aria-hidden' => 'true' }
   %h5.pull-left.no-margin-top
@@ -13,6 +13,4 @@
   %button.close.pull-right{ 'data-toggle' => 'collapse', :href => '#j-footer-map' } &times;
   .clearfix
   .footer-map
-    -#%script{:charset => "utf-8", :src => "src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=dzDcQ9HM2RAzBNcdLwrB43-rhduCVkca&width=600&height=450",
-      :type => "text/javascript"}
     %img{src: "//api-maps.yandex.ru/services/constructor/1.0/static/?sid=dzDcQ9HM2RAzBNcdLwrB43-rhduCVkca&width=600&height=450"}

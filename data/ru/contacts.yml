@@ -4,7 +4,7 @@ people:
   danil:
     photo: 'people/pismenny.jpg'
     name: Данил Письменный
-    position: Основатель, CEO
+    position: Директор
     phone: +7 903 389 12 28
     email: danil@brandymint.com
 
@@ -23,7 +23,8 @@ people:
 address: |
   Чебоксары
   <br>
-  Академика Крылова, 7
+  ул. Академика А.Н. Крылова, дом 5, офис 22А
+
 
 phones:
   - "8 903 389 12 28"
