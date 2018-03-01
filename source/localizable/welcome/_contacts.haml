@@ -15,7 +15,7 @@
         %br
     .row
       - ldata.contacts.people.each_pair do |key, contact|
-        .col-sm-3.col-sm-offset-1.article-text
+        .col-sm-4.col-sm-offset-1.article-text
           - if contact.photo.present?
             .contacts-photo{ style: "background-image: url('/images/#{contact.photo}')" }
             %br
