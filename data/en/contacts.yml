@@ -14,13 +14,6 @@ people:
     position: Sales and Account Manager
     email: elacheva@gmail.com
 
-  mescheryakov:
-    photo: 'people/mescheryakov.jpg'
-    name: Alexander Mescheryakov
-    position: Product Designer
-    phone: +7 960 307 00 64
-    email: sib@brandymint.com
-
 address: |
   Russian Federation
   <br>
