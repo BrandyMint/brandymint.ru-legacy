@@ -35,11 +35,7 @@ GEM
       sass (~> 3.1)
     compass-rails (1.1.3)
       compass (>= 0.12.2)
-    em-websocket (0.5.0)
-      eventmachine (>= 0.12.9)
-      http_parser.rb (~> 0.5.3)
     erubis (2.7.0)
-    eventmachine (1.0.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
     exifr (1.1.3)
@@ -50,7 +46,6 @@ GEM
       tilt
     highline (1.6.20)
     hike (1.2.3)
-    http_parser.rb (0.5.3)
     i18n (0.6.9)
     image_optim (0.9.1)
       exifr (~> 1.1.3)
@@ -60,7 +55,7 @@ GEM
       progress (~> 3.0.0)
     image_size (1.1.5)
     in_threads (1.2.0)
-    json (1.8.1)
+    json (2.2.0)
     kramdown (1.3.1)
     listen (1.3.1)
       rb-fsevent (>= 0.9.3)
@@ -95,11 +90,6 @@ GEM
     middleman-imageoptim (0.1.4)
       image_optim (~> 0.9.1)
       middleman-core (>= 3.0)
-    middleman-livereload (3.1.1)
-      em-websocket (>= 0.2.0)
-      middleman-core (>= 3.0.2)
-      multi_json (~> 1.0)
-      rack-livereload
     middleman-navigation (1.0.4)
       middleman-core (~> 3.2.1)
       simple-navigation (> 3.0.0)
@@ -127,8 +117,6 @@ GEM
       pry
     ptools (1.2.2)
     rack (1.5.2)
-    rack-livereload (0.3.15)
-      rack
     rack-test (0.6.2)
       rack (>= 1.0)
     rake (0.9.6)
@@ -172,7 +160,6 @@ DEPENDENCIES
   middleman-deploy
   middleman-google-analytics
   middleman-imageoptim (~> 0.1.4)
-  middleman-livereload
   middleman-navigation
   pry-nav
   pry-pretty-numeric
@@ -182,4 +169,4 @@ DEPENDENCIES
   sass (>= 3.2)
 
 BUNDLED WITH
-   1.10.6
+   1.17.2
