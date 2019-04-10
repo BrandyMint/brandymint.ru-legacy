@@ -3,17 +3,19 @@
 
 ## Development
 
-`npm install -g bower`
+Setup development environment
 
-`bower install`
+> make setup
 
-`bundle install` first.
+Start liveupdate development server
 
-`bundle exec middleman` starts a server on `0.0.0.0:4567` (liveupdate included).
+> make start
 
-`bundle exec middleman build` builds a static site in `build` folder.
+## Deploy
 
-`cap production deploy`
+Build static distribution and deploy to server
+
+> make 
 
 ---
 

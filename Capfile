@@ -14,7 +14,7 @@ set :port, 22
 set :deploy_to,  defer {"/home/#{user}/#{application}" }
 
 set :scm, :git
-set :repository,  "git@github.com:BrandyMint/brandymint2014.git"
+set :repository,  "git@github.com:BrandyMint/brandymint.ru.git"
 
 set :deploy_via, :copy
 set :copy_cache, true
