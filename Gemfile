@@ -44,7 +44,6 @@ gem 'pry-nav'
 #gem "pry-stack_explorer"
 
 
-
 group :deploy do
-   gem 'capistrano', :require => false
+  gem 'capistrano', :require => false
 end

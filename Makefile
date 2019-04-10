@@ -14,7 +14,7 @@ bower: npm
 	bower install
 
 build: # builds a static site in `build` folder.
-	bundle exec middleman build
+	bundle exec middleman build --verbose
 
 start: # starts a server on `0.0.0.0:4567` (liveupdate included).
 	bundle exec middleman
