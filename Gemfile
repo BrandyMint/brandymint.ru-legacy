@@ -6,7 +6,7 @@ gem "middleman", "~> 3.2.2"
 gem 'builder'
 gem 'redcarpet'
 #gem "activesupport", "~> 3.2.8"
-gem "rake", "~> 0.9.2"
+gem "rake", "~> 13.0.1"
 
 # Conflicts when install eventmachine on ruby 2.6.2
 # gem "middleman-livereload"
