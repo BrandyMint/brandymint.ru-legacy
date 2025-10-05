@@ -5,7 +5,9 @@
       "Bash(ruby:*)",
       "Bash(gem list:*)",
       "WebSearch",
-      "Bash(bundle:*)"
+      "Bash(bundle:*)",
+      "Bash(curl:*)",
+      "Bash(kill:*)"
     ],
     "deny": [],
     "ask": []

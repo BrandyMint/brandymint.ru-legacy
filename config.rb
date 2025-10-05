@@ -23,7 +23,7 @@ set :markdown, :fenced_code_blocks => true,
                :smartypants => true
 
 # I18n configuration
-activate :i18n, langs: [:en, :ru], mount_at_root: false, path: "/:locale/"
+activate :i18n, langs: [:en, :ru], mount_at_root: :ru, path: "/:locale/"
 
 # Live reload in development
 # activate :livereload
