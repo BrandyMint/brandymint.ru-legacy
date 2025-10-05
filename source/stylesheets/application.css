@@ -1,0 +1,316 @@
+/* Basic Bootstrap and custom styles for Brandymint */
+
+/* Import Bootstrap CSS from CDN */
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+
+/* Import Fontello icons */
+@import url('fontello/fontello.css');
+
+/* Reset and base styles */
+body {
+  font-family: 'PT Serif', serif;
+  color: #4d4d4d;
+  line-height: 1.6;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Museo', sans-serif;
+  font-weight: 300;
+  color: #333;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 1.5em;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 1.2em;
+}
+
+h3 {
+  font-size: 28px;
+  margin-bottom: 1em;
+}
+
+/* Navbar */
+.navbar {
+  background: #fff;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  min-height: 70px;
+}
+
+.navbar-fixed-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+}
+
+.navbar-brand-logo-link {
+  padding: 15px 0;
+}
+
+.navbar-brand-logo {
+  height: 40px;
+}
+
+.navbar-locale-btn-group {
+  margin-top: 18px;
+}
+
+.navbar-locale-btn {
+  padding: 6px 12px;
+  margin: 0 2px;
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  color: #666;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.navbar-locale-btn:hover {
+  background: #e8e8e8;
+  color: #333;
+}
+
+.app-nav-toggle {
+  margin-top: 18px;
+  padding: 9px 10px;
+  background: none;
+  border: 1px solid #ddd;
+}
+
+.icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #333;
+  margin: 4px 0;
+}
+
+.app-nav {
+  margin-top: 20px;
+}
+
+.app-nav-item {
+  display: block;
+  padding: 8px 0;
+  color: #333;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Museo', sans-serif;
+}
+
+.app-nav-item:hover {
+  color: #00a0e3;
+}
+
+/* Main layout */
+.application-container {
+  background: #fff;
+  min-height: 100vh;
+}
+
+body.welcome {
+  padding-top: 70px;
+}
+
+/* Welcome section */
+.page-container-image.welcome-container-image {
+  background: url('../images/welcome-bg.jpg') center center/cover no-repeat;
+  height: 500px;
+  position: relative;
+}
+
+.welcome-content {
+  padding-top: 80px;
+  text-align: center;
+}
+
+.welcome-header {
+  font-size: 48px;
+  color: #333;
+  margin-bottom: 1.5em;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.welcome-subheader {
+  margin-top: 2em;
+}
+
+/* Welcome blocks */
+.welcome-block {
+  padding: 60px 0;
+}
+
+.welcome-whatwedo-block {
+  font-family: 'PT Serif', serif;
+  font-size: 24px;
+  line-height: 1.67;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.welcome-whatwedo-block em {
+  font-style: italic;
+  color: #00a0e3;
+}
+
+/* Buttons */
+.btn-primary-outline {
+  background: transparent;
+  border: 2px solid #00a0e3;
+  color: #00a0e3;
+  padding: 12px 30px;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-outline:hover {
+  background: #00a0e3;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-container {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background: #f8f8f8;
+  text-decoration: none;
+  color: #333;
+  font-family: 'Museo', sans-serif;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.btn-container:hover {
+  background: #e8e8e8;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Partners section */
+.welcome-partners-logo {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.welcome-partners-logo-image {
+  max-width: 100%;
+  max-height: 70px;
+  display: inline-block;
+}
+
+/* Contacts section */
+.contacts-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto 20px;
+}
+
+.contacts-name {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.contacts-name strong {
+  font-family: 'Museo', sans-serif;
+  font-size: 18px;
+}
+
+.contacts-name small {
+  color: #666;
+  font-size: 14px;
+}
+
+.contacts-link {
+  display: block;
+  text-align: center;
+  color: #00a0e3;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.contacts-link:hover {
+  color: #0088c4;
+  text-decoration: none;
+}
+
+.gray-link {
+  color: #666;
+  text-decoration: none;
+}
+
+.gray-link:hover {
+  color: #00a0e3;
+  text-decoration: none;
+}
+
+/* Footer */
+.application-footer {
+  background: #2c3e50;
+  color: #ecf0f1;
+  padding: 40px 0;
+  margin-top: 60px;
+}
+
+/* Utilities */
+.text-center {
+  text-align: center;
+}
+
+.no-margins {
+  margin: 0;
+}
+
+.clearfix {
+  clear: both;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .welcome-header {
+    font-size: 36px;
+  }
+
+  .welcome-whatwedo-block {
+    font-size: 20px;
+  }
+
+  .page-container-image.welcome-container-image {
+    height: 350px;
+  }
+
+  .welcome-content {
+    padding-top: 60px;
+  }
+
+  .welcome-block {
+    padding: 40px 0;
+  }
+}

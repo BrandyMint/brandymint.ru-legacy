@@ -7,7 +7,16 @@
       "WebSearch",
       "Bash(bundle:*)",
       "Bash(curl:*)",
-      "Bash(kill:*)"
+      "Bash(kill:*)",
+      "Bash(lsof:*)",
+      "Bash(make:*)",
+      "Bash(bower install:*)",
+      "Bash(pkill:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(npm install:*)",
+      "Bash(npx:*)",
+      "Bash(npm search:*)",
+      "Bash(sudo:*)"
     ],
     "deny": [],
     "ask": []

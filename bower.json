@@ -9,7 +9,8 @@
     "jquery-waypoints": "~2.0.4",
     "animate.sass": "*",
     "animate.css": "~3.0.0",
-    "jReject": "~1.1.1"
+    "jReject": "~1.1.1",
+    "bootstrap-sass": "~3.3.0"
   },
   "ignore": [
     "**/.*",

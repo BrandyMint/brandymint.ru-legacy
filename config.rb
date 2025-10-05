@@ -60,7 +60,7 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 set :relative_links, true
 
-# Sprockets configuration (built-in to Middleman 4)
+# Sprockets configuration disabled due to compatibility issues
 # activate :sprockets do |s|
 #   s.supported_output_extensions << '.html'
 # end

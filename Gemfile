@@ -14,6 +14,7 @@ gem 'kramdown'
 # Essential Middleman extensions
 gem "middleman-syntax"
 gem "middleman-autoprefixer"
+# gem "middleman-sprockets" # Disabled due to Sass compatibility issues
 
 # SASS/SCSS support (modern versions)
 gem "sassc", "~> 2.4"
