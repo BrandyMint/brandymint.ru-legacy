@@ -15,6 +15,9 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  MIDDLEMAN_HTTP_PREFIX: "/"
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -47,7 +50,6 @@ jobs:
     - name: Build site
       run: |
         # Set the base URL for GitHub Pages
-        export MIDDLEMAN_HTTP_PREFIX="/brandymint.ru-legacy"
         bundle exec middleman build
 
     - name: Setup Pages

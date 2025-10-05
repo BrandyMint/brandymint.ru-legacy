@@ -97,7 +97,7 @@ configure :build do
 
   # Set the base URL for GitHub Pages (will be overridden by environment)
   # This is a placeholder - the actual URL will be set in the workflow
-  config[:http_prefix] = "/brandymint.ru-legacy"
+  config[:http_prefix] = "/"
 end
 
 # Build configuration
