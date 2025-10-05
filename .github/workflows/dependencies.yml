@@ -1,0 +1,107 @@
+name: Dependencies
+
+on:
+  schedule:
+    # Run every Monday at 9:00 AM UTC
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+
+jobs:
+  check-dependencies:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.4'
+
+    - name: Check outdated gems
+      run: |
+        gem install bundler
+        bundle install
+        bundle outdated --strict --parseable > outdated-gems.txt || true
+
+    - name: Check for security vulnerabilities
+      run: |
+        gem install bundler-audit
+        bundle-audit check --update > audit-results.txt || true
+
+    - name: Create dependency issue
+      if: failure()
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const fs = require('fs');
+
+          let body = '## 📦 Dependency Update Required\n\n';
+
+          if (fs.existsSync('outdated-gems.txt')) {
+            const outdated = fs.readFileSync('outdated-gems.txt', 'utf8');
+            if (outdated.trim()) {
+              body += '### Outdated Gems:\n```\n' + outdated + '\n```\n\n';
+            }
+          }
+
+          if (fs.existsSync('audit-results.txt')) {
+            const audit = fs.readFileSync('audit-results.txt', 'utf8');
+            if (audit.trim() && !audit.includes('No vulnerabilities found')) {
+              body += '### Security Vulnerabilities:\n```\n' + audit + '\n```\n\n';
+            }
+          }
+
+          if (body !== '## 📦 Dependency Update Required\n\n') {
+            body += 'Please consider updating the dependencies to maintain security and compatibility.\n\n';
+            body += 'To update locally:\n```bash\nbundle update\n```\n';
+
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '📦 Dependency Update Available',
+              body: body,
+              labels: ['dependencies', 'maintenance']
+            });
+          }
+
+  update-dependencies:
+    runs-on: ubuntu-latest
+    needs: check-dependencies
+    if: github.event_name == 'schedule'
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.4'
+        bundler-cache: true
+
+    - name: Update dependencies
+      run: |
+        bundle update
+        bundle lock --add-platform ruby
+
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v6
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        commit-message: '📦 chore: update gem dependencies'
+        title: '📦 Update Ruby dependencies'
+        body: |
+          Automated dependency update.
+
+          This PR updates the Ruby gems to their latest compatible versions.
+
+          Please review the changes and ensure everything works as expected before merging.
+        branch: chore/update-dependencies
+        delete-branch: true
+        labels: |
+          dependencies
+          automated

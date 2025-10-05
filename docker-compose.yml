@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  brandymint-website:
+    build: .
+    ports:
+      - "8080:80"
+    container_name: brandymint-website
+    restart: unless-stopped
+    environment:
+      - NGINX_HOST=localhost
+      - NGINX_PORT=80
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.brandymint.rule=Host(`localhost`)"
+      - "traefik.http.services.brandymint.loadbalancer.server.port=80"

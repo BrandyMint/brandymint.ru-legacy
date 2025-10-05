@@ -1,49 +1,32 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
-gem "middleman", "~> 3.2.2"
-#gem "middleman-fjords"
-#gem "bourbon"
+# Core Middleman
+gem "middleman", "~> 4.5"
+gem "middleman-core", "~> 4.5"
+
+# Build tools
 gem 'builder'
-gem 'redcarpet'
-#gem "activesupport", "~> 3.2.8"
-gem "rake", "~> 0.9.2"
+gem 'rake', "~> 13.0"
 
-# Conflicts when install eventmachine on ruby 2.6.2
-# gem "middleman-livereload"
-gem "middleman-google-analytics"
-gem "middleman-navigation"
-gem "middleman-deploy"
-gem "middleman-imageoptim", "~> 0.1.4"
+# Markdown support
+gem 'kramdown'
 
-#gem "middleman-core"
-gem 'bootstrap-sass', '3.0.3.0', :require => false, :github => 'thomas-mcdonald/bootstrap-sass'
-gem 'compass-rails', require: false
-gem 'animate-sass'
-#gem "sass-rails", ">= 4.0"
-gem "sass", ">= 3.2"
+# Essential Middleman extensions
+gem "middleman-syntax"
+gem "middleman-autoprefixer"
 
-#gem "jquery-rails"
-#gem 'therubyracer'
-gem 'rb-inotify', '~> 0.9', :require => false
+# SASS/SCSS support (modern versions)
+gem "sassc", "~> 2.4"
+gem 'bootstrap-sass', '~> 3.4', require: false
 
+# Development tools
 gem 'better_errors'
-#gem 'middleman-pry'
-#gem 'pry-theme'
-gem 'pry-pretty-numeric'
-#gem 'pry-syntax-hacks'
-#gem 'pry-highlight'
-#gem 'pry-git'
-#gem 'pry-developer_tools'
-#gem 'pry-remote'
-#gem 'rspec-console'
-# step, next, finish, continue, break
-gem 'pry-nav'
-#gem 'pry-doc'
-#gem 'pry-docmore'
-# Добавляет show-stack
-#gem "pry-stack_explorer"
+gem 'binding_of_caller'
+gem 'pry'
 
+# File watching
+gem 'listen', '~> 3.0'
 
-group :deploy do
-  gem 'capistrano', :require => false
+group :development do
+  gem 'middleman-livereload'
 end

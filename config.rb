@@ -1,14 +1,6 @@
 ##############################
 # Load data
 Dir[File.join(File.dirname(__FILE__), 'models', '*.rb')].each{ |file| require file }
-#Navigation.load_all(data.navigation)
-
-#activate :fjords do |config|
-  #config.username = ""
-  #config.password = ""
-  #config.domain = "site.example.com"
-#end
-
 
 ##############################
 # Helpers
@@ -16,9 +8,6 @@ require 'config/routes'
 require 'config/helpers'
 require 'config/icon_helper'
 require 'builder'
-require 'pry'
-require 'pry-pretty-numeric'
-require "better_errors"
 
 helpers do
   include RouteHelpers
@@ -27,108 +16,93 @@ helpers do
 end
 
 ##############################
-# Initalise
-
-# Markdown config
-module Haml::Filters::Markdown
-  include Haml::Filters::Base
-  #lazy_require "redcarpet"
-  require 'redcarpet'
-
-  def render(text)
-    Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(text)
-  end
-end
-
-activate :i18n, langs: [:en, :ru], mount_at_root: false
-
-# Middleman Navigation
-activate :navigation
-
-# Livereload
-# activate :livereload
-
-# Automatic image dimensions on image_tag helper
-activate :automatic_image_sizes
-
-# Activate google-analytics extension
-activate :google_analytics do |ga|
-  ga.tracking_id = 'UA-XXXXXXX-X'
-end
-
-
-activate :deploy do |deploy|
-  deploy.method = :git
-  deploy.build_before = true
-end
-
-
-
-#activate :imageoptim do |options|
-#  # print out skipped images
-#  options.verbose = false
-#  # Setting these to true or nil will let options determine them (recommended)
-#  options.nice = true
-#  options.threads = true
-#  # Image extensions to attempt to compress
-#  options.image_extensions = %w(.png .jpg .gif)
-  # compressor worker options, individual optimisers can be disabled by passing
-#  # false instead of a hash
-#  options.pngcrush_options  = {:chunks => ['alla'], :fix => false, :brute => false}
-#  options.pngout_options    = {:copy_chunks => false, :strategy => 0}
-#  options.optipng_options   = {:level => 6, :interlace => false}
-#  options.advpng_options    = {:level => 4}
-#  options.jpegoptim_options = {:strip => ['all'], :max_quality => 100}
-#  options.jpegtran_options  = {:copy_chunks => false, :progressive => true, :jpegrescan => true}
-#  options.gifsicle_options  = {:interlace => false}
-#end
-
-##############################
-# Pages
-page "*", :layout => "application"
-
-#page:
-#  proxy "/#{link}.html", "/demo.html", :locals => { :src => link, :next_link => next_link, :skip_this => skip_this }
-
-
-##############################
-# Dynamically Generated Pages
-activate :directory_indexes  #Removes .html from file
-
-
-
-##############################
-## Settings
-set :markdown_engine, :redcarpet
+# Markdown configuration
+set :markdown_engine, :kramdown
 set :markdown, :fenced_code_blocks => true,
-               :autolink => true, 
+               :autolink => true,
                :smartypants => true
 
+# I18n configuration
+activate :i18n, langs: [:en, :ru], mount_at_root: false, path: "/:locale/"
+
+# Live reload in development
+# activate :livereload
+
+# Syntax highlighting for code blocks
+activate :syntax, :line_numbers => true
+
+# Google Analytics (manually add to layout in production)
+
+# Deploy configuration
+# activate :deploy do |deploy|
+#   deploy.deploy_method = :git
+#   deploy.build_before = true
+# end
+
+# Image optimization (disabled due to compatibility issues)
+# activate :imageoptim do |options|
+#   options.pngout = false
+#   options.svgo = false
+# end
+
+# Layout configuration
+page '/*.xml', layout: false
+page '/*.json', layout: false
+page '/*.txt', layout: false
+page "*", layout: "application"
+
+# Directory indexes (removes .html from URLs)
+activate :directory_indexes
+
+# Asset pipeline
 set :css_dir, 'stylesheets'
-
 set :js_dir, 'javascripts'
-
 set :images_dir, 'images'
-
 set :relative_links, true
 
-activate :sprockets
+# Sprockets configuration (built-in to Middleman 4)
+# activate :sprockets do |s|
+#   s.supported_output_extensions << '.html'
+# end
 
+# after_configuration do
+#   if File.exist?("#{root}/.bowerrc")
+#     @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
+#     @bower_assets_path = File.join "#{root}", @bower_config["directory"]
+#     sprockets.append_path @bower_assets_path
+#   end
 
-# Development-specific configuration
+#   sprockets.append_path 'source/vendor'
+#   sprockets.append_path 'vendor/javascripts'
+#   sprockets.append_path 'vendor/stylesheets'
+#   sprockets.append_path 'source/stylesheets/fonts'
+# end
+
+# Development configuration
 configure :development do
-  activate :google_analytics do |ga|
-    ga.tracking_id = false
+  # Better errors for development
+  if defined?(BetterErrors)
+    use BetterErrors::Middleware
+    BetterErrors.application_root = __dir__
   end
-  use BetterErrors::Middleware
-  BetterErrors.application_root = __dir__
+
+  # Disable minification in development
+  set :debug_assets, true
 end
 
-
-# Build-specific configuration
+# GitHub Pages configuration
 configure :build do
+  # Override relative assets for GitHub Pages
+  set :relative_links, true
 
-  # Clean 'Build' folder clean
+  # Set the base URL for GitHub Pages (will be overridden by environment)
+  # This is a placeholder - the actual URL will be set in the workflow
+  config[:http_prefix] = "/brandymint.ru-legacy"
+end
+
+# Build configuration
+configure :build do
+  # Ignore development files
   ignore "/javascripts/application/*"
   ignore "/javascripts/vendor/lib/*"
   ignore "/stylesheets/vendor/*"
@@ -136,40 +110,23 @@ configure :build do
   ignore "/vendor/components/*"
   ignore "*.rb"
 
+  # Minify CSS
   activate :minify_css
-  
-  # Minify Javascript on build
+
+  # Minify JavaScript
   activate :minify_javascript
-  
-  # Enable cache buster
-  activate :cache_buster
 
-  # Activate google-analytics extension
-  activate :google_analytics do |ga|
-    ga.tracking_id = 'UA-XXXXXXX-X'
-  end
-  
-  # Use relative URLs
+  # Minify HTML
+  activate :minify_html
+
+  # Gzip files
+  activate :gzip
+
+  # Cache buster
+  activate :asset_hash
+
+  # Relative assets
   activate :relative_assets
-  
-  # Compress PNGs after build
-  # First: gem install middleman-smusher
-  # require "middleman-smusher"
-  # activate :smusher
-  
-  # Or use a different image path
-  # set :http_path, "/Content/images/"
-end
-
-after_configuration do
-  @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
-  @bower_assets_path = File.join "#{root}", @bower_config["directory"]
-  sprockets.append_path 'source/vendor'
-  sprockets.append_path @bower_assets_path
-  sprockets.append_path 'vendor/javascripts'
-  sprockets.append_path 'vendor/stylesheets'
-  sprockets.append_path 'source/stylesheets/fonts'
-  #sprockets.import_asset 'source/robots.txt'
 end
 
 

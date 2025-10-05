@@ -6,8 +6,8 @@ npm:
 bundle:
 	bundle install
 
-deploy: setup build # build static and deploy
-	bundle exec cap production deploy
+deploy: build # build static only
+	@echo "Deploy target removed. Use 'make build' and deploy manually."
 
 .PHONY: ./source/vendor/components/
 bower: npm
@@ -16,7 +16,9 @@ bower: npm
 build: # builds a static site in `build` folder.
 	bundle exec middleman build --verbose
 
-start: # starts a server on `0.0.0.0:4567` (liveupdate included).
-	bundle exec middleman
+PORT ?= 3000
+
+start: # starts a server on `0.0.0.0:${PORT}` (liveupdate included).
+	bundle exec middleman -p ${PORT}
 
 .DEFAULT_GOAL := deploy
